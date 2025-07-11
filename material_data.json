@@ -1,0 +1,22 @@
+{
+  "\ud1a0\ub9c9\ub0b8\uc0dd\uc120": {
+    "buy_price": 0,
+    "fee": 0
+  },
+  "\ud574\ucd08": {
+    "buy_price": 0,
+    "fee": 0
+  },
+  "\ub2f9\uadfc": {
+    "buy_price": 0,
+    "fee": 0,
+    "stock": 250
+  },
+  "\uc7a5\uc778\ub09a\uc2dc\uafbc\uc758\uc77c\uc9c0": {
+    "buy_price": 1497,
+    "fee": 0,
+    "count": 4,
+    "market_price": 1497,
+    "market_price_time": "2025-07-10 22:43:55"
+  }
+}
