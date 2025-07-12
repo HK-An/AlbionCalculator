@@ -4,6 +4,7 @@ import json
 import os
 from profit_manager import ProfitManager
 from sale_register import SaleRegister
+from inventory_manager import InventoryManager
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QTextEdit, QComboBox, QMessageBox, QSpinBox
@@ -57,8 +58,7 @@ class MainWindow(QWidget):
         self._profit_window.show()
 
     def open_inventory(self):
-        if self._inventory_window is None:
-            self._inventory_window = InventoryManager()
+        self._inventory_window = InventoryManager()
         self._inventory_window.show()
 
     def open_recipe(self):
@@ -74,136 +74,83 @@ class MainWindow(QWidget):
         self._sale_window = SaleRegister()
         self._sale_window.show()
 
-class InventoryManager(QWidget):
-    def __init__(self):
-        super().__init__()
-        self.setWindowTitle("인벤토리")
-        layout = QVBoxLayout()
-        self.material_select = QComboBox()
-        self.material_select.addItem("새로 입력")
-        self.load_materials()
-        self.material_select.currentIndexChanged.connect(self.load_selected_material)
-
-        self.name = QLineEdit()
-        self.buy_price = QSpinBox()
-        self.buy_price.setMaximum(9999999)
-        self.fee = QSpinBox()
-        self.fee.setMaximum(9999999)
-        self.count = QSpinBox()
-        self.count.setMaximum(9999999)
-        self.market_price = QSpinBox()
-        self.market_price.setMaximum(99999999)
-        self.market_price_time = QLabel("-")
-        btn_save = QPushButton("저장")
-        btn_save.clicked.connect(self.save_material)
-
-        layout.addWidget(QLabel("재료(검색/선택)"))
-        layout.addWidget(self.material_select)
-        layout.addWidget(QLabel("재료명"))
-        layout.addWidget(self.name)
-        layout.addWidget(QLabel("구매가격"))
-        layout.addWidget(self.buy_price)
-        layout.addWidget(QLabel("제작시 수수료"))
-        layout.addWidget(self.fee)
-        layout.addWidget(QLabel("재고수량"))
-        layout.addWidget(self.count)
-        layout.addWidget(QLabel("시장가 입력"))
-        layout.addWidget(self.market_price)
-        layout.addWidget(QLabel("시장가 입력일시"))
-        layout.addWidget(self.market_price_time)
-        layout.addWidget(btn_save)
-        self.setLayout(layout)
-
-    def load_materials(self):
-        self.materials = load_data(DATA_FILE)
-        for name in self.materials:
-            self.material_select.addItem(name)
-
-    def load_selected_material(self):
-        idx = self.material_select.currentIndex()
-        if idx == 0:  # 새로 입력
-            self.name.setText("")
-            self.buy_price.setValue(0)
-            self.fee.setValue(0)
-            self.count.setValue(0)
-            self.market_price.setValue(0)
-            self.market_price_time.setText("-")
-        else:
-            mat_name = self.material_select.currentText()
-            mat = self.materials.get(mat_name, {})
-            self.name.setText(mat_name)
-            self.buy_price.setValue(mat.get("buy_price", 0))
-            self.fee.setValue(mat.get("fee", 0))
-            self.count.setValue(mat.get("count", 0))
-            self.market_price.setValue(mat.get("market_price", 0))
-            t = mat.get("market_price_time", None)
-            if t:
-                self.market_price_time.setText(str(t))
-            else:
-                self.market_price_time.setText("-")
-
-    def save_material(self):
-        materials = load_data(DATA_FILE)
-        n = self.name.text()
-        b = self.buy_price.value()
-        f = self.fee.value()
-        c = self.count.value()
-        m = self.market_price.value()
-        now = datetime.datetime.now().isoformat(sep=" ", timespec="seconds") if m else materials.get(n, {}).get("market_price_time")
-        if not n:
-            QMessageBox.warning(self, "경고", "재료명을 입력하세요")
-            return
-        # 이미 있는 아이템인지 체크(새로 입력 상태에서만)
-        if self.material_select.currentIndex() == 0 and n in materials:
-            QMessageBox.warning(self, "경고", "이미 존재하는 아이템입니다. 수정하려면 리스트에서 선택하세요.")
-            return
-        materials[n] = {
-            "buy_price": b,
-            "fee": f,
-            "count": c,
-            "market_price": m,
-            "market_price_time": now
-        }
-        save_data(DATA_FILE, materials)
-        QMessageBox.information(self, "알림", "저장됨")
-        self.material_select.clear()
-        self.material_select.addItem("새로 입력")
-        self.load_materials()
-        self.material_select.setCurrentText(n)
 
 class RecipeManager(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("레시피")
         layout = QVBoxLayout()
-        self.recipe_select = QComboBox()
-        self.recipe_select.addItem("새로 입력")
+        self.name_select = QComboBox()
+        self.name_select.addItem("새로 입력")
+        self.name_select.currentIndexChanged.connect(self.select_changed)
         self.load_recipes()
-        self.recipe_select.currentIndexChanged.connect(self.load_selected_recipe)
+        layout.addWidget(QLabel("아이템명"))
+        layout.addWidget(self.name_select)
 
-        self.name = QLineEdit()
-        self.output = QSpinBox()
-        self.output.setMinimum(1)
-        self.output.setMaximum(99999)
+        self.recipe_name = QLineEdit()
+        self.recipe_name.setPlaceholderText("레시피명")
+        self.output_count = QSpinBox()
+        self.output_count.setMaximum(99999)
         self.materials = QTextEdit()
-        btn_save = QPushButton("저장")
-        btn_save.clicked.connect(self.save_recipe)
+        self.materials.setPlaceholderText("재료명:수량 (줄바꿈 구분)")
 
-        layout.addWidget(QLabel("레시피 선택"))
-        layout.addWidget(self.recipe_select)
         layout.addWidget(QLabel("레시피명"))
-        layout.addWidget(self.name)
-        layout.addWidget(QLabel("제작 산출 갯수"))
-        layout.addWidget(self.output)
-        layout.addWidget(QLabel("재료명:수량 (줄바꿈 구분)"))
+        layout.addWidget(self.recipe_name)
+        layout.addWidget(QLabel("제작산출갯수"))
+        layout.addWidget(self.output_count)
+        layout.addWidget(QLabel("재료:수량"))
         layout.addWidget(self.materials)
-        layout.addWidget(btn_save)
+
+        btn_layout = QHBoxLayout()
+        self.btn_save = QPushButton("저장")
+        self.btn_save.clicked.connect(self.save_recipe)
+        self.btn_edit = QPushButton("수정")
+        self.btn_edit.clicked.connect(self.enable_edit)
+        btn_layout.addWidget(self.btn_save)
+        btn_layout.addWidget(self.btn_edit)
+        layout.addLayout(btn_layout)
         self.setLayout(layout)
+
+        self.editing = False
+        self.set_editable(True)
 
     def load_recipes(self):
         self.recipes = load_data(RECIPE_FILE)
-        for rname in self.recipes:
-            self.recipe_select.addItem(rname)
+        self.name_select.blockSignals(True)
+        self.name_select.clear()
+        self.name_select.addItem("새로 입력")
+        for name in self.recipes:
+            self.name_select.addItem(name)
+        self.name_select.blockSignals(False)
+
+    def set_editable(self, enable):
+        self.recipe_name.setEnabled(enable)
+        self.output_count.setEnabled(enable)
+        self.materials.setEnabled(enable)
+
+    def select_changed(self):
+        idx = self.name_select.currentIndex()
+        if idx == 0:
+            self.set_editable(True)
+            self.recipe_name.setText("")
+            self.output_count.setValue(1)
+            self.materials.setPlainText("")
+            self.btn_edit.setEnabled(False)
+        else:
+            key = self.name_select.currentText()
+            rec = self.recipes.get(key, {})
+            self.recipe_name.setText(rec.get("name", key))
+            self.output_count.setValue(rec.get("output_count", 1))
+            mats = rec.get("materials", {})
+            self.materials.setPlainText(
+                "\n".join(f"{k}:{v}" for k, v in mats.items())
+            )
+            self.set_editable(False)
+            self.btn_edit.setEnabled(True)
+
+    def enable_edit(self):
+        self.set_editable(True)
+        self.editing = True
 
     def load_selected_recipe(self):
         idx = self.recipe_select.currentIndex()
@@ -221,29 +168,30 @@ class RecipeManager(QWidget):
             self.materials.setPlainText("\n".join(lines))
 
     def save_recipe(self):
-        recipes = load_data(RECIPE_FILE)
-        n = self.name.text()
-        output_cnt = self.output.value()
-        lines = self.materials.toPlainText().splitlines()
+        n = self.recipe_name.text()
+        out_cnt = self.output_count.value()
         mats = {}
-        for l in lines:
+        for l in self.materials.toPlainText().splitlines():
             try:
-                mat, cnt = l.split(":")
-                mats[mat.strip()] = int(cnt)
+                k, v = l.split(":")
+                mats[k.strip()] = int(v)
             except:
                 QMessageBox.warning(self, "경고", f"형식오류: {l}")
                 return
+        recipes = load_data(RECIPE_FILE)
         recipes[n] = {
-            "materials": mats,
-            "output": output_cnt
+            "name": n,
+            "output_count": out_cnt,
+            "materials": mats
         }
         save_data(RECIPE_FILE, recipes)
         QMessageBox.information(self, "알림", "저장됨")
-        # 목록 최신화
-        self.recipe_select.clear()
-        self.recipe_select.addItem("새로 입력")
         self.load_recipes()
-        self.recipe_select.setCurrentText(n)
+        idx = self.name_select.findText(n)
+        self.name_select.setCurrentIndex(idx if idx >= 0 else 0)
+        self.set_editable(False)
+        self.editing = False
+        self.btn_edit.setEnabled(True)
 
 
 class RecipeCalc(QWidget):

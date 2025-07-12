@@ -63,8 +63,12 @@ class ProfitManager(QWidget):
             for i, sale in enumerate(data):
                 if sale.get("status") != "판매완료":
                     self.sales.append((i, sale))
+                    # 인첸트 표시 추가
                     self.sale_list.addItem(
-                        f"{sale.get('item','')} (개당판매가:{sale.get('unit_sale_price', sale.get('sale_price', '-'))}, 총판매가:{sale.get('total_sale_price', sale.get('sale_price', '-'))}, 이익:{sale.get('profit','-')})"
+                        f"{sale.get('item','')} (인첸트{sale.get('enchant',0)}, "
+                        f"개당판매가:{sale.get('unit_sale_price', sale.get('sale_price', '-'))}, "
+                        f"총판매가:{sale.get('total_sale_price', sale.get('sale_price', '-'))}, "
+                        f"이익:{sale.get('profit','-')})"
                     )
         self.show_detail()
 
@@ -72,14 +76,16 @@ class ProfitManager(QWidget):
         idx = self.sale_list.currentIndex()
         if idx < 0 or idx >= len(self.sales):
             self.detail.setText("-")
-            self.unit_sale_edit.setText("")
-            self.total_sale_edit.setText("")
+            # ... (생략)
             return
         i, sale = self.sales[idx]
         unit_sale = str(sale.get('unit_sale_price', sale.get('sale_price', '')))
         total_sale = str(sale.get('total_sale_price', sale.get('sale_price', '')))
+        # 인첸트 표시
         self.detail.setText(
             f"아이템: {sale.get('item','')}\n"
+            f"인첸트: {sale.get('enchant', 0)}\n"
+            f"판매수량: {sale.get('count', '-')}\n"    # <- 추가
             f"구매가(1개): {sale.get('unit_buy_price', sale.get('buy_price', '-'))}\n"
             f"수수료(1개): {sale.get('unit_fee', sale.get('fee', '-'))}\n"
             f"총원가: {sale.get('total_cost', '-')}\n"
