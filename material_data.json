@@ -1,14 +1,24 @@
 {
-  "\ud1a0\ub9c9\ub0b8\uc0dd\uc120": {
+  "토막낸생선": {
     "0": {
       "buy_price": 0,
       "fee": 0,
       "count": 7,
       "market_price": 242,
       "market_price_time": "2025-07-12 23:30:18"
+    },
+    "category": "요리",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 355,
+        "market_price": 272,
+        "market_price_time": "2025-07-13 14:30:27"
+      }
     }
   },
-  "\ud574\ucd08": {
+  "해조": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -17,16 +27,26 @@
       "market_price_time": null
     }
   },
-  "\ub2f9\uadfc": {
+  "당근": {
     "0": {
       "buy_price": 0,
       "fee": 0,
       "count": 0,
       "market_price": 354,
       "market_price_time": "2025-07-12 23:13:43"
+    },
+    "category": "",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 0,
+        "market_price": 328,
+        "market_price_time": "2025-07-13 16:55:11"
+      }
     }
   },
-  "\uc7a5\uc778\ub09a\uc2dc\uafbc\uc758\uc77c\uc9c0": {
+  "장인낚시꾼의일지": {
     "0": {
       "buy_price": 996,
       "fee": 0,
@@ -35,25 +55,38 @@
       "market_price_time": "2025-07-12 23:48:46"
     }
   },
-  "\ucca0\uad11\uc11d": {
+  "철광석": {
     "0": {
       "buy_price": 0,
       "fee": 0,
       "count": 0,
       "market_price": 0,
       "market_price_time": null
+    },
+    "category": "",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 0,
+        "market_price": 0,
+        "market_price_time": null
+      }
     }
   },
-  "\uae30\ubcf8\ud53c\uc2dc\uc18c\uc2a4": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 4367,
-      "market_price_time": "2025-07-12 23:13:56"
+  "기본피시소스": {
+    "category": "요리",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 0,
+        "market_price": 4300,
+        "market_price_time": "2025-07-13 11:14:09"
+      }
     }
   },
-  "\uc785\ubb38\uc790\uc758\uace1\uad2d\uc774": {
+  "입문자의곡괭이": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -62,7 +95,7 @@
       "market_price_time": "2025-07-12 23:13:59"
     }
   },
-  "\uae30\ubcf8\ub09a\uc2dc\ubbf8\ub07c": {
+  "기본낚시미끼": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -71,7 +104,7 @@
       "market_price_time": "2025-07-12 23:14:04"
     }
   },
-  "\ucd08\uc2ec\uc790\uc758\uac00\ubc29": {
+  "초심자의가방": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -80,16 +113,28 @@
       "market_price_time": "2025-07-12 23:25:00"
     }
   },
-  "\uae54\ub054\ud55c\uc9c1\ubb3c": {
+  "깔끔한직물": {
     "0": {
       "buy_price": 0,
       "fee": 446,
       "count": 150,
       "market_price": 0,
       "market_price_time": null
-    }
+    },
+    "category": "",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 446,
+        "count": 169,
+        "market_price": 0,
+        "market_price_time": null
+      }
+    },
+    "count": 162,
+    "fee": 3
   },
-  "\uad1c\ucc2e\uc740\uc9c1\ubb3c": {
+  "괜찮은직물": {
     "0": {
       "buy_price": 0,
       "fee": 465,
@@ -98,19 +143,19 @@
       "market_price_time": null
     }
   },
-  "\ub85c\uc6b0\ub9ac\ubc84\uac8c": {
-    "category": "\uc0dd\uc120",
+  "로우리버게": {
+    "category": "생선",
     "enchant": {
       "0": {
         "buy_price": 0,
         "fee": 0,
-        "count": 3,
+        "count": 0,
         "market_price": 2200,
-        "market_price_time": "2025-07-13 00:05:04"
+        "market_price_time": "2025-07-13 11:18:18"
       }
     }
   },
-  "\uc18c\ub098\ubb34\uc6d0\ubaa9": {
+  "소나무원목": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -126,7 +171,7 @@
       "market_price_time": "2025-07-12 23:16:43"
     }
   },
-  "\ub4dc\ub77c\uc774\ube0c\ub8e9\uac8c": {
+  "드라이브룩게": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -135,25 +180,45 @@
       "market_price_time": "2025-07-12 23:14:31"
     }
   },
-  "\uc0bc\ub098\ubb34\uc6d0\ubaa9": {
+  "삼나무원목": {
     "0": {
       "buy_price": 0,
       "fee": 0,
       "count": 0,
       "market_price": 272,
       "market_price_time": "2025-07-12 23:14:35"
+    },
+    "category": "",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 0,
+        "market_price": 297,
+        "market_price_time": "2025-07-13 17:10:36"
+      }
     }
   },
-  "\uc18c\ub098\ubb34\ud310\uc790": {
+  "소나무판자": {
     "0": {
       "buy_price": 0,
       "fee": 536,
       "count": 0,
       "market_price": 324,
       "market_price_time": "2025-07-12 23:14:38"
+    },
+    "category": "",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 117,
+        "count": 16,
+        "market_price": 324,
+        "market_price_time": "2025-07-13 17:05:30"
+      }
     }
   },
-  "\uc804\ubb38\uac00\uc758\uc218\uc1a1\uc6a9\ud669\uc18c": {
+  "전문가의수송용황소": {
     "0": {
       "buy_price": 99985,
       "fee": 0,
@@ -162,7 +227,7 @@
       "market_price_time": "2025-07-12 23:14:41"
     }
   },
-  "\uc219\ub828\uc790\uc758\ub9dd\ud1a0": {
+  "숙련자의망토": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -171,7 +236,7 @@
       "market_price_time": "2025-07-12 23:21:18"
     }
   },
-  "\uc219\ub828\uc790\uc758\uac00\ubc29": {
+  "숙련자의가방": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -180,7 +245,7 @@
       "market_price_time": "2025-07-12 23:21:59"
     }
   },
-  "\ucd08\uc2ec\uc790\uc758\ud559\uc790\uc0cc\ub4e4": {
+  "초심자의학자샌들": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -189,7 +254,7 @@
       "market_price_time": "2025-07-12 23:22:52"
     }
   },
-  "\ucd08\uc2ec\uc790\uc758\ud30c\uc774\uc5b4\uc2a4\ud0dc\ud504": {
+  "초심자의파이어스태프": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -198,7 +263,7 @@
       "market_price_time": "2025-07-12 23:23:25"
     }
   },
-  "\uc219\ub828\uc790\uc758\uc6a9\ubcd1\uc790\ucf13": {
+  "숙련자의용병자켓": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -207,7 +272,7 @@
       "market_price_time": "2025-07-12 23:24:00"
     }
   },
-  "\ucd08\uc2ec\uc790\uc758\ud559\uc790\ub450\uac74": {
+  "초심자의학자두건": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -216,7 +281,7 @@
       "market_price_time": "2025-07-12 23:25:31"
     }
   },
-  "\ucd08\uc2ec\uc790\uc758\ud559\uc790\ub85c\ube0c": {
+  "초심자의학자로브": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -225,7 +290,7 @@
       "market_price_time": "2025-07-12 23:26:11"
     }
   },
-  "\uc219\ub828\uc790\uc758\uc6a9\ubcd1\ud6c4\ub4dc": {
+  "숙련자의용병후드": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -234,7 +299,7 @@
       "market_price_time": "2025-07-12 23:26:46"
     }
   },
-  "\uc7a5\uc778\ubc8c\ubaa9\uafbc\uc758\uc77c\uc9c0": {
+  "장인벌목꾼의일지": {
     "0": {
       "buy_price": 1287,
       "fee": 0,
@@ -243,7 +308,7 @@
       "market_price_time": "2025-07-12 23:27:44"
     }
   },
-  "\uc219\ub828\uc790\uc758\uc6a9\ubcd1\uc2e0\ubc1c": {
+  "숙련자의용병신발": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -252,7 +317,7 @@
       "market_price_time": "2025-07-12 23:28:28"
     }
   },
-  "\ub9c8\uc2a4\ud130\uc758\uae30\uc0ac\uc544\uba38": {
+  "마스터의기사아머": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -261,7 +326,7 @@
       "market_price_time": "2025-07-12 23:29:06"
     }
   },
-  "\ud654\uc774\ud2b8\ud3ec\uadf8\uc2a4\ub0b4\ud37c": {
+  "화이트포그스내퍼": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -270,7 +335,7 @@
       "market_price_time": "2025-07-12 23:29:39"
     }
   },
-  "\uc0ac\uc554": {
+  "사암": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -279,7 +344,7 @@
       "market_price_time": "2025-07-12 23:31:27"
     }
   },
-  "\uc0ac\uc554\uc11d\uad34": {
+  "사암석괴": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -288,7 +353,7 @@
       "market_price_time": "2025-07-12 23:32:23"
     }
   },
-  "\uc219\ub828\uc790\uc758\ub09a\uc2ef\ub300": {
+  "숙련자의낚싯대": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -297,7 +362,7 @@
       "market_price_time": "2025-07-12 23:33:04"
     }
   },
-  "\ud2b8\ub798\ubc84\ud2f4\uc11d\uad34": {
+  "트래버틴석괴": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -306,7 +371,7 @@
       "market_price_time": "2025-07-12 23:33:37"
     }
   },
-  "\uc7a5\uc778\uc758\uc218\uc1a1\uc6a9\ud669\uc18c": {
+  "장인의수송용황소": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -315,7 +380,7 @@
       "market_price_time": "2025-07-12 23:34:48"
     }
   },
-  "\uc587\uc740\uac00\uc8fd": {
+  "얇은가죽": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -324,7 +389,7 @@
       "market_price_time": "2025-07-12 23:40:05"
     }
   },
-  "\uac00\uacf5\ub41c\ud53c\ud601": {
+  "가공된피혁": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -333,7 +398,7 @@
       "market_price_time": "2025-07-12 23:41:15"
     }
   },
-  "\uc801\ub2f9\ud55c\uac00\uc8fd": {
+  "적당한가죽": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -361,9 +426,19 @@
       "count": 0,
       "market_price": 173,
       "market_price_time": "2025-07-12 23:45:57"
+    },
+    "category": "분류없음",
+    "enchant": {
+      "2": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 3,
+        "market_price": 1222,
+        "market_price_time": "2025-07-13 17:09:16"
+      }
     }
   },
-  "\ud2bc\ud2bc\ud55c\uac00\uc8fd": {
+  "튼튼한가죽": {
     "0": {
       "buy_price": 0,
       "fee": 0,
@@ -379,87 +454,243 @@
       "market_price_time": "2025-07-12 23:44:09"
     }
   },
-  "\uc810\ubc15\uc774\uc1a1\uc5b4": {
-    "category": "\uc0dd\uc120",
+  "점박이송어": {
+    "category": "생선",
     "enchant": {
       "0": {
         "buy_price": 0,
         "fee": 0,
-        "count": 6,
-        "market_price": 1500,
-        "market_price_time": "2025-07-13 00:00:18"
+        "count": 0,
+        "market_price": 1411,
+        "market_price_time": "2025-07-13 11:18:24"
       }
     }
   },
-  "\ud478\ub978\ube44\ub298\uac15\uaf2c\uce58\uace0\uae30": {
-    "category": "\uc0dd\uc120",
+  "푸른비늘강꼬치고기": {
+    "category": "생선",
     "enchant": {
       "0": {
         "buy_price": 0,
         "fee": 0,
-        "count": 5,
-        "market_price": 874,
-        "market_price_time": "2025-07-13 00:01:16"
+        "count": 0,
+        "market_price": 875,
+        "market_price_time": "2025-07-13 11:18:30"
       }
     }
   },
-  "\uc54c\ube44\uc628\ub18d\uc5b4": {
-    "category": "\uc0dd\uc120",
+  "알비온농어": {
+    "category": "생선",
     "enchant": {
       "0": {
         "buy_price": 0,
         "fee": 0,
-        "count": 8,
-        "market_price": 684,
-        "market_price_time": "2025-07-13 00:01:50"
+        "count": 0,
+        "market_price": 682,
+        "market_price_time": "2025-07-13 11:18:39"
       }
     }
   },
-  "\uc904\ubb34\ub2ac\uc789\uc5b4": {
-    "category": "\uc0dd\uc120",
+  "줄무늬잉어": {
+    "category": "생선",
     "enchant": {
       "0": {
         "buy_price": 0,
         "fee": 0,
-        "count": 14,
-        "market_price": 427,
-        "market_price_time": "2025-07-13 00:02:25"
+        "count": 0,
+        "market_price": 423,
+        "market_price_time": "2025-07-13 11:18:46"
       }
     }
   },
-  "\uadf8\ub9b0\ub9ac\ubc84\uc7a5\uc5b4": {
-    "category": "\uc0dd\uc120",
+  "그린리버장어": {
+    "category": "생선",
     "enchant": {
       "0": {
         "buy_price": 0,
         "fee": 0,
-        "count": 3,
-        "market_price": 2239,
-        "market_price_time": "2025-07-13 00:03:31"
+        "count": 0,
+        "market_price": 2245,
+        "market_price_time": "2025-07-13 11:18:53"
       }
     }
   },
-  "\uc2a4\ud1a4\uc2a4\ud2b8\ub9bc\ub5a0\ub3cc\uc774": {
-    "category": "\uc0dd\uc120",
+  "스톤스트림떠돌이": {
+    "category": "생선",
     "enchant": {
       "0": {
         "buy_price": 0,
         "fee": 0,
-        "count": 4,
-        "market_price": 2250,
-        "market_price_time": "2025-07-13 00:04:02"
+        "count": 0,
+        "market_price": 2200,
+        "market_price_time": "2025-07-13 11:18:59"
       }
     }
   },
-  "\uc5c5\ub79c\ub4dc\ucf5c\ub4dc\uc544\uc774": {
-    "category": "\uc0dd\uc120",
+  "업랜드콜드아이": {
+    "category": "생선",
     "enchant": {
       "0": {
         "buy_price": 0,
+        "fee": 0,
+        "count": 0,
+        "market_price": 2228,
+        "market_price_time": "2025-07-13 11:47:46"
+      }
+    }
+  },
+  "수확숙련자의일지": {
+    "category": "분류없음",
+    "enchant": {
+      "0": {
+        "buy_price": 2500,
         "fee": 0,
         "count": 1,
-        "market_price": 2228,
-        "market_price_time": "2025-07-13 00:04:28"
+        "market_price": 2500,
+        "market_price_time": "2025-07-13 11:59:52"
+      }
+    }
+  },
+  "전문가사냥터지기의일지": {
+    "category": "분류없음",
+    "enchant": {
+      "0": {
+        "buy_price": 4400,
+        "fee": 0,
+        "count": 1,
+        "market_price": 4400,
+        "market_price_time": "2025-07-13 12:01:42"
+      }
+    }
+  },
+  "숙련자탐광자의일지": {
+    "category": "분류없음",
+    "enchant": {
+      "0": {
+        "buy_price": 4000,
+        "fee": 0,
+        "count": 1,
+        "market_price": 4000,
+        "market_price_time": "2025-07-13 12:02:15"
+      }
+    }
+  },
+  "전문가벌목꾼의일지": {
+    "category": "분류없음",
+    "enchant": {
+      "0": {
+        "buy_price": 5990,
+        "fee": 0,
+        "count": 1,
+        "market_price": 5990,
+        "market_price_time": "2025-07-13 12:03:27"
+      }
+    }
+  },
+  "구리주괴": {
+    "category": "분류없음",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 0,
+        "market_price": 26,
+        "market_price_time": "2025-07-13 16:57:16"
+      }
+    }
+  },
+  "아마": {
+    "category": "분류없음",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 0,
+        "market_price": 0,
+        "market_price_time": null
+      }
+    }
+  },
+  "단순한직물": {
+    "category": "분류없음",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 185,
+        "market_price": 0,
+        "market_price_time": null
+      }
+    }
+  },
+  "구리광석": {
+    "category": "분류없음",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 0,
+        "market_price": 0,
+        "market_price_time": null
+      }
+    }
+  },
+  "아연광석": {
+    "category": "분류없음",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 0,
+        "market_price": 98,
+        "market_price_time": "2025-07-13 14:25:50"
+      }
+    }
+  },
+  "청동주괴": {
+    "category": "분류없음",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 448,
+        "count": 0,
+        "market_price": 0,
+        "market_price_time": null
+      }
+    }
+  },
+  "강철주괴": {
+    "category": "분류없음",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 1152,
+        "count": 0,
+        "market_price": 332,
+        "market_price_time": "2025-07-13 14:26:44"
+      }
+    }
+  },
+  "헤비가죽": {
+    "category": "분류없음",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 0,
+        "market_price": 420,
+        "market_price_time": "2025-07-13 14:13:54"
+      }
+    }
+  },
+  "밤나무판자": {
+    "category": "분류없음",
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 27,
+        "count": 12,
+        "market_price": 0,
+        "market_price_time": null
       }
     }
   }

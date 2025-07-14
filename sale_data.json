@@ -548,9 +548,11 @@
     "unit_cost": 0,
     "count": 511,
     "total_cost": 0,
-    "unit_sale_price": 103,
-    "total_sale_price": 52633,
-    "profit": 52633
+    "unit_sale_price": 98.88,
+    "total_sale_price": 50527.0,
+    "profit": 50527.68,
+    "sold_time": "2025-07-13 09:59:13",
+    "status": "\ud310\ub9e4\uc644\ub8cc"
   },
   {
     "item": "\uc801\ub2f9\ud55c\uac00\uc8fd",
@@ -560,9 +562,11 @@
     "unit_cost": 0,
     "count": 167,
     "total_cost": 0,
-    "unit_sale_price": 100,
-    "total_sale_price": 16700,
-    "profit": 16700
+    "unit_sale_price": 96.0,
+    "total_sale_price": 16032.0,
+    "profit": 16032.0,
+    "status": "\ud310\ub9e4\uc644\ub8cc",
+    "sold_time": "2025-07-13 09:57:23"
   },
   {
     "item": "\ud2bc\ud2bc\ud55c\uac00\uc8fd",
@@ -572,9 +576,11 @@
     "unit_cost": 0,
     "count": 12,
     "total_cost": 0,
-    "unit_sale_price": 3427,
-    "total_sale_price": 41124,
-    "profit": 41124
+    "unit_sale_price": 3289.92,
+    "total_sale_price": 39479.0,
+    "profit": 39479.04,
+    "status": "\ud310\ub9e4\uc644\ub8cc",
+    "sold_time": "2025-07-13 09:58:48"
   },
   {
     "item": "\uc801\ub2f9\ud55c\uac00\uc8fd",
@@ -584,9 +590,11 @@
     "unit_cost": 0,
     "count": 3,
     "total_cost": 0,
-    "unit_sale_price": 9479,
-    "total_sale_price": 28437,
-    "profit": 28437
+    "unit_sale_price": 9099.67,
+    "total_sale_price": 27299.0,
+    "profit": 27299.010000000002,
+    "status": "\ud310\ub9e4\uc644\ub8cc",
+    "sold_time": "2025-07-13 09:59:41"
   },
   {
     "item": "\uc801\ub2f9\ud55c\uac00\uc8fd",
@@ -608,9 +616,11 @@
     "unit_cost": 0,
     "count": 50,
     "total_cost": 0,
-    "unit_sale_price": 173,
-    "total_sale_price": 8650,
-    "profit": 8650
+    "unit_sale_price": 166.08,
+    "total_sale_price": 8304.0,
+    "profit": 8304.0,
+    "status": "\ud310\ub9e4\uc644\ub8cc",
+    "sold_time": "2025-07-13 09:58:06"
   },
   {
     "item": "\uc7a5\uc778\ub09a\uc2dc\uafbc\uc758\uc77c\uc9c0",
@@ -623,5 +633,149 @@
     "unit_sale_price": 8959,
     "total_sale_price": 17918,
     "profit": 15926
+  },
+  {
+    "item": "\uae30\ubcf8\ud53c\uc2dc\uc18c\uc2a4",
+    "enchant": 0,
+    "unit_buy_price": 0,
+    "unit_fee": 0,
+    "unit_cost": 0,
+    "count": 11,
+    "total_cost": 0,
+    "unit_sale_price": 5000,
+    "total_sale_price": 55000,
+    "profit": 55000
+  },
+  {
+    "item": "\ud1a0\ub9c9\ub0b8\uc0dd\uc120",
+    "enchant": 0,
+    "unit_buy_price": 0,
+    "unit_fee": 0,
+    "unit_cost": 0,
+    "count": 53,
+    "total_cost": 0,
+    "unit_sale_price": 276,
+    "total_sale_price": 14628,
+    "profit": 14628
+  },
+  {
+    "item": "\uad6c\ub9ac\uc8fc\uad34",
+    "enchant": 0,
+    "unit_buy_price": 0,
+    "unit_fee": 0,
+    "unit_cost": 0,
+    "count": 38,
+    "total_cost": 0,
+    "unit_sale_price": 30,
+    "total_sale_price": 1140,
+    "profit": 1140
+  },
+  {
+    "item": "\uccad\ub3d9\uc8fc\uad34",
+    "enchant": 0,
+    "unit_buy_price": 0,
+    "unit_fee": 448,
+    "unit_cost": 448,
+    "count": 224,
+    "total_cost": 100352,
+    "unit_sale_price": 207,
+    "total_sale_price": 46368,
+    "profit": -53984
+  },
+  {
+    "item": "\ucca0\uad11\uc11d",
+    "enchant": 0,
+    "unit_buy_price": 0,
+    "unit_fee": 0,
+    "unit_cost": 0,
+    "count": 1,
+    "total_cost": 0,
+    "unit_sale_price": 149.0,
+    "total_sale_price": 149.0,
+    "profit": 149.0,
+    "status": "\ud310\ub9e4\uc644\ub8cc",
+    "sold_time": "2025-07-13 16:58:04"
+  },
+  {
+    "item": "\uc544\uc5f0\uad11\uc11d",
+    "enchant": 0,
+    "unit_buy_price": 0,
+    "unit_fee": 0,
+    "unit_cost": 0,
+    "count": 1,
+    "total_cost": 0,
+    "unit_sale_price": 94,
+    "total_sale_price": 94,
+    "profit": 94,
+    "status": "\ud310\ub9e4\uc644\ub8cc",
+    "sold_time": "2025-07-13 16:54:49"
+  },
+  {
+    "item": "\ub2f9\uadfc",
+    "enchant": 0,
+    "unit_buy_price": 0,
+    "unit_fee": 0,
+    "unit_cost": 0,
+    "count": 108,
+    "total_cost": 0,
+    "unit_sale_price": 328.31,
+    "total_sale_price": 35458.0,
+    "profit": 35457.48,
+    "status": "\ud310\ub9e4\uc644\ub8cc",
+    "sold_time": "2025-07-13 16:55:48"
+  },
+  {
+    "item": "\uac15\ucca0\uc8fc\uad34",
+    "enchant": 0,
+    "unit_buy_price": 0,
+    "unit_fee": 1152,
+    "unit_cost": 1152,
+    "count": 144,
+    "total_cost": 165888,
+    "unit_sale_price": 318.72,
+    "total_sale_price": 45895.0,
+    "profit": -119992.31999999999,
+    "status": "\ud310\ub9e4\uc644\ub8cc",
+    "sold_time": "2025-07-13 16:56:53"
+  },
+  {
+    "item": "\uad6c\ub9ac\uc8fc\uad34",
+    "enchant": 0,
+    "unit_buy_price": 0,
+    "unit_fee": 0,
+    "unit_cost": 0,
+    "count": 38,
+    "total_cost": 0,
+    "unit_sale_price": 26.87,
+    "total_sale_price": 1021.0,
+    "profit": 1021.0600000000001,
+    "status": "\ud310\ub9e4\uc644\ub8cc",
+    "sold_time": "2025-07-13 16:57:42"
+  },
+  {
+    "item": "\uccad\ub3d9\uc8fc\uad34",
+    "enchant": 0,
+    "unit_buy_price": 0,
+    "unit_fee": 448,
+    "unit_cost": 448,
+    "count": 224,
+    "total_cost": 100352,
+    "unit_sale_price": 198.72,
+    "total_sale_price": 44513.0,
+    "profit": -55838.72,
+    "status": "\ud310\ub9e4\uc644\ub8cc",
+    "sold_time": "2025-07-13 17:00:20"
+  },
+  {
+    "item": "\uc0bc\ub098\ubb34\uc6d0\ubaa9",
+    "enchant": 0,
+    "unit_buy_price": 0,
+    "unit_fee": 0,
+    "unit_cost": 0,
+    "count": 153,
+    "total_cost": 0,
+    "unit_sale_price": 297,
+    "total_sale_price": 45441,
+    "profit": 45441
   }
 ]

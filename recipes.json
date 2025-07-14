@@ -1,23 +1,46 @@
 {
-  "\ub2f9\uadfc \uc218\ud504": {
+  "당근 수프": {
     "materials": {
-      "\ub2f9\uadfc": 16
+      "당근": 16
     },
     "output": 10
   },
-  "\uae30\ubcf8\ud53c\uc2dc\uc18c\uc2a4": {
+  "기본피시소스": {
     "materials": {
-      "\ud1a0\ub9c9\ub0b8\uc0dd\uc120": 15,
-      "\ud574\uc870": 1
+      "토막낸생선": 15,
+      "해조": 1
     },
     "output": 1
   },
-  "\uae54\ub054\ud55c\uc9c1\ubb3c": {
-    "name": "\uae54\ub054\ud55c\uc9c1\ubb3c",
+  "깔끔한직물": {
+    "name": "깔끔한직물",
     "output_count": 1,
     "materials": {
-      "\uc544\ub9c8": 2,
-      "\ub2e8\uc21c\ud55c\uc9c1\ubb3c": 1
+      "아마": 2,
+      "단순한직물": 1
+    }
+  },
+  "구리주괴": {
+    "name": "구리주괴",
+    "output_count": 1,
+    "materials": {
+      "구리광석": 1
+    }
+  },
+  "청동주괴": {
+    "name": "청동주괴",
+    "output_count": 1,
+    "materials": {
+      "아연광석": 2,
+      "구리주괴": 1
+    }
+  },
+  "강철주괴": {
+    "name": "강철주괴",
+    "output_count": 1,
+    "materials": {
+      "철광석": 2,
+      "청동주괴": 1
     }
   }
 }

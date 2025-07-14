@@ -1,5 +1,6 @@
 import os
 import json
+import datetime
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QLabel, QComboBox, QPushButton, QMessageBox,
     QCheckBox, QLineEdit, QHBoxLayout
@@ -76,23 +77,22 @@ class ProfitManager(QWidget):
         idx = self.sale_list.currentIndex()
         if idx < 0 or idx >= len(self.sales):
             self.detail.setText("-")
-            # ... (생략)
             return
         i, sale = self.sales[idx]
         unit_sale = str(sale.get('unit_sale_price', sale.get('sale_price', '')))
         total_sale = str(sale.get('total_sale_price', sale.get('sale_price', '')))
-        # 인첸트 표시
         self.detail.setText(
             f"아이템: {sale.get('item','')}\n"
             f"인첸트: {sale.get('enchant', 0)}\n"
-            f"판매수량: {sale.get('count', '-')}\n"    # <- 추가
+            f"판매수량: {sale.get('count', '-')}\n"
             f"구매가(1개): {sale.get('unit_buy_price', sale.get('buy_price', '-'))}\n"
             f"수수료(1개): {sale.get('unit_fee', sale.get('fee', '-'))}\n"
             f"총원가: {sale.get('total_cost', '-')}\n"
             f"개당판매가: {unit_sale}\n"
             f"총판매가: {total_sale}\n"
             f"이익: {sale.get('profit','-')}\n"
-            f"상태: {sale.get('status','')}"
+            f"상태: {sale.get('status','')}\n"
+            f"판매완료시간: {sale.get('sold_time', '-')}"
         )
         self.unit_sale_edit.setText(unit_sale)
         self.total_sale_edit.setText(total_sale)
@@ -154,6 +154,22 @@ class ProfitManager(QWidget):
         with open(filename, "r") as f:
             data = json.load(f)
         data[rec_idx]["status"] = "판매완료"
+        with open(filename, "w") as f:
+            json.dump(data, f, indent=2)
+        QMessageBox.information(self, "알림", "거래완료 처리됨")
+        self.refresh_sales()
+
+    def complete_sale(self):
+        idx = self.sale_list.currentIndex()
+        if idx < 0 or idx >= len(self.sales):
+            return
+        rec_idx, sale = self.sales[idx]
+        filename = "sale_data.json"
+        with open(filename, "r") as f:
+            data = json.load(f)
+        data[rec_idx]["status"] = "판매완료"
+        # 여기 추가: 판매 시간 기록
+        data[rec_idx]["sold_time"] = datetime.datetime.now().isoformat(sep=" ", timespec="seconds")
         with open(filename, "w") as f:
             json.dump(data, f, indent=2)
         QMessageBox.information(self, "알림", "거래완료 처리됨")

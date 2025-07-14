@@ -33,6 +33,7 @@ class SaleRegister(QWidget):
         self.count_spin.setMaximum(99999999)
         self.sale_price = QSpinBox()
         self.sale_price.setMaximum(99999999)
+
         btn_calc = QPushButton("계산")
         btn_calc.clicked.connect(self.calc_profit)
         btn_register = QPushButton("등록")
@@ -70,32 +71,33 @@ class SaleRegister(QWidget):
         self.materials = materials
         # 아이템명별로 "갯수 1개 이상인 인첸트"만 콤보에 추가
         filtered_items = []
-        for item_name, enchants in materials.items():
+        for item_name, meta in materials.items():
+            enchants = meta.get("enchant", {})
             for enchant_str, mat in enchants.items():
-                if mat.get("count", 0) > 0:
+                if isinstance(mat, dict) and mat.get("count", 0) > 0:
                     filtered_items.append((item_name, enchant_str))
-                    break  # 이 아이템은 보여주기(최소 1개라도 인첸트가 있으면)
+                    break
         for item_name, _ in filtered_items:
             self.item_select.addItem(item_name)
+        self.refresh_enchants()
         # 인첸트 콤보도 해당 아이템에서 count>0인 인첸트만
-        self.item_select.currentIndexChanged.connect(self.refresh_enchants)
         self.refresh_enchants()
 
     def refresh_enchants(self):
         self.enchant_select.blockSignals(True)
         self.enchant_select.clear()
         item = self.item_select.currentText()
-        enchants = self.materials.get(item, {})
+        enchants = self.materials.get(item, {}).get("enchant", {})
         for enchant_str, mat in enchants.items():
-            if mat.get("count", 0) > 0:
+            if isinstance(mat, dict) and mat.get("count", 0) > 0:
                 self.enchant_select.addItem(f"{enchant_str} 인첸트", int(enchant_str))
         self.enchant_select.blockSignals(False)
         self.update_item_info()
 
     def update_item_info(self):
         item = self.item_select.currentText()
-        enchant = str(self.enchant_select.currentData())
-        mat = self.materials.get(item, {}).get(enchant, {})
+        enchant = str(self.enchant_select.currentData() or "0")
+        mat = self.materials.get(item, {}).get("enchant", {}).get(enchant, {})
         self.buy_price_label.setText(str(mat.get("buy_price", "-")))
         self.fee_label.setText(str(mat.get("fee", "-")))
         try:
@@ -109,8 +111,8 @@ class SaleRegister(QWidget):
 
     def calc_profit(self):
         item = self.item_select.currentText()
-        enchant = str(self.enchant_select.currentData())
-        mat = self.materials.get(item, {}).get(enchant, {})
+        enchant = str(self.enchant_select.currentData() or "0")
+        mat = self.materials.get(item, {}).get("enchant", {}).get(enchant, {})
         if not mat:
             self.result.setText("아이템/인첸트 정보 없음")
             return
@@ -127,12 +129,16 @@ class SaleRegister(QWidget):
     def register_sale(self):
         item = self.item_select.currentText()
         enchant = str(self.enchant_select.currentData())
-        mat = self.materials.get(item, {}).get(enchant, {})
+        print(enchant)
+        mat = self.materials.get(item, {}).get("enchant", {}).get(enchant, {})
+        print(mat)
         if not mat:
             QMessageBox.warning(self, "경고", "아이템/인첸트 정보 없음")
             return
         cnt = self.count_spin.value()
         stock = mat.get("count", 0)
+        print("stock -> ", stock)
+        print(mat.get("count"))
         if cnt <= 0:
             QMessageBox.warning(self, "경고", "판매수량을 입력하세요")
             return
@@ -147,10 +153,10 @@ class SaleRegister(QWidget):
 
         # 인벤토리에서 차감
         materials = load_data(DATA_FILE)
-        if item not in materials or enchant not in materials[item]:
+        if item not in materials or "enchant" not in materials[item] or enchant not in materials[item]["enchant"]:
             QMessageBox.warning(self, "경고", "인벤토리 정보 오류")
             return
-        materials[item][enchant]["count"] = stock - cnt
+        materials[item]["enchant"][enchant]["count"] = stock - cnt
         save_data(DATA_FILE, materials)
 
         # sale_data.json에 append
