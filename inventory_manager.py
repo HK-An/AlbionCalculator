@@ -1,21 +1,36 @@
-import os
 import json
 import datetime
 from PyQt5.QtWidgets import (
-    QWidget, QVBoxLayout, QLabel, QComboBox, QLineEdit, QSpinBox, QPushButton, QMessageBox, QHBoxLayout
+    QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton,
+    QComboBox, QSpinBox, QMessageBox
 )
 
 DATA_FILE = "material_data.json"
+CATEGORY_FILE = "category.json"
 
 def load_data(filename):
-    if os.path.exists(filename):
-        with open(filename, "r") as f:
-            return json.load(f)
-    return {}
+    with open(filename, encoding="utf-8") as f:
+        return json.load(f)
 
 def save_data(filename, data):
-    with open(filename, "w") as f:
-        json.dump(data, f, indent=2)
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+def load_category_tree():
+    with open(CATEGORY_FILE, encoding="utf-8") as f:
+        return json.load(f)
+
+def get_category_path_from_index(cat_tree, idx_list):
+    names = []
+    node = cat_tree
+    for idx in idx_list:
+        idx_str = str(idx)
+        if idx_str in node:
+            names.append(node[idx_str]["name"])
+            node = node[idx_str].get("category", {})
+        else:
+            break
+    return names
 
 class InventoryManager(QWidget):
     def __init__(self):
@@ -23,117 +38,242 @@ class InventoryManager(QWidget):
         self.setWindowTitle("인벤토리")
         layout = QVBoxLayout()
 
-        # 1. 검색/카테고리 위젯
-        filter_layout = QHBoxLayout()
-        self.search_box = QLineEdit()
-        self.search_box.setPlaceholderText("아이템명 검색")
-        self.search_box.textChanged.connect(self.filter_materials)
-        filter_layout.addWidget(QLabel("이름검색"))
-        filter_layout.addWidget(self.search_box)
-        self.category_select = QComboBox()
-        self.category_select.addItem("전체")
-        self.category_select.currentIndexChanged.connect(self.filter_materials)
-        filter_layout.addWidget(QLabel("카테고리"))
-        filter_layout.addWidget(self.category_select)
-        layout.addLayout(filter_layout)
-
-        # 2. 아이템선택 콤보
+        # 재료 선택
         self.material_select = QComboBox()
         self.material_select.addItem("새로 입력")
         self.material_select.currentIndexChanged.connect(self.load_selected_material)
-        layout.addWidget(QLabel("재료(검색/선택)"))
         layout.addWidget(self.material_select)
 
-        # 3. 아이템명/카테고리/인첸트 등 입력
+        # 이름 입력
         self.name = QLineEdit()
-        layout.addWidget(QLabel("재료명"))
+        layout.addWidget(QLabel("이름"))
         layout.addWidget(self.name)
-        self.category_input = QComboBox()
-        # 카테고리 종류는 실제 데이터 로딩 이후 세팅
+
+        # 카테고리 콤보박스 4단계
+        self.cat_box1 = QComboBox()
+        self.cat_box2 = QComboBox()
+        self.cat_box3 = QComboBox()
+        self.cat_box4 = QComboBox()
+        for box in [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]:
+            box.currentIndexChanged.connect(self.update_category_boxes)
+        cat_layout = QHBoxLayout()
+        for box in [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]:
+            cat_layout.addWidget(box)
         layout.addWidget(QLabel("카테고리"))
-        layout.addWidget(self.category_input)
+        layout.addLayout(cat_layout)
+
+        # 인첸트, 가격 등 기타 필드
         self.enchant = QComboBox()
-        for i in range(0, 5):
-            self.enchant.addItem(f"{i} 인첸트", i)
+        for i in range(5): self.enchant.addItem(str(i), i)
+        self.buy_price = QSpinBox()
+        self.fee = QSpinBox()
+        self.count = QSpinBox()
+        self.market_price = QSpinBox()
+        self.market_price_time = QLineEdit()
         layout.addWidget(QLabel("인첸트"))
         layout.addWidget(self.enchant)
-        self.buy_price = QSpinBox()
-        self.buy_price.setMaximum(9999999)
-        layout.addWidget(QLabel("구매가격"))
+        layout.addWidget(QLabel("구매가"))
         layout.addWidget(self.buy_price)
-        self.fee = QSpinBox()
-        self.fee.setMaximum(9999999)
-        layout.addWidget(QLabel("제작시 수수료"))
+        layout.addWidget(QLabel("수수료"))
         layout.addWidget(self.fee)
-        self.count = QSpinBox()
-        self.count.setMaximum(9999999)
-        layout.addWidget(QLabel("재고수량"))
+        layout.addWidget(QLabel("수량"))
         layout.addWidget(self.count)
-        self.market_price = QSpinBox()
-        self.market_price.setMaximum(99999999)
-        layout.addWidget(QLabel("시장가 입력"))
+        layout.addWidget(QLabel("시장가"))
         layout.addWidget(self.market_price)
-        self.market_price_time = QLabel("-")
-        layout.addWidget(QLabel("시장가 입력일시"))
+        layout.addWidget(QLabel("시장가입력시각"))
         layout.addWidget(self.market_price_time)
-        btn_save = QPushButton("저장")
-        btn_save.clicked.connect(self.save_material)
-        layout.addWidget(btn_save)
-        self.setLayout(layout)
 
-        self.materials = {}
+        # 버튼
+        btn = QPushButton("저장")
+        btn.clicked.connect(self.save_material)
+        layout.addWidget(btn)
+
+        self.setLayout(layout)
+        self.cat_tree = load_category_tree()
         self.load_materials()
 
-    def load_materials(self):
-        # 데이터 로딩 및 구조 보정
-        raw = load_data(DATA_FILE)
-        self.materials = {}
-        category_set = set()
-        for name, val in raw.items():
-            # category/enchant 구조로 변환
-            if isinstance(val, dict) and "enchant" in val:
-                self.materials[name] = val
-                if "category" in val:
-                    category_set.add(val["category"])
+    def update_category_boxes(self):
+        node = self.cat_tree
+        boxes = [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]
+        idx_list = [box.currentData() for box in boxes]
+        for depth, box in enumerate(boxes):
+            # 하위 후보 갱신 전 block
+            box.blockSignals(True)
+            box.clear()
+            box.addItem("")
+            if node and isinstance(node, dict):
+                for k in sorted(node.keys(), key=int):
+                    box.addItem(node[k]["name"], int(k))
+            # 현재 선택값 복구
+            idx = idx_list[depth]
+            if idx is not None and idx in [box.itemData(i) for i in range(box.count()) if box.itemData(i) is not None]:
+                # 값이 있으면 복구
+                for i in range(box.count()):
+                    if box.itemData(i) == idx:
+                        box.setCurrentIndex(i)
+                        break
             else:
-                # 구버전 호환
-                self.materials[name] = {
-                    "category": "",
-                    "enchant": val if isinstance(val, dict) else {"0": val}
-                }
-        # 카테고리 콤보 업데이트
-        self.category_select.blockSignals(True)
-        self.category_select.clear()
-        self.category_select.addItem("전체")
-        for c in sorted(category_set):
-            if c: self.category_select.addItem(c)
-        self.category_select.blockSignals(False)
-        # 입력폼의 카테고리 선택도 동기화
-        self.category_input.clear()
-        self.category_input.addItem("")  # 공백(없음)
-        for c in sorted(category_set):
-            if c: self.category_input.addItem(c)
-        self.filter_materials()
+                box.setCurrentIndex(0)
+            box.blockSignals(False)
+            # 다음 노드 이동
+            if box.currentIndex() > 0:
+                node = node.get(str(box.currentData()), {}).get("category", {})
+            else:
+                node = None
+    # def update_category_boxes(self):
+    #     node = self.cat_tree
+    #     boxes = [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]
+    #     idx_list = []
+    #     # 1~4단계 현재 선택값 저장
+    #     for box in boxes:
+    #         idx = box.currentData()
+    #         idx_list.append(idx)
+    #     # 1단계(최상위) 후보는 항상 채우기
+    #     box = boxes[0]
+    #     sel_idx = box.currentIndex()
+    #     box.blockSignals(True)
+    #     box.clear()
+    #     box.addItem("")
+    #     if isinstance(node, dict):
+    #         for k in sorted(node.keys(), key=int):
+    #             box.addItem(node[k]["name"], int(k))
+    #     box.blockSignals(False)
+    #     # 선택값 복구
+    #     if sel_idx > 0 and sel_idx < box.count():
+    #         box.setCurrentIndex(sel_idx)
+    #     else:
+    #         box.setCurrentIndex(0)
+    #     # 하위단계
+    #     for depth in range(1, 4):
+    #         prev = boxes[depth - 1]
+    #         prev_idx = prev.currentData()
+    #         node = node.get(str(prev_idx), {}).get("category", {}) if prev_idx is not None and node else None
+    #         box = boxes[depth]
+    #         sel_idx = box.currentIndex()
+    #         box.blockSignals(True)
+    #         box.clear()
+    #         box.addItem("")
+    #         if node and isinstance(node, dict):
+    #             for k in sorted(node.keys(), key=int):
+    #                 box.addItem(node[k]["name"], int(k))
+    #         box.blockSignals(False)
+    #         if sel_idx > 0 and sel_idx < box.count():
+    #             box.setCurrentIndex(sel_idx)
+    #         else:
+    #             box.setCurrentIndex(0)
+    # def update_category_boxes(self):
+    #     # 단계별 카테고리 후보 갱신
+    #     node = self.cat_tree
+    #     boxes = [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]
+    #     for depth, box in enumerate(boxes):
+    #         prev_idx = box.currentData()
+    #         box.blockSignals(True)
+    #         box.clear()
+    #         box.addItem("")
+    #         if isinstance(node, dict):
+    #             for k in sorted(node.keys(), key=int):
+    #                 box.addItem(node[k]["name"], int(k))
+    #         box.blockSignals(False)
+    #         # 다음 단계로 진입
+    #         if box.currentIndex() > 0:
+    #             idx = box.currentData()
+    #             node = node.get(str(idx), {}).get("category", {})
+    #         else:
+    #             # 하위박스 초기화
+    #             for b in boxes[depth+1:]:
+    #                 b.blockSignals(True)
+    #                 b.clear()
+    #                 b.addItem("")
+    #                 b.blockSignals(False)
+    #             break
 
-    def filter_materials(self, *args):
-        name_filter = self.search_box.text().strip()
-        category_filter = self.category_select.currentText()
+    def get_selected_category_index(self):
+        boxes = [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]
+        idx_list = []
+        for box in boxes:
+            idx = box.currentData()
+            if idx is not None:
+                idx_list.append(idx)
+            else:
+                break
+        return idx_list
+
+    # def set_category_boxes_by_index(self, idx_list):
+    #     node = self.cat_tree
+    #     boxes = [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]
+    #     for i, idx in enumerate(idx_list):
+    #         box = boxes[i]
+    #         box.blockSignals(True)
+    #         box.clear()
+    #         box.addItem("")
+    #         if isinstance(node, dict):
+    #             for k in sorted(node.keys(), key=int):
+    #                 box.addItem(node[k]["name"], int(k))
+    #         box.setCurrentIndex(idx + 1)  # 0: ""(공백), 1: 0번 index ...
+    #         box.blockSignals(False)
+    #         # 다음 단계로 진입
+    #         node = node.get(str(idx), {}).get("category", {})
+    #     # 나머지 하위는 공백으로 초기화
+    #     for j in range(len(idx_list), 4):
+    #         boxes[j].blockSignals(True)
+    #         boxes[j].clear()
+    #         boxes[j].addItem("")
+    #         boxes[j].blockSignals(False)
+    def set_category_boxes_by_index(self, idx_list):
+        node = self.cat_tree
+        boxes = [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]
+        # 1단계(최상위) 후보는 무조건 채우기
+        box = boxes[0]
+        box.blockSignals(True)
+        box.clear()
+        box.addItem("")
+        if isinstance(node, dict):
+            for k in sorted(node.keys(), key=int):
+                box.addItem(node[k]["name"], int(k))
+        if idx_list and len(idx_list) > 0:
+            box.setCurrentIndex(idx_list[0] + 1)
+            node = node.get(str(idx_list[0]), {}).get("category", {})
+        else:
+            box.setCurrentIndex(0)
+            node = None
+        box.blockSignals(False)
+        # 2~4단계는 idx_list 기반으로만 후보 채움
+        for i in range(1, 4):
+            box = boxes[i]
+            box.blockSignals(True)
+            box.clear()
+            box.addItem("")
+            if node and isinstance(node, dict):
+                for k in sorted(node.keys(), key=int):
+                    box.addItem(node[k]["name"], int(k))
+            if idx_list and len(idx_list) > i:
+                box.setCurrentIndex(idx_list[i] + 1)
+                node = node.get(str(idx_list[i]), {}).get("category", {}) if node else None
+            else:
+                box.setCurrentIndex(0)
+                node = None
+            box.blockSignals(False)
+
+    def load_materials(self):
+        # material_data.json에서 불러오기
+        try:
+            raw = load_data(DATA_FILE)
+        except:
+            raw = {}
+        self.materials = raw
         self.material_select.blockSignals(True)
         self.material_select.clear()
         self.material_select.addItem("새로 입력")
-        for name, meta in self.materials.items():
-            if category_filter != "전체" and meta.get("category","") != category_filter:
-                continue
-            if name_filter and name_filter not in name:
-                continue
+        for name in self.materials:
             self.material_select.addItem(name)
         self.material_select.blockSignals(False)
+        self.update_category_boxes()
 
     def load_selected_material(self):
         idx = self.material_select.currentIndex()
         if idx == 0:  # 새로 입력
             self.name.setText("")
-            self.category_input.setCurrentIndex(0)
+            self.set_category_boxes_by_index([])
             self.enchant.setCurrentIndex(0)
             self.buy_price.setValue(0)
             self.fee.setValue(0)
@@ -143,12 +283,11 @@ class InventoryManager(QWidget):
         else:
             mat_name = self.material_select.currentText()
             meta = self.materials.get(mat_name, {})
-            # 카테고리 표시
-            category_val = meta.get("category","")
-            cat_idx = self.category_input.findText(category_val)
-            self.category_input.setCurrentIndex(cat_idx if cat_idx>=0 else 0)
+            # 카테고리
+            cat_idx = meta.get("category", [])
+            self.set_category_boxes_by_index(cat_idx)
             self.name.setText(mat_name)
-            # 인첸트별 정보 로딩(기본 0인첸트)
+            # 인첸트
             enchants = meta.get("enchant", {})
             ench_str = str(self.enchant.currentData()) if self.enchant.currentData() is not None else "0"
             mat = enchants.get(ench_str, {})
@@ -167,7 +306,7 @@ class InventoryManager(QWidget):
         c = self.count.value()
         m = self.market_price.value()
         enchant = str(self.enchant.currentData())
-        category = self.category_input.currentText()
+        category_idx = self.get_selected_category_index()
         now = datetime.datetime.now().isoformat(sep=" ", timespec="seconds") if m else materials.get(n, {}).get("enchant", {}).get(enchant, {}).get("market_price_time")
         if not n:
             QMessageBox.warning(self, "경고", "재료명을 입력하세요")
@@ -178,9 +317,9 @@ class InventoryManager(QWidget):
             return
         # 구조 맞추기
         if n not in materials or not isinstance(materials[n], dict):
-            materials[n] = {"category": category, "enchant": {}}
+            materials[n] = {"category": category_idx, "enchant": {}}
         else:
-            materials[n]["category"] = category
+            materials[n]["category"] = category_idx
         if "enchant" not in materials[n]:
             materials[n]["enchant"] = {}
         materials[n]["enchant"][enchant] = {
