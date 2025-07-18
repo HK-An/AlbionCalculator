@@ -1,12 +1,17 @@
+import os
 import json
 import datetime
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton,
     QComboBox, QSpinBox, QMessageBox
 )
+from inventory.crafting_manager import CraftingManager
 
-DATA_FILE = "material_data.json"
+# DATA_FILE = "material_data.json"
 CATEGORY_FILE = "category.json"
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_FILE = os.path.join(BASE_DIR, '', 'material_data.json')
 
 def load_data(filename):
     with open(filename, encoding="utf-8") as f:
@@ -84,13 +89,24 @@ class InventoryManager(QWidget):
         layout.addWidget(self.market_price_time)
 
         # 버튼
-        btn = QPushButton("저장")
-        btn.clicked.connect(self.save_material)
-        layout.addWidget(btn)
+        saveBtn = QPushButton("저장")
+        saveBtn.clicked.connect(self.save_material)
+        layout.addWidget(saveBtn)
+
+
+        
+
+        craftingBtn = QPushButton("제작")
+        craftingBtn.clicked.connect(self.open_crafting)
+        layout.addWidget(craftingBtn)
 
         self.setLayout(layout)
         self.cat_tree = load_category_tree()
         self.load_materials()
+
+    def open_crafting(self):
+        self.crafting_manager = CraftingManager()
+        self.crafting_manager.show()
 
     def update_category_boxes(self):
         node = self.cat_tree
@@ -120,72 +136,6 @@ class InventoryManager(QWidget):
                 node = node.get(str(box.currentData()), {}).get("category", {})
             else:
                 node = None
-    # def update_category_boxes(self):
-    #     node = self.cat_tree
-    #     boxes = [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]
-    #     idx_list = []
-    #     # 1~4단계 현재 선택값 저장
-    #     for box in boxes:
-    #         idx = box.currentData()
-    #         idx_list.append(idx)
-    #     # 1단계(최상위) 후보는 항상 채우기
-    #     box = boxes[0]
-    #     sel_idx = box.currentIndex()
-    #     box.blockSignals(True)
-    #     box.clear()
-    #     box.addItem("")
-    #     if isinstance(node, dict):
-    #         for k in sorted(node.keys(), key=int):
-    #             box.addItem(node[k]["name"], int(k))
-    #     box.blockSignals(False)
-    #     # 선택값 복구
-    #     if sel_idx > 0 and sel_idx < box.count():
-    #         box.setCurrentIndex(sel_idx)
-    #     else:
-    #         box.setCurrentIndex(0)
-    #     # 하위단계
-    #     for depth in range(1, 4):
-    #         prev = boxes[depth - 1]
-    #         prev_idx = prev.currentData()
-    #         node = node.get(str(prev_idx), {}).get("category", {}) if prev_idx is not None and node else None
-    #         box = boxes[depth]
-    #         sel_idx = box.currentIndex()
-    #         box.blockSignals(True)
-    #         box.clear()
-    #         box.addItem("")
-    #         if node and isinstance(node, dict):
-    #             for k in sorted(node.keys(), key=int):
-    #                 box.addItem(node[k]["name"], int(k))
-    #         box.blockSignals(False)
-    #         if sel_idx > 0 and sel_idx < box.count():
-    #             box.setCurrentIndex(sel_idx)
-    #         else:
-    #             box.setCurrentIndex(0)
-    # def update_category_boxes(self):
-    #     # 단계별 카테고리 후보 갱신
-    #     node = self.cat_tree
-    #     boxes = [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]
-    #     for depth, box in enumerate(boxes):
-    #         prev_idx = box.currentData()
-    #         box.blockSignals(True)
-    #         box.clear()
-    #         box.addItem("")
-    #         if isinstance(node, dict):
-    #             for k in sorted(node.keys(), key=int):
-    #                 box.addItem(node[k]["name"], int(k))
-    #         box.blockSignals(False)
-    #         # 다음 단계로 진입
-    #         if box.currentIndex() > 0:
-    #             idx = box.currentData()
-    #             node = node.get(str(idx), {}).get("category", {})
-    #         else:
-    #             # 하위박스 초기화
-    #             for b in boxes[depth+1:]:
-    #                 b.blockSignals(True)
-    #                 b.clear()
-    #                 b.addItem("")
-    #                 b.blockSignals(False)
-    #             break
 
     def get_selected_category_index(self):
         boxes = [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]
@@ -198,27 +148,6 @@ class InventoryManager(QWidget):
                 break
         return idx_list
 
-    # def set_category_boxes_by_index(self, idx_list):
-    #     node = self.cat_tree
-    #     boxes = [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]
-    #     for i, idx in enumerate(idx_list):
-    #         box = boxes[i]
-    #         box.blockSignals(True)
-    #         box.clear()
-    #         box.addItem("")
-    #         if isinstance(node, dict):
-    #             for k in sorted(node.keys(), key=int):
-    #                 box.addItem(node[k]["name"], int(k))
-    #         box.setCurrentIndex(idx + 1)  # 0: ""(공백), 1: 0번 index ...
-    #         box.blockSignals(False)
-    #         # 다음 단계로 진입
-    #         node = node.get(str(idx), {}).get("category", {})
-    #     # 나머지 하위는 공백으로 초기화
-    #     for j in range(len(idx_list), 4):
-    #         boxes[j].blockSignals(True)
-    #         boxes[j].clear()
-    #         boxes[j].addItem("")
-    #         boxes[j].blockSignals(False)
     def set_category_boxes_by_index(self, idx_list):
         node = self.cat_tree
         boxes = [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]

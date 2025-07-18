@@ -36,8 +36,6 @@ class RecipeCalc(QWidget):
         self.make_count = QSpinBox()
         self.make_count.setMaximum(999999)
 
-
-
         layout.addWidget(QLabel("레시피 선택"))
         layout.addWidget(self.recipe_select)
         layout.addWidget(QLabel("개당 제작 수수료"))

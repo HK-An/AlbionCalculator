@@ -1,16 +1,13 @@
 import sys
-import datetime
 import json
 import os
 from profit_manager import ProfitManager
 from sale_register import SaleRegister
-from inventory_manager import InventoryManager
-from recipe_calc import RecipeCalc
-from recipe_manager import RecipeManager
+from inventory.inventory_manager import InventoryManager
+from receipe.recipe_calc import RecipeCalc
+from receipe.recipe_manager import RecipeManager
 from PyQt5.QtWidgets import (
-    QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
-    QPushButton
-    # , QTextEdit, QComboBox, QMessageBox, QSpinBox
+    QApplication, QWidget, QVBoxLayout, QPushButton
 )
 
 DATA_FILE = "material_data.json"
