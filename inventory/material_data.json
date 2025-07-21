@@ -5,31 +5,17 @@
       4,
       2
     ],
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 7,
-      "market_price": 242,
-      "market_price_time": "2025-07-12 23:30:18"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
         "fee": 0,
-        "count": 355,
+        "count": 0,
         "market_price": 272,
         "market_price_time": "2025-07-13 14:30:27"
       }
     }
   },
   "해조": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 0,
-      "market_price_time": null
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -46,13 +32,6 @@
     ]
   },
   "당근": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 354,
-      "market_price_time": "2025-07-12 23:13:43"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -64,13 +43,6 @@
     }
   },
   "장인낚시꾼의일지": {
-    "0": {
-      "buy_price": 996,
-      "fee": 0,
-      "count": 0,
-      "market_price": 8959,
-      "market_price_time": "2025-07-12 23:48:46"
-    },
     "enchant": {
       "0": {
         "buy_price": 996,
@@ -82,13 +54,6 @@
     }
   },
   "철광석": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 0,
-      "market_price_time": null
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -115,13 +80,6 @@
     }
   },
   "입문자의곡괭이": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 19,
-      "market_price_time": "2025-07-12 23:13:59"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -133,13 +91,6 @@
     }
   },
   "기본낚시미끼": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 232,
-      "market_price_time": "2025-07-12 23:14:04"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -151,13 +102,6 @@
     }
   },
   "초심자의가방": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 762,
-      "market_price_time": "2025-07-12 23:25:00"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -169,46 +113,32 @@
     }
   },
   "깔끔한직물": {
-    "0": {
-      "buy_price": 0,
-      "fee": 446,
-      "count": 150,
-      "market_price": 0,
-      "market_price_time": null
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
-        "fee": 99,
-        "count": 99,
+        "fee": 757,
+        "count": 196,
         "market_price": 0,
         "market_price_time": null
       }
     },
-    "count": 162,
-    "fee": 3,
+    "tier": 3,
     "category": [
       9,
       1
     ]
   },
   "괜찮은직물": {
-    "0": {
-      "buy_price": 0,
-      "fee": 465,
-      "count": 52,
-      "market_price": 0,
-      "market_price_time": null
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
-        "fee": 99,
-        "count": 52,
+        "fee": 1018,
+        "count": 147,
         "market_price": 0,
         "market_price_time": null
       }
     },
+    "tier": 4,
     "category": [
       9,
       1
@@ -226,20 +156,6 @@
     }
   },
   "소나무원목": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 143,
-      "market_price_time": "2025-07-12 23:14:28"
-    },
-    "1": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 148,
-      "market_price_time": "2025-07-12 23:16:43"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -255,13 +171,6 @@
     ]
   },
   "드라이브룩게": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 4903,
-      "market_price_time": "2025-07-12 23:14:31"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -273,13 +182,6 @@
     }
   },
   "삼나무원목": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 272,
-      "market_price_time": "2025-07-12 23:14:35"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -295,18 +197,11 @@
     ]
   },
   "소나무판자": {
-    "0": {
-      "buy_price": 0,
-      "fee": 536,
-      "count": 0,
-      "market_price": 324,
-      "market_price_time": "2025-07-12 23:14:38"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
-        "fee": 99,
-        "count": 16,
+        "fee": 84,
+        "count": 19,
         "market_price": 99,
         "market_price_time": "2025-07-16 13:18:45"
       }
@@ -317,13 +212,6 @@
     ]
   },
   "전문가의수송용황소": {
-    "0": {
-      "buy_price": 99985,
-      "fee": 0,
-      "count": 0,
-      "market_price": 99985,
-      "market_price_time": "2025-07-12 23:14:41"
-    },
     "enchant": {
       "0": {
         "buy_price": 99985,
@@ -335,13 +223,6 @@
     }
   },
   "숙련자의망토": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 2191,
-      "market_price_time": "2025-07-12 23:21:18"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -353,13 +234,6 @@
     }
   },
   "숙련자의가방": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 4052,
-      "market_price_time": "2025-07-12 23:21:59"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -371,13 +245,6 @@
     }
   },
   "초심자의학자샌들": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 455,
-      "market_price_time": "2025-07-12 23:22:52"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -389,13 +256,6 @@
     }
   },
   "초심자의파이어스태프": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 478,
-      "market_price_time": "2025-07-12 23:23:25"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -407,13 +267,6 @@
     }
   },
   "숙련자의용병자켓": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 2879,
-      "market_price_time": "2025-07-12 23:24:00"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -425,13 +278,6 @@
     }
   },
   "초심자의학자두건": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 415,
-      "market_price_time": "2025-07-12 23:25:31"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -443,13 +289,6 @@
     }
   },
   "초심자의학자로브": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 237,
-      "market_price_time": "2025-07-12 23:26:11"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -461,13 +300,6 @@
     }
   },
   "숙련자의용병후드": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 1519,
-      "market_price_time": "2025-07-12 23:26:46"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -479,13 +311,6 @@
     }
   },
   "장인벌목꾼의일지": {
-    "0": {
-      "buy_price": 1287,
-      "fee": 0,
-      "count": 0,
-      "market_price": 4889,
-      "market_price_time": "2025-07-12 23:27:44"
-    },
     "enchant": {
       "0": {
         "buy_price": 1287,
@@ -497,13 +322,6 @@
     }
   },
   "숙련자의용병신발": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 1340,
-      "market_price_time": "2025-07-12 23:28:28"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -515,13 +333,6 @@
     }
   },
   "마스터의기사아머": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 22079,
-      "market_price_time": "2025-07-12 23:29:06"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -533,13 +344,6 @@
     }
   },
   "화이트포그스내퍼": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 2589,
-      "market_price_time": "2025-07-12 23:29:39"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -551,13 +355,6 @@
     }
   },
   "사암": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 113,
-      "market_price_time": "2025-07-12 23:31:27"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -573,13 +370,6 @@
     ]
   },
   "사암석괴": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 190,
-      "market_price_time": "2025-07-12 23:32:23"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -595,13 +385,6 @@
     ]
   },
   "숙련자의낚싯대": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 1629,
-      "market_price_time": "2025-07-12 23:33:04"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -613,13 +396,6 @@
     }
   },
   "트래버틴석괴": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 191,
-      "market_price_time": "2025-07-12 23:33:37"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -635,13 +411,6 @@
     ]
   },
   "장인의수송용황소": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 12170,
-      "market_price_time": "2025-07-12 23:34:48"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -653,13 +422,6 @@
     }
   },
   "얇은가죽": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 103,
-      "market_price_time": "2025-07-12 23:40:05"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -675,18 +437,11 @@
     ]
   },
   "가공된피혁": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 4,
-      "market_price": 250,
-      "market_price_time": "2025-07-12 23:41:15"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
-        "fee": 0,
-        "count": 4,
+        "fee": 9144,
+        "count": 178,
         "market_price": 99,
         "market_price_time": "2025-07-16 13:19:35"
       }
@@ -697,34 +452,6 @@
     ]
   },
   "적당한가죽": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 100,
-      "market_price_time": "2025-07-12 23:41:58"
-    },
-    "3": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 9479,
-      "market_price_time": "2025-07-12 23:44:45"
-    },
-    "2": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 1450,
-      "market_price_time": "2025-07-12 23:45:14"
-    },
-    "1": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 173,
-      "market_price_time": "2025-07-12 23:45:57"
-    },
     "enchant": {
       "2": {
         "buy_price": 0,
@@ -747,20 +474,6 @@
     ]
   },
   "튼튼한가죽": {
-    "0": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 0,
-      "market_price_time": null
-    },
-    "1": {
-      "buy_price": 0,
-      "fee": 0,
-      "count": 0,
-      "market_price": 3427,
-      "market_price_time": "2025-07-12 23:44:09"
-    },
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -931,7 +644,7 @@
       "0": {
         "buy_price": 0,
         "fee": 0,
-        "count": 99,
+        "count": 377,
         "market_price": 0,
         "market_price_time": null
       }
@@ -975,8 +688,8 @@
     "enchant": {
       "0": {
         "buy_price": 0,
-        "fee": 99,
-        "count": 0,
+        "fee": 366,
+        "count": 272,
         "market_price": 0,
         "market_price_time": null
       }
@@ -990,8 +703,8 @@
     "enchant": {
       "0": {
         "buy_price": 0,
-        "fee": 99,
-        "count": 0,
+        "fee": 1729,
+        "count": 228,
         "market_price": 99,
         "market_price_time": "2025-07-16 13:21:07"
       }
@@ -1020,8 +733,8 @@
     "enchant": {
       "0": {
         "buy_price": 0,
-        "fee": 27,
-        "count": 12,
+        "fee": 3997,
+        "count": 96,
         "market_price": 0,
         "market_price_time": null
       }
@@ -1030,5 +743,128 @@
       9,
       1
     ]
+  },
+  "삼": {
+    "category": [
+      9,
+      0
+    ],
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 0,
+        "market_price": 0,
+        "market_price_time": null
+      }
+    }
+  },
+  "초심자농부의일지": {
+    "category": [
+      14
+    ],
+    "enchant": {
+      "0": {
+        "buy_price": 40,
+        "fee": 0,
+        "count": 5,
+        "market_price": 40,
+        "market_price_time": "2025-07-19 09:14:46"
+      }
+    }
+  },
+  "지식의서적": {
+    "category": [
+      14,
+      1,
+      1,
+      0
+    ],
+    "enchant": {
+      "0": {
+        "buy_price": 99,
+        "fee": 0,
+        "count": 2,
+        "market_price": 99,
+        "market_price_time": "2025-07-19 09:14:35"
+      }
+    }
+  },
+  "장인탐광자의일지": {
+    "category": [
+      14,
+      1,
+      0,
+      4
+    ],
+    "enchant": {
+      "0": {
+        "buy_price": 1265,
+        "fee": 0,
+        "count": 1,
+        "market_price": 0,
+        "market_price_time": null
+      }
+    }
+  },
+  "자작나무판자": {
+    "category": [
+      9,
+      1
+    ],
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 2,
+        "market_price": 0,
+        "market_price_time": null
+      }
+    }
+  },
+  "두꺼운피혁": {
+    "category": [
+      9,
+      1
+    ],
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 16432,
+        "count": 515,
+        "market_price": 0,
+        "market_price_time": null
+      }
+    }
+  },
+  "뻣뻣한피혁": {
+    "category": [
+      9,
+      1
+    ],
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 0,
+        "market_price": 0,
+        "market_price_time": null
+      }
+    }
+  },
+  "질긴가죽": {
+    "category": [
+      9,
+      1
+    ],
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 0,
+        "market_price": 0,
+        "market_price_time": null
+      }
+    }
   }
 }

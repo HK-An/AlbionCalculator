@@ -3,7 +3,7 @@ import json
 import datetime
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton,
-    QComboBox, QSpinBox, QMessageBox
+    QComboBox, QSpinBox, QMessageBox, QDoubleSpinBox
 )
 from inventory.crafting_manager import CraftingManager
 
@@ -75,14 +75,24 @@ class InventoryManager(QWidget):
         self.count = QSpinBox()
         self.market_price = QSpinBox()
         self.market_price_time = QLineEdit()
+        self.production_fee = QDoubleSpinBox()
+
+        self.fee.setMaximum(9999999)
+        self.count.setMaximum(9999999)
+        self.production_fee.setMaximum(9999999)
+        self.buy_price.setMaximum(9999999)
+
         layout.addWidget(QLabel("인첸트"))
         layout.addWidget(self.enchant)
         layout.addWidget(QLabel("구매가"))
         layout.addWidget(self.buy_price)
         layout.addWidget(QLabel("수수료"))
         layout.addWidget(self.fee)
+        
         layout.addWidget(QLabel("수량"))
         layout.addWidget(self.count)
+        layout.addWidget(QLabel("생산단가"))
+        layout.addWidget(self.production_fee);
         layout.addWidget(QLabel("시장가"))
         layout.addWidget(self.market_price)
         layout.addWidget(QLabel("시장가입력시각"))
@@ -223,10 +233,15 @@ class InventoryManager(QWidget):
             self.buy_price.setValue(mat.get("buy_price", 0))
             self.fee.setValue(mat.get("fee", 0))
             self.count.setValue(mat.get("count", 0))
+            self.production_fee.setValue(self.calculate_production_fee(mat.get("fee", 0), mat.get("count", 0)))
             self.market_price.setValue(mat.get("market_price", 0))
             t = mat.get("market_price_time", None)
             self.market_price_time.setText(str(t) if t else "-")
-
+    def calculate_production_fee(self, fee, count):
+        if fee == 0: return 0
+        
+        return fee/count
+    
     def save_material(self):
         materials = load_data(DATA_FILE)
         n = self.name.text()
