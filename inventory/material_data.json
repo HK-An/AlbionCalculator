@@ -613,8 +613,8 @@
     "enchant": {
       "0": {
         "buy_price": 0,
-        "fee": 0,
-        "count": 0,
+        "fee": 86,
+        "count": 86,
         "market_price": 26,
         "market_price_time": "2025-07-16 13:20:10"
       }
@@ -688,8 +688,8 @@
     "enchant": {
       "0": {
         "buy_price": 0,
-        "fee": 366,
-        "count": 272,
+        "fee": 143,
+        "count": 43,
         "market_price": 0,
         "market_price_time": null
       }

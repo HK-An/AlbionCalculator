@@ -1,0 +1,21 @@
+{
+    "debug": {
+        "item_name": "item_name",
+        "calculate": "calculate"
+    },
+
+    "ko": {
+        "item_name": "아이템명",
+        "calculate": "계산하기",
+        "btn_calculate": "계산하기",
+        "btn_craft": "제작하기",
+        "combo_new": "새로 입력",
+        "combo_not_selected": "선택안함",
+        "label_craft_count": "제작갯수",
+        "label_total_craft_fee": "총 제작수수료",
+        "label_ingredient_and_count": "재료와 수량",
+        "label_item_name": "아이템명",
+        "label_recipe_name": "레시피명",
+        "msg_craft_process": "입력하신 내용으로 제작하시겠습니까?"
+    }
+}

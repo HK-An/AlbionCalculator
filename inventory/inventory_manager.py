@@ -237,6 +237,7 @@ class InventoryManager(QWidget):
             self.market_price.setValue(mat.get("market_price", 0))
             t = mat.get("market_price_time", None)
             self.market_price_time.setText(str(t) if t else "-")
+            
     def calculate_production_fee(self, fee, count):
         if fee == 0: return 0
         

@@ -4,6 +4,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 RECIPE_FILE = os.path.join(BASE_DIR, 'receipe', 'recipes.json')
 MATERIAL_FILE = os.path.join(BASE_DIR, 'inventory', 'material_data.json')
+LANG_FILE = os.path.join(BASE_DIR, '', 'lang.json')
 
 def load_data(filename):
     with open(filename, encoding="utf-8") as f:
@@ -16,6 +17,10 @@ def save_data(filename, data):
 class Util():
     def __init__(self):
         self.load_materials()
+        self.load_lang()
+
+    def get_item_from_inventory(self, item_name):
+        return self.materials.get(item_name, {})
 
     def add_inventory(self, item_name, item_count, fee):
         mat = self.materials.get(item_name, {})
@@ -69,18 +74,26 @@ class Util():
             material_raw = {}
 
         self.materials = material_raw
+    
+    def load_lang(self):
+        try:
+            lang_raw = load_data(LANG_FILE)
+        except:
+            lang_raw = {}
+        self.lang = lang_raw
 
     def consume_ingredients_and_transfer_fee(self, materials_dict, output_count):
         """
         materials_dict: {'item_name': 사용수량, ...}
         output_count: 산출 갯수
         """
-        for item, used_count in materials_dict.items():
+        for item, remaining_count in materials_dict.items():
             mat = self.materials.get(item, {})
             if not mat or "enchant" not in mat or "0" not in mat["enchant"]:
                 continue
             # 재고(수량) 감소
             old_count = mat["enchant"]["0"].get("count", 0)
+            used_count = old_count - remaining_count
             mat["enchant"]["0"]["count"] = max(0, old_count - used_count)
             # fee 전가 계산
             old_fee = mat["enchant"]["0"].get("fee", 0)
@@ -95,3 +108,5 @@ class Util():
             yield item, transfer_fee
         self.save_materials()
 
+    def get_text_from_lang(self, lang, text):
+        return self.lang.get(lang).get(text, {})
