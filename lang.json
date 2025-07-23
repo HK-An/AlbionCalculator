@@ -7,15 +7,122 @@
     "ko": {
         "item_name": "아이템명",
         "calculate": "계산하기",
-        "btn_calculate": "계산하기",
-        "btn_craft": "제작하기",
+        "btn_calculate": "계산",
+        "btn_craft": "제작",
+        "btn_save": "저장",
+
         "combo_new": "새로 입력",
         "combo_not_selected": "선택안함",
+
+
+        "item_staff_fire_novice": "초심자의파이어스태프",
+
+        "item_armor_mercenary_adept": "숙련자의용병자켓",
+        "item_armor_knight_master": "마스터의기사아머",
+        "item_armor_scholar_robe": "초심자의학자로브",
+
+        "item_shoes_mercenary_adept": "숙련자의용병신발",
+        "item_shoes_scholar_novice": "초심자의학자샌들",
+
+        "item_helm_scholar_novice": "초심자의학자두건",
+
+        "item_harvest_fisher_adept": "숙련자의낚싯대",
+
+
+        "item_journal_lumberjack_journeyman": "장인벌목꾼의일지",
+
+        "item_bag_adept": "숙련자의가방",
+        "item_bag_novice": "초심자의가방",
+        "item_bait_basic_fishing": "기본낚시미끼",
+        
+        "item_trophy_knowledge": "지식의서적",
+        "item_cloack_adept": "숙련자의망토",
+
+        "item_fish_green_river": "그린리버장어",
+        "item_fish_albion_bass": "알비온농어",
+        "item_fish_chopped": "토막낸생선",
+        "item_fish_crab_dry_blue": "드라이브룩게",
+        "item_fish_crab_low_river": "로우리버게",
+        "item_fish_seaweed": "해조",
+        "item_fish_stonestream": "스톤스트림떠돌이",
+        "item_fish_skewer_blue_scale": "푸른비늘강꼬치고기",
+        "item_fish_whitefogsnapper": "화이트포그스내퍼",
+        "item_fish_trout_spotted": "점박이송어",
+        "item_fish_whiskered_carp": "줄무늬잉어",
+        "item_fish_cold_eye": "업랜드콜드아이",
+
+        "item_vegetable_carrot": "당근",
+        
+        "item_hide_thin": "얇은가죽",
+        "item_hide_heavy": "헤비가죽",
+        "item_hide_moderate": "적당한가죽",
+        "item_hide_strong": "튼튼한가죽",
+        "item_hide_processed": "가공된피혁",
+        "item_hide_rugged": "질긴가죽",
+        "item_hide_stiff": "뻣뻣한피혁",
+        "item_hide_thick": "두꺼운피혁",
+        
+        "item_journal_farmer_journeyman": "초심자농부의일지",
+        "item_journal_fisherman_master": "장인낚시꾼의일지",
+        "item_journal_hunter_expert": "전문가사냥터지기의일지",
+        "item_journal_lumberjack_expert": "전문가벌목꾼의일지",
+        "item_journal_harvester_journeyman": "수확숙련자의일지",
+        "item_journal_prospector_journeyman": "장인탐광자의일지",
+        "item_journal_prospector_novice": "숙련자탐광자의일지",
+
+        "item_log_cedar": "삼나무원목",
+        "item_log_pine": "소나무원목",
+
+        "item_plank_birch": "자작나무판자",
+        "item_plank_chestnut": "밤나무판자",
+        "item_plank_pine": "소나무판자",
+
+        "item_metal_ore_copper": "구리광석",
+        "item_metal_ore_iron": "철광석",
+        "item_metal_ore_zinc": "아연광석",
+
+        "item_ingot_bronze": "청동주괴",
+        "item_ingot_copper": "구리주괴",
+        "item_ingot_steel": "강철주괴",
+
+        "item_metal_ore_sandstone": "사암",
+
+        "item_block_sandstone": "사암석괴",
+        "item_block_travertine": "트래버틴석괴",
+
+        "item_fiber_flax": "아마",
+        "item_fiber_hemp": "삼",
+
+        "item_cloth_clean": "깔끔한직물",
+        "item_cloth_decent": "괜찮은직물",
+        "item_cloth_simple": "단순한직물",
+
+        "item_pickaxe_novice": "입문자의곡괭이",
+        
+        "item_fish_sauce_basic": "기본피시소스",
+        
+
+        "item_ride_ox_expert": "전문가의수송용황소",
+        "item_ride_ox_journeyman": "장인의수송용황소",
+        "item_helm_adept_mercenary": "숙련자의용병후드",
+
+        "label_bought_price": "구매가",
+        "label_category": "카테고리",
+        "label_count": "수량",
         "label_craft_count": "제작갯수",
-        "label_total_craft_fee": "총 제작수수료",
+        "label_enchant": "인첸트",
+        "label_fee": "수수료",
         "label_ingredient_and_count": "재료와 수량",
         "label_item_name": "아이템명",
+        "label_market_price": "시장가",
+        "label_market_price_entered_time": "시장가입력시간",
+        "label_name": "이름",
+        "label_price_per_production": "생산단가",
         "label_recipe_name": "레시피명",
-        "msg_craft_process": "입력하신 내용으로 제작하시겠습니까?"
+        "label_total_craft_fee": "총 제작수수료",
+
+        "msg_craft_process": "입력하신 내용으로 제작하시겠습니까?",
+        "msg_enter_ingredient_name": "재료명을 입력하세요",
+        "msg_item_is_already_exists": "이미 존재하는 아이템입니다. 수정하려면 리스트에서 선택하세요"
     }
 }

@@ -1,10 +1,6 @@
 {
-  "토막낸생선": {
-    "category": [
-      9,
-      4,
-      2
-    ],
+  "item_fish_chopped": {
+    "category": [9, 4, 2],
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -15,7 +11,7 @@
       }
     }
   },
-  "해조": {
+  "item_fish_seaweed": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -25,13 +21,9 @@
         "market_price_time": null
       }
     },
-    "category": [
-      9,
-      4,
-      2
-    ]
+    "category": [9, 4, 2]
   },
-  "당근": {
+  "item_vegetable_carrot": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -42,7 +34,7 @@
       }
     }
   },
-  "장인낚시꾼의일지": {
+  "item_journal_fisherman_master": {
     "enchant": {
       "0": {
         "buy_price": 996,
@@ -53,7 +45,7 @@
       }
     }
   },
-  "철광석": {
+  "item_metal_ore_iron": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -63,72 +55,54 @@
         "market_price_time": null
       }
     },
-    "category": [
-      9,
-      0
-    ]
+    "category": [9, 0]
   },
-  "기본피시소스": {
+  "item_fish_sauce_basic": {
     "enchant": {
       "0": {
-        "buy_price": 0,
+        "buy_price": 300,
         "fee": 0,
         "count": 0,
-        "market_price": 4300,
-        "market_price_time": "2025-07-13 11:14:09"
-      }
-    }
-  },
-  "입문자의곡괭이": {
-    "enchant": {
-      "0": {
-        "buy_price": 0,
-        "fee": 0,
-        "count": 0,
-        "market_price": 19,
-        "market_price_time": "2025-07-14 11:04:49"
-      }
-    }
-  },
-  "기본낚시미끼": {
-    "enchant": {
-      "0": {
-        "buy_price": 0,
-        "fee": 0,
-        "count": 0,
-        "market_price": 232,
-        "market_price_time": "2025-07-14 11:00:05"
-      }
-    }
-  },
-  "초심자의가방": {
-    "enchant": {
-      "0": {
-        "buy_price": 0,
-        "fee": 0,
-        "count": 0,
-        "market_price": 762,
-        "market_price_time": "2025-07-14 11:04:58"
-      }
-    }
-  },
-  "깔끔한직물": {
-    "enchant": {
-      "0": {
-        "buy_price": 0,
-        "fee": 757,
-        "count": 196,
-        "market_price": 0,
-        "market_price_time": null
+        "market_price": 1200,
+        "market_price_time": "2025-07-14 11:04:46"
       }
     },
-    "tier": 3,
-    "category": [
-      9,
-      1
-    ]
+    "category": [9, 4, 3]
   },
-  "괜찮은직물": {
+  "item_pickaxe_novice": {
+    "enchant": {
+      "0": {
+        "buy_price": 1000,
+        "fee": 0,
+        "count": 0,
+        "market_price": 9000,
+        "market_price_time": "2025-07-14 11:00:00"
+      }
+    }
+  },
+  "item_bag_novice": {
+    "enchant": {
+      "0": {
+        "buy_price": 0,
+        "fee": 0,
+        "count": 0,
+        "market_price": 10000,
+        "market_price_time": "2025-07-14 11:02:22"
+      }
+    }
+  },
+  "item_cloth_clean": {
+    "enchant": {
+      "0": {
+        "buy_price": 700,
+        "fee": 0,
+        "count": 0,
+        "market_price": 2500,
+        "market_price_time": "2025-07-14 10:57:00"
+      }
+    }
+  },
+  "item_cloth_decent": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -144,7 +118,7 @@
       1
     ]
   },
-  "로우리버게": {
+  "item_fish_crab_low_river": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -155,7 +129,7 @@
       }
     }
   },
-  "소나무원목": {
+  "item_log_pine": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -170,7 +144,7 @@
       0
     ]
   },
-  "드라이브룩게": {
+  "item_fish_crab_dry_blue": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -181,7 +155,7 @@
       }
     }
   },
-  "삼나무원목": {
+  "item_log_cedar": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -196,7 +170,7 @@
       0
     ]
   },
-  "소나무판자": {
+  "item_plank_pine": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -211,7 +185,7 @@
       1
     ]
   },
-  "전문가의수송용황소": {
+  "item_ride_ox_expert": {
     "enchant": {
       "0": {
         "buy_price": 99985,
@@ -222,7 +196,7 @@
       }
     }
   },
-  "숙련자의망토": {
+  "item_cloack_adept": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -233,7 +207,7 @@
       }
     }
   },
-  "숙련자의가방": {
+  "item_bag_adept": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -244,7 +218,7 @@
       }
     }
   },
-  "초심자의학자샌들": {
+  "item_shoes_scholar_novice": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -255,7 +229,7 @@
       }
     }
   },
-  "초심자의파이어스태프": {
+  "item_staff_fire_novice": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -266,7 +240,7 @@
       }
     }
   },
-  "숙련자의용병자켓": {
+  "item_armor_mercenary_adept": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -277,7 +251,7 @@
       }
     }
   },
-  "초심자의학자두건": {
+  "item_helm_scholar_novice": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -288,7 +262,7 @@
       }
     }
   },
-  "초심자의학자로브": {
+  "item_armor_scholar_robe": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -299,7 +273,7 @@
       }
     }
   },
-  "숙련자의용병후드": {
+  "item_helm_adept_mercenary": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -310,7 +284,7 @@
       }
     }
   },
-  "장인벌목꾼의일지": {
+  "item_journal_lumberjack_journeyman": {
     "enchant": {
       "0": {
         "buy_price": 1287,
@@ -321,7 +295,7 @@
       }
     }
   },
-  "숙련자의용병신발": {
+  "item_shoes_mercenary_adept": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -332,7 +306,7 @@
       }
     }
   },
-  "마스터의기사아머": {
+  "item_armor_knight_master": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -343,7 +317,7 @@
       }
     }
   },
-  "화이트포그스내퍼": {
+  "item_fish_whitefogsnapper": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -354,7 +328,7 @@
       }
     }
   },
-  "사암": {
+  "item_metal_ore_sandstone": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -369,7 +343,7 @@
       0
     ]
   },
-  "사암석괴": {
+  "item_block_sandstone": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -384,7 +358,7 @@
       1
     ]
   },
-  "숙련자의낚싯대": {
+  "item_harvest_fisher_adept": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -395,7 +369,7 @@
       }
     }
   },
-  "트래버틴석괴": {
+  "item_block_travertine": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -410,7 +384,7 @@
       1
     ]
   },
-  "장인의수송용황소": {
+  "item_ride_ox_journeyman": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -421,7 +395,7 @@
       }
     }
   },
-  "얇은가죽": {
+  "item_hide_thin": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -436,7 +410,7 @@
       0
     ]
   },
-  "가공된피혁": {
+  "item_hide_processed": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -451,7 +425,7 @@
       1
     ]
   },
-  "적당한가죽": {
+  "item_hide_moderate": {
     "enchant": {
       "2": {
         "buy_price": 0,
@@ -473,7 +447,7 @@
       0
     ]
   },
-  "튼튼한가죽": {
+  "item_hide_strong": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -488,7 +462,7 @@
       0
     ]
   },
-  "점박이송어": {
+  "item_fish_trout_spotted": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -499,7 +473,7 @@
       }
     }
   },
-  "푸른비늘강꼬치고기": {
+  "item_fish_skewer_blue_scale": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -510,7 +484,7 @@
       }
     }
   },
-  "알비온농어": {
+  "item_fish_albion_bass": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -521,7 +495,7 @@
       }
     }
   },
-  "줄무늬잉어": {
+  "item_fish_whiskered_carp": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -532,7 +506,7 @@
       }
     }
   },
-  "그린리버장어": {
+  "item_fish_green_river": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -543,7 +517,7 @@
       }
     }
   },
-  "스톤스트림떠돌이": {
+  "item_fish_stonestream": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -554,7 +528,7 @@
       }
     }
   },
-  "업랜드콜드아이": {
+  "item_fish_cold_eye": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -565,7 +539,7 @@
       }
     }
   },
-  "수확숙련자의일지": {
+  "item_journal_harvester_journeyman": {
     "enchant": {
       "0": {
         "buy_price": 2500,
@@ -576,7 +550,7 @@
       }
     }
   },
-  "전문가사냥터지기의일지": {
+  "item_journal_hunter_expert": {
     "enchant": {
       "0": {
         "buy_price": 4400,
@@ -587,7 +561,7 @@
       }
     }
   },
-  "숙련자탐광자의일지": {
+  "item_journal_prospector_novice": {
     "enchant": {
       "0": {
         "buy_price": 4000,
@@ -598,7 +572,7 @@
       }
     }
   },
-  "전문가벌목꾼의일지": {
+  "item_journal_lumberjack_expert": {
     "enchant": {
       "0": {
         "buy_price": 5990,
@@ -609,7 +583,7 @@
       }
     }
   },
-  "구리주괴": {
+  "item_ingot_copper": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -624,7 +598,7 @@
       1
     ]
   },
-  "아마": {
+  "item_fiber_flax": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -639,7 +613,7 @@
       0
     ]
   },
-  "단순한직물": {
+  "item_cloth_simple": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -654,7 +628,7 @@
       1
     ]
   },
-  "구리광석": {
+  "item_metal_ore_copper": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -669,7 +643,7 @@
       0
     ]
   },
-  "아연광석": {
+  "item_metal_ore_zinc": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -684,7 +658,7 @@
       0
     ]
   },
-  "청동주괴": {
+  "item_ingot_bronze": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -699,7 +673,7 @@
       1
     ]
   },
-  "강철주괴": {
+  "item_ingot_steel": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -714,7 +688,7 @@
       1
     ]
   },
-  "헤비가죽": {
+  "item_hide_heavy": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -729,7 +703,7 @@
       0
     ]
   },
-  "밤나무판자": {
+  "item_plank_chestnut": {
     "enchant": {
       "0": {
         "buy_price": 0,
@@ -744,7 +718,7 @@
       1
     ]
   },
-  "삼": {
+  "item_fiber_hemp": {
     "category": [
       9,
       0
@@ -759,7 +733,7 @@
       }
     }
   },
-  "초심자농부의일지": {
+  "item_journal_farmer_journeyman": {
     "category": [
       14
     ],
@@ -773,7 +747,8 @@
       }
     }
   },
-  "지식의서적": {
+
+  "item_trophy_knowledge": {
     "category": [
       14,
       1,
@@ -790,7 +765,7 @@
       }
     }
   },
-  "장인탐광자의일지": {
+  "item_journal_prospector_journeyman": {
     "category": [
       14,
       1,
@@ -807,7 +782,7 @@
       }
     }
   },
-  "자작나무판자": {
+  "item_plank_birch": {
     "category": [
       9,
       1
@@ -822,7 +797,7 @@
       }
     }
   },
-  "두꺼운피혁": {
+  "item_hide_thick": {
     "category": [
       9,
       1
@@ -837,7 +812,7 @@
       }
     }
   },
-  "뻣뻣한피혁": {
+  "item_hide_stiff": {
     "category": [
       9,
       1
@@ -852,7 +827,7 @@
       }
     }
   },
-  "질긴가죽": {
+  "item_hide_rugged": {
     "category": [
       9,
       1

@@ -6,8 +6,8 @@ from PyQt5.QtWidgets import (
     QComboBox, QSpinBox, QMessageBox, QDoubleSpinBox
 )
 from inventory.crafting_manager import CraftingManager
+from util import Util
 
-# DATA_FILE = "material_data.json"
 CATEGORY_FILE = "category.json"
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -41,83 +41,108 @@ class InventoryManager(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("인벤토리")
-        layout = QVBoxLayout()
+        self.lang = "ko"
+        self.util = Util()
 
-        # 재료 선택
+        self.cat_tree = load_category_tree()
+        self.init_fields()
+        self.setup_ui()
+        self.load_materials()
+
+    def init_fields(self):
         self.material_select = QComboBox()
-        self.material_select.addItem("새로 입력")
-        self.material_select.currentIndexChanged.connect(self.load_selected_material)
-        layout.addWidget(self.material_select)
-
-        # 이름 입력
         self.name = QLineEdit()
-        layout.addWidget(QLabel("이름"))
-        layout.addWidget(self.name)
 
-        # 카테고리 콤보박스 4단계
         self.cat_box1 = QComboBox()
         self.cat_box2 = QComboBox()
         self.cat_box3 = QComboBox()
         self.cat_box4 = QComboBox()
-        for box in [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]:
-            box.currentIndexChanged.connect(self.update_category_boxes)
-        cat_layout = QHBoxLayout()
-        for box in [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]:
-            cat_layout.addWidget(box)
-        layout.addWidget(QLabel("카테고리"))
-        layout.addLayout(cat_layout)
 
-        # 인첸트, 가격 등 기타 필드
         self.enchant = QComboBox()
-        for i in range(5): self.enchant.addItem(str(i), i)
-        self.buy_price = QSpinBox()
-        self.fee = QSpinBox()
-        self.count = QSpinBox()
-        self.market_price = QSpinBox()
-        self.market_price_time = QLineEdit()
-        self.production_fee = QDoubleSpinBox()
+        for i in range(5):
+            self.enchant.addItem(str(i), i)
 
-        self.fee.setMaximum(9999999)
-        self.count.setMaximum(9999999)
-        self.production_fee.setMaximum(9999999)
+        self.buy_price = QSpinBox()
         self.buy_price.setMaximum(9999999)
 
-        layout.addWidget(QLabel("인첸트"))
+        self.fee = QSpinBox()
+        self.fee.setMaximum(9999999)
+
+        self.count = QSpinBox()
+        self.count.setMaximum(9999999)
+
+        self.production_fee = QDoubleSpinBox()
+        self.production_fee.setMaximum(9999999)
+
+        self.market_price = QSpinBox()
+        self.market_price_time = QLineEdit()
+
+    def setup_ui(self):
+        layout = QVBoxLayout()
+
+        self.add_material_selector(layout)
+        self.add_name_input(layout)
+        self.add_category_boxes(layout)
+        self.add_enchant_section(layout)
+        self.add_price_fields(layout)
+        self.add_action_buttons(layout)
+
+        self.setLayout(layout)
+
+    def add_material_selector(self, layout):
+        self.material_select.addItem(self.util.get_text_from_lang(self.lang, "combo_new"))
+        self.material_select.currentIndexChanged.connect(self.load_selected_material)
+        layout.addWidget(self.material_select)
+
+    def add_name_input(self, layout):
+        layout.addWidget(QLabel(self.util.get_text_from_lang(self.lang, "label_name")))
+        layout.addWidget(self.name)
+
+    def add_category_boxes(self, layout):
+        layout.addWidget(QLabel(self.util.get_text_from_lang(self.lang, "label_category")))
+        cat_layout = QHBoxLayout()
+        for box in [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]:
+            box.currentIndexChanged.connect(self.update_category_boxes)
+            cat_layout.addWidget(box)
+        layout.addLayout(cat_layout)
+
+    def add_enchant_section(self, layout):
+        layout.addWidget(QLabel(self.util.get_text_from_lang(self.lang, "label_enchant")))
         layout.addWidget(self.enchant)
-        layout.addWidget(QLabel("구매가"))
+
+    def add_price_fields(self, layout):
+        layout.addWidget(QLabel(self.util.get_text_from_lang(self.lang, "label_bought_price")))
         layout.addWidget(self.buy_price)
-        layout.addWidget(QLabel("수수료"))
+
+        layout.addWidget(QLabel(self.util.get_text_from_lang(self.lang, "label_fee")))
         layout.addWidget(self.fee)
-        
-        layout.addWidget(QLabel("수량"))
+
+        layout.addWidget(QLabel(self.util.get_text_from_lang(self.lang, "label_count")))
         layout.addWidget(self.count)
-        layout.addWidget(QLabel("생산단가"))
-        layout.addWidget(self.production_fee);
-        layout.addWidget(QLabel("시장가"))
+
+        layout.addWidget(QLabel(self.util.get_text_from_lang(self.lang, "label_price_per_production")))
+        layout.addWidget(self.production_fee)
+
+        layout.addWidget(QLabel(self.util.get_text_from_lang(self.lang, "label_market_price")))
         layout.addWidget(self.market_price)
-        layout.addWidget(QLabel("시장가입력시각"))
+
+        layout.addWidget(QLabel(self.util.get_text_from_lang(self.lang, "label_market_price_entered_time")))
         layout.addWidget(self.market_price_time)
 
-        # 버튼
-        saveBtn = QPushButton("저장")
+    def add_action_buttons(self, layout):
+        saveBtn = QPushButton(self.util.get_text_from_lang(self.lang, "btn_save"))
         saveBtn.clicked.connect(self.save_material)
         layout.addWidget(saveBtn)
 
-
-        
-
-        craftingBtn = QPushButton("제작")
+        craftingBtn = QPushButton(self.util.get_text_from_lang(self.lang, "btn_craft"))
         craftingBtn.clicked.connect(self.open_crafting)
         layout.addWidget(craftingBtn)
-
-        self.setLayout(layout)
-        self.cat_tree = load_category_tree()
-        self.load_materials()
-
+    
     def open_crafting(self):
         self.crafting_manager = CraftingManager()
         self.crafting_manager.show()
 
+#  category
     def update_category_boxes(self):
         node = self.cat_tree
         boxes = [self.cat_box1, self.cat_box2, self.cat_box3, self.cat_box4]
@@ -192,6 +217,7 @@ class InventoryManager(QWidget):
                 box.setCurrentIndex(0)
                 node = None
             box.blockSignals(False)
+#   cateogry end
 
     def load_materials(self):
         # material_data.json에서 불러오기
@@ -202,9 +228,9 @@ class InventoryManager(QWidget):
         self.materials = raw
         self.material_select.blockSignals(True)
         self.material_select.clear()
-        self.material_select.addItem("새로 입력")
+        self.material_select.addItem(self.util.get_text_from_lang(self.lang, "combo_new"))
         for name in self.materials:
-            self.material_select.addItem(name)
+            self.material_select.addItem(self.util.get_text_from_lang(self.lang, name))
         self.material_select.blockSignals(False)
         self.update_category_boxes()
 
@@ -254,11 +280,11 @@ class InventoryManager(QWidget):
         category_idx = self.get_selected_category_index()
         now = datetime.datetime.now().isoformat(sep=" ", timespec="seconds") if m else materials.get(n, {}).get("enchant", {}).get(enchant, {}).get("market_price_time")
         if not n:
-            QMessageBox.warning(self, "경고", "재료명을 입력하세요")
+            QMessageBox.warning(self, "경고", self.util.get_text_from_lang(self.lang, "msg_enter_ingredient_name"))
             return
         # 중복 체크
         if self.material_select.currentIndex() == 0 and n in materials:
-            QMessageBox.warning(self, "경고", "이미 존재하는 아이템입니다. 수정하려면 리스트에서 선택하세요.")
+            QMessageBox.warning(self, "경고", self.util.get_text_from_lang(self.lang, "msg_item_is_already_exists"))
             return
         # 구조 맞추기
         if n not in materials or not isinstance(materials[n], dict):

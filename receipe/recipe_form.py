@@ -93,7 +93,6 @@ class RecipeForm(QWidget):
         self.connect_signals()
 
 # Add UI start
-# self.util.get_text_from_lang(self.lang, "")
     def add_item_name_combo(self, layout):
         layout.addWidget(QLabel(self.util.get_text_from_lang(self.lang, "label_item_name")))
         self.name_select = QComboBox()
