@@ -14,6 +14,11 @@
         "combo_new": "새로 입력",
         "combo_not_selected": "선택안함",
 
+        "category_weapon": "무기",
+        "category_armor_chest": "가슴방어구",
+        "category_armor_head": "머리방어구",
+        "category_armor_foot": "발방어구",
+
 
         "item_staff_fire_novice": "초심자의파이어스태프",
 
