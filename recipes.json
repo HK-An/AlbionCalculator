@@ -1,101 +1,116 @@
 {
-  "당근 수프": {
+  "item_food_carrot_soup": {
     "materials": {
-      "당근": 16
+      "item_vegetable_carrot": 16
     },
     "output": 10
   },
-  "기본피시소스": {
+  "item_fish_sauce_basic": {
     "materials": {
-      "토막낸생선": 15,
-      "해조": 1
+      "item_fish_chopped": 15,
+      "item_fish_seaweed": 1
     },
     "output": 1
   },
-  "깔끔한직물": {
-    "name": "깔끔한직물",
+  "item_cloth_clean": {
+    "name": "item_cloth_clean",
     "output_count": 1,
     "materials": {
-      "아마": 2,
-      "단순한직물": 1
+      "item_fiber_flax": 2,
+      "item_cloth_simple": 1
     }
   },
-  "구리주괴": {
-    "name": "구리주괴",
+  "item_ingot_copper": {
+    "name": "item_ingot_copper",
     "output_count": 1,
     "materials": {
-      "구리광석": 1
+      "item_metal_ore_copper": 1
     }
   },
-  "청동주괴": {
-    "name": "청동주괴",
+  "item_ingot_bronze": {
+    "name": "item_ingot_bronze",
     "output_count": 1,
     "materials": {
-      "아연광석": 2,
-      "구리주괴": 1
+      "item_metal_ore_zinc": 2,
+      "item_ingot_copper": 1
     }
   },
-  "강철주괴": {
-    "name": "강철주괴",
+  "item_ingot_steel": {
+    "name": "item_ingot_steel",
     "output_count": 1,
     "materials": {
-      "철광석": 2,
-      "청동주괴": 1
+      "item_metal_ore_iron": 2,
+      "item_ingot_bronze": 1
     }
   },
-  "단순한직물": {
-    "name": "단순한직물",
+  "item_cloth_simple": {
+    "name": "item_cloth_simple",
     "output_count": 1,
     "materials": {
-      "아마": 1
+      "item_fiber_flax": 1
     }
   },
-  "괜찮은직물": {
-    "name": "괜찮은직물",
+  "item_cloth_decent": {
+    "name": "item_cloth_decent",
     "output_count": 1,
     "materials": {
-      "삼": 2,
-      "깔끔한직물": 1
+      "item_fiber_hemp": 2,
+      "item_cloth_clean": 1
     }
   },
-  "밤나무판자": {
-    "name": "밤나무판자",
+  "item_plank_chestnut": {
+    "name": "item_plank_chestnut",
     "output_count": 1,
     "materials": {
-      "밤나무원목": 2,
-      "자작나무판자": 1
+      "item_log_chestnut": 2,
+      "item_plank_birch": 1
     }
   },
-  "소나무판자": {
-    "name": "소나무판자",
+  "item_plank_pine": {
+    "name": "item_plank_pine",
     "output_count": 1,
     "materials": {
-      "소나무원목": 2,
-      "밤나무판자": 1
+      "item_log_pine": 2,
+      "item_log_chestnut": 1
     }
   },
-  "뻣뻣한피혁": {
-    "name": "뻣뻣한피혁",
+  "item_hide_stiff": {
+    "name": "item_hide_stiff",
     "output_count": 1,
     "materials": {
-      "질긴가죽": 1
+      "item_hide_rugged": 1
     }
   },
-  "두꺼운피혁": {
-    "name": "두꺼운피혁",
+  "item_hide_thick": {
+    "name": "item_hide_thick",
     "output_count": 1,
     "materials": {
-      "얇은가죽": 2,
-      "뻣뻣한피혁": 1
+      "item_hide_thin": 2,
+      "뻣뻣한item_hide_stiff혁": 1
     }
   },
-  "가공된피혁": {
-    "name": "가공된피혁",
+  "item_hide_processed": {
+    "name": "item_hide_processed",
     "output_count": 1,
     "materials": {
-      "적당한가죽": 2,
-      "두꺼운피혁": 1
+      "item_hide_moderate": 2,
+      "item_hide_thick": 1
+    }
+  },
+  "item_potion_poison_small": {
+    "name": "item_hide_processed",
+    "output_count": 1,
+    "materials": {
+      "item_herb_burdock": 8,
+      "item_herb_compree": 4
+    }
+  },
+  "item_potion_health": {
+    "name": "item_hide_processed",
+    "output_count": 1,
+    "materials": {
+      "item_herb_burdock": 24,
+      "item_livestock_egg": 6
     }
   }
-  
 }

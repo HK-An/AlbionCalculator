@@ -15,15 +15,16 @@ def save_data(filename, data):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 class Util():
-    def __init__(self):
+    def __init__(self, lang):
         self.load_materials()
         self.load_lang()
+        self.current_lang = lang
 
     def get_item_from_inventory(self, item_name):
         return self.materials.get(item_name, {})
 
     def add_inventory(self, item_name, item_count, fee):
-        mat = self.materials.get(item_name, {})
+        mat = self.materials.get(self.get_key_from_lang(self.current_lang, item_name), {})
         if mat != {}:
             # 1. count 증가
             new_mat = self.increase_enchant_count(mat, "0", item_count)
@@ -82,6 +83,13 @@ class Util():
             lang_raw = {}
         self.lang = lang_raw
 
+    def add_lang(self, lang, key, text):
+        self.lang[lang][key] = text
+        save_data(LANG_FILE, self.lang)
+        self.load_lang()
+
+
+
     def consume_ingredients_and_transfer_fee(self, materials_dict, output_count):
         """
         materials_dict: {'item_name': 사용수량, ...}
@@ -110,3 +118,15 @@ class Util():
 
     def get_text_from_lang(self, lang, text):
         return self.lang.get(lang).get(text, {})
+    
+    def get_key_from_lang(self, lang, value):
+        """
+        lang: 언어코드(str)
+        value: 실제 번역된 텍스트(예: "사암")
+        return: 해당 value의 key(예: "item_metal_ore_sandstone"), 없으면 None
+        """
+        lang_dict = self.lang.get(lang, {})
+        for k, v in lang_dict.items():
+            if v == value:
+                return k
+        return None

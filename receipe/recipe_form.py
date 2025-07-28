@@ -13,7 +13,8 @@ def load_data(filename):
 class IngredientRow(QWidget):
     def __init__(self, inventory_items, remove_callback, is_recipe, item_name):
         super().__init__()
-        self.util = Util()
+        self.lang = "ko"
+        self.util = Util(self.lang)
         self.is_recipe = is_recipe
         self.item_name = item_name
 
@@ -67,7 +68,7 @@ class RecipeForm(QWidget):
         self.setWindowTitle(title)
         self.lang = "ko"
 
-        self.util = Util()
+        self.util = Util(self.lang)
         self.isRecipe = title != "Crafting Manager"
         self.isHeader = False
         self.editing = False
@@ -145,7 +146,7 @@ class RecipeForm(QWidget):
         else:
             self.name_select.addItem(self.util.get_text_from_lang(self.lang, "combo_not_selected"))
         for name in self.recipes:
-            self.name_select.addItem(name)
+            self.name_select.addItem(self.util.get_text_from_lang(self.lang, name))
         self.name_select.blockSignals(False)
 
     def select_changed(self):
@@ -154,8 +155,8 @@ class RecipeForm(QWidget):
             self.clear_ingredients()
         else:
             key = self.name_select.currentText()
-            rec = self.recipes.get(key, {})
-            self.recipe_name.setText(rec.get("name", key))
+            rec = self.recipes.get(self.util.get_key_from_lang(self.lang, key), {})
+            self.recipe_name.setText(self.util.get_text_from_lang(self.lang, rec.get("name", key)))
             self.output_count.setValue(rec.get("output_count", 1))
             mats = rec.get("materials", {})
             self.set_ingredients(mats)
@@ -194,7 +195,7 @@ class RecipeForm(QWidget):
             w.setParent(None)
         self.ingredient_rows = []
         for mat, qty in ingredients_dict.items():
-            self.add_ingredient_row(mat, qty)
+            self.add_ingredient_row(self.util.get_text_from_lang(self.lang, mat), qty)
         if not ingredients_dict:
             self.add_ingredient_row()
 
@@ -231,7 +232,7 @@ class RecipeForm(QWidget):
         # 산출물 fee에 (입력된 수수료 + 재료에서 넘긴 fee) 합산
         # 즉, add_inventory의 fee값에 위 transfer_fee를 더해서 호출해야함
         final_fee = self.fee.value() + total_transfer_fee
-        self.util.add_inventory(self.name_select.currentText(), self.output_count.value(), final_fee)
+        self.util.add_inventory(self.util.get_key_from_lang(self.name_select.currentText()), self.output_count.value(), final_fee)
 
         # minus fee or price from the item
 

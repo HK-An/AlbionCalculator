@@ -42,7 +42,7 @@ class InventoryManager(QWidget):
         super().__init__()
         self.setWindowTitle("인벤토리")
         self.lang = "ko"
-        self.util = Util()
+        self.util = Util(self.lang)
 
         self.cat_tree = load_category_tree()
         self.init_fields()
@@ -52,6 +52,7 @@ class InventoryManager(QWidget):
     def init_fields(self):
         self.material_select = QComboBox()
         self.name = QLineEdit()
+        self.key = QLineEdit()
 
         self.cat_box1 = QComboBox()
         self.cat_box2 = QComboBox()
@@ -97,6 +98,9 @@ class InventoryManager(QWidget):
     def add_name_input(self, layout):
         layout.addWidget(QLabel(self.util.get_text_from_lang(self.lang, "label_name")))
         layout.addWidget(self.name)
+        layout.addWidget(QLabel("저장할키"))
+        layout.addWidget(self.key)
+        
 
     def add_category_boxes(self, layout):
         layout.addWidget(QLabel(self.util.get_text_from_lang(self.lang, "label_category")))
@@ -154,7 +158,8 @@ class InventoryManager(QWidget):
             box.addItem("")
             if node and isinstance(node, dict):
                 for k in sorted(node.keys(), key=int):
-                    box.addItem(node[k]["name"], int(k))
+                    print(node[k]["name"])
+                    box.addItem(self.util.get_text_from_lang(self.lang, node[k]["name"]), int(k))
             # 현재 선택값 복구
             idx = idx_list[depth]
             if idx is not None and idx in [box.itemData(i) for i in range(box.count()) if box.itemData(i) is not None]:
@@ -193,7 +198,7 @@ class InventoryManager(QWidget):
         box.addItem("")
         if isinstance(node, dict):
             for k in sorted(node.keys(), key=int):
-                box.addItem(node[k]["name"], int(k))
+                box.addItem(self.util.get_text_from_lang(self.lang, node[k]["name"]), int(k))
         if idx_list and len(idx_list) > 0:
             box.setCurrentIndex(idx_list[0] + 1)
             node = node.get(str(idx_list[0]), {}).get("category", {})
@@ -209,7 +214,7 @@ class InventoryManager(QWidget):
             box.addItem("")
             if node and isinstance(node, dict):
                 for k in sorted(node.keys(), key=int):
-                    box.addItem(node[k]["name"], int(k))
+                    box.addItem(self.util.get_text_from_lang(self.lang, node[k]["name"]), int(k))
             if idx_list and len(idx_list) > i:
                 box.setCurrentIndex(idx_list[i] + 1)
                 node = node.get(str(idx_list[i]), {}).get("category", {}) if node else None
@@ -247,7 +252,9 @@ class InventoryManager(QWidget):
             self.market_price_time.setText("-")
         else:
             mat_name = self.material_select.currentText()
-            meta = self.materials.get(mat_name, {})
+            key = self.util.get_key_from_lang(self.lang, mat_name)
+            self.key.setText(key)
+            meta = self.materials.get(key, {})
             # 카테고리
             cat_idx = meta.get("category", [])
             self.set_category_boxes_by_index(cat_idx)
@@ -270,37 +277,45 @@ class InventoryManager(QWidget):
         return fee/count
     
     def save_material(self):
+        is_new = False
         materials = load_data(DATA_FILE)
-        n = self.name.text()
-        b = self.buy_price.value()
-        f = self.fee.value()
-        c = self.count.value()
-        m = self.market_price.value()
+        item_name = self.name.text()
+        item_key = self.util.get_key_from_lang(self.lang, item_name)
+        if item_key == None:
+            item_key = self.key.text()
+            is_new = True
+        buy_price = self.buy_price.value()
+        fee = self.fee.value()
+        count = self.count.value()
+        market_price = self.market_price.value()
+
         enchant = str(self.enchant.currentData())
         category_idx = self.get_selected_category_index()
-        now = datetime.datetime.now().isoformat(sep=" ", timespec="seconds") if m else materials.get(n, {}).get("enchant", {}).get(enchant, {}).get("market_price_time")
-        if not n:
+        now = datetime.datetime.now().isoformat(sep=" ", timespec="seconds") if market_price else materials.get(item_key, {}).get("enchant", {}).get(enchant, {}).get("market_price_time")
+        if not item_key:
             QMessageBox.warning(self, "경고", self.util.get_text_from_lang(self.lang, "msg_enter_ingredient_name"))
             return
         # 중복 체크
-        if self.material_select.currentIndex() == 0 and n in materials:
+        if self.material_select.currentIndex() == 0 and item_key in materials:
             QMessageBox.warning(self, "경고", self.util.get_text_from_lang(self.lang, "msg_item_is_already_exists"))
             return
         # 구조 맞추기
-        if n not in materials or not isinstance(materials[n], dict):
-            materials[n] = {"category": category_idx, "enchant": {}}
+        if item_key not in materials or not isinstance(materials[item_key], dict):
+            materials[item_key] = {"category": category_idx, "enchant": {}}
         else:
-            materials[n]["category"] = category_idx
-        if "enchant" not in materials[n]:
-            materials[n]["enchant"] = {}
-        materials[n]["enchant"][enchant] = {
-            "buy_price": b,
-            "fee": f,
-            "count": c,
-            "market_price": m,
+            materials[item_key]["category"] = category_idx
+        if "enchant" not in materials[item_key]:
+            materials[item_key]["enchant"] = {}
+        materials[item_key]["enchant"][enchant] = {
+            "buy_price": buy_price,
+            "fee": fee,
+            "count": count,
+            "market_price": market_price,
             "market_price_time": now
         }
         save_data(DATA_FILE, materials)
+        if is_new:
+            self.util.add_lang(self.lang, item_key, item_name)
         QMessageBox.information(self, "알림", "저장됨")
         self.load_materials()
-        self.material_select.setCurrentText(n)
+        self.material_select.setCurrentText(item_name)

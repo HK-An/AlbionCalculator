@@ -1,153 +1,456 @@
 {
   "0": {
-    "name": "무기",
+    "name": "category_weapon",
     "category": {
       "0": {
-        "name": "활",
-            "category": {
-                "0": { "name": "활" },
-                "1": { "name": "롱보우" },
-                "2": { "name": "워보우" },
-                "3": { "name": "워스퍼링보우" },
-                "4": { "name": "플레이보우" },
-                "5": { "name": "웨일링보우" },
-                "6": { "name": "바돈의활" },
-                "7": { "name": "미스트피어서" },
-                "8": { "name": "스카이스트라이더보우" }
-            }
+        "name": "category_weapon_bow",
+        "category": {
+          "0": { "name": "category_weapon_bow" },
+          "1": { "name": "category_weapon_bow_long" },
+          "2": { "name": "category_weapon_bow_war" },
+          "3": { "name": "category_weapon_bow_warspering" },
+          "4": { "name": "category_weapon_bow_play" },
+          "5": { "name": "category_weapon_bow_whaling" },
+          "6": { "name": "category_weapon_bow_badon" },
+          "7": { "name": "category_weapon_bow_pierc" },
+          "8": { "name": "category_weapon_bow_sky" }
         }
       },
       "1": {
-        "name": "크로스보우",
-        "category": {}
+        "name": "category_weapon_crossbow",
+        "category": {
+          "0": { "name": "category_weapon_crossbow" },
+          "1": { "name": "category_weapon_crossbow_heavy" },
+          "2": { "name": "category_weapon_crossbow_light" },
+          "3": { "name": "category_weapon_crossbow_weeping" },
+          "4": { "name": "category_weapon_crossbow_boltcasters" },
+          "5": { "name": "category_weapon_crossbow_siege" },
+          "6": { "name": "category_weapon_crossbow_energyshaper" },
+          "7": { "name": "category_weapon_crossbow_arclight" }
+        }
       },
       "2": {
-        "name": "도끼",
+        "name": "category_weapon_axe",
+        "category": {
+          "0": { "name": "category_weapon_battleaxe" },
+          "1": { "name": "category_weapon_axe_great" },
+          "2": { "name": "category_weapon_axe_halberd" },
+          "3": { "name": "category_weapon_axe_carrioncaller" },
+          "4": { "name": "category_weapon_axe_infernal" },
+          "5": { "name": "category_weapon_axe_bearpaws" },
+          "6": { "name": "category_weapon_axe_realm" },
+          "7": { "name": "category_weapon_axe_crystal" }
+        }
+      },
+      "3": {
+        "name": "category_weapon_dagger",
+        "category": {
+          "0": { "name": "category_weapon_dagger" },
+          "1": { "name": "category_weapon_dagger_pair" },
+          "2": { "name": "category_weapon_dagger_claws" },
+          "3": { "name": "category_weapon_dagger_bloodletter" },
+          "4": { "name": "category_weapon_dagger_demonfang" },
+          "5": { "name": "category_weapon_dagger_deathgivers" },
+          "6": { "name": "category_weapon_dagger_bridled" },
+          "7": { "name": "category_weapon_dagger_twinslay" }
+        }
+      },
+      "4": {
+          "name": "category_weapon_hammer",
+          "category": {
+            "0": { "name": "category_weapon_hammer" },
+            "1": { "name": "category_weapon_hammer_great" },
+            "2": { "name": "category_weapon_hammer_pole" },
+            "3": { "name": "category_weapon_hammer_tomb" },
+            "4": { "name": "category_weapon_hammer_forge" },
+            "5": { "name": "category_weapon_hammer_grovekeeper" },
+            "6": { "name": "category_weapon_hammer_justice" },
+            "7": { "name": "category_weapon_hammer_truebolt" }
+          }
+      },
+      "5": {
+          "name": "category_weapon_gauntlet",
+          "category": {
+            "0": { "name": "category_weapon_gauntlet_fight" },
+            "1": { "name": "category_weapon_gauntlet_brawler" },
+            "2": { "name": "category_weapon_gauntlet_spiked" },
+            "3": { "name": "category_weapon_gauntlet_bear" },
+            "4": { "name": "category_weapon_gauntlet_hellfire" },
+            "5": { "name": "category_weapon_gauntlet_raven" },
+            "6": { "name": "category_weapon_gauntlet_avalon" },
+            "7": { "name": "category_weapon_gauntlet_pulse" },
+            "8": { "name": "category_weapon_gauntlet_blackhands" }
+          }
+      },
+      "6": {
+          "name": "category_weapon_mace",
+          "category": {
+            "0": { "name": "category_weapon_mace" },
+            "1": { "name": "category_weapon_mace_heavy" },
+            "2": { "name": "category_weapon_mace_morningstar" },
+            "3": { "name": "category_weapon_mace_bedrock" },
+            "4": { "name": "category_weapon_mace_incubus" },
+            "5": { "name": "category_weapon_mace_camlann" },
+            "6": { "name": "category_weapon_mace_oathkeeper" },
+            "7": { "name": "category_weapon_mace_dreadmonarch" }
+          }
+      },
+      "7": {
+          "name": "category_weapon_staff_quarter",
+          "category": {
+            "0": { "name": "category_weapon_staff_quarter" },
+            "1": { "name": "category_weapon_staff_quarter_ironclad" },
+            "2": { "name": "category_weapon_staff_quarter_doubleblade" },
+            "3": { "name": "category_weapon_staff_quarter_blackmonk" },
+            "4": { "name": "category_weapon_staff_quarter_soulside" },
+            "5": { "name": "category_weapon_staff_quarter_balance" },
+            "6": { "name": "category_weapon_staff_quarter_grailseeker" },
+            "7": { "name": "category_weapon_staff_quarter_phantomtwin" }
+          }
+      },
+      "8": {
+          "name": "category_weapon_spear",
+          "category": {
+            "0": { "name": "category_weapon_spear" },
+            "1": { "name": "category_weapon_spear_pike" },
+            "2": { "name": "category_weapon_spear_glaive" },
+            "3": { "name": "category_weapon_spear_heron" },
+            "4": { "name": "category_weapon_spear_spirithunter" },
+            "5": { "name": "category_weapon_spear_trinity" },
+            "6": { "name": "category_weapon_spear_daybreaker" },
+            "7": { "name": "category_weapon_spear_riftglaive" }
+          }
+      },
+      "9": {
+          "name": "category_weapon_sword",
+          "category": {
+            "0": { "name": "category_weapon_sword_broad" },
+            "1": { "name": "category_weapon_sword_claymore" },
+            "2": { "name": "category_weapon_sword_dual" },
+            "3": { "name": "category_weapon_sword_clarent" },
+            "4": { "name": "category_weapon_sword_carving" },
+            "5": { "name": "category_weapon_sword_galatine" },
+            "6": { "name": "category_weapon_sword_kingmaker" },
+            "7": { "name": "category_weapon_sword_infinity" }
+          }
+      },
+      "10": {
+          "name": "category_weapon_staff_arcane",
+          "category": {
+            "0": { "name": "category_weapon_staff_arcane" },
+            "1": { "name": "category_weapon_staff_arcane_great" },
+            "2": { "name": "category_weapon_staff_arcane_enigmatic" },
+            "3": { "name": "category_weapon_staff_arcane_witchwork" },
+            "4": { "name": "category_weapon_staff_arcane_occult" },
+            "5": { "name": "category_weapon_staff_arcane_malevolent" },
+            "6": { "name": "category_weapon_staff_arcane_evensong" },
+            "7": { "name": "category_weapon_staff_arcane_astral" }
+          }
+      },
+      "11": {
+          "name": "category_weapon_staff_cursed",
+          "category": {
+            "0": { "name": "category_weapon_staff_cursed" },
+            "1": { "name": "category_weapon_staff_cursed_great" },
+            "2": { "name": "category_weapon_staff_cursed_demonic" },
+            "3": { "name": "category_weapon_staff_cursed_lifecurse" },
+            "4": { "name": "category_weapon_staff_cursed_skull" },
+            "5": { "name": "category_weapon_staff_cursed_damnation" },
+            "6": { "name": "category_weapon_staff_cursed_shadowcaller" },
+            "7": { "name": "category_weapon_staff_cursed_rottcaller" }
+          }
+      },
+      "12": {
+      "name": "category_weapon_staff_fire",
+      "category": {
+          "0": { "name": "category_weapon_staff_fire" },
+          "1": { "name": "category_weapon_staff_fire_great" },
+          "2": { "name": "category_weapon_staff_fire_infernal" },
+          "3": { "name": "category_weapon_staff_fire_wildfire" },
+          "4": { "name": "category_weapon_staff_fire_brimstone" },
+          "5": { "name": "category_weapon_staff_fire_blazing" },
+          "6": { "name": "category_weapon_staff_fire_dawnsong" },
+          "7": { "name": "category_weapon_staff_fire_flamewalker" }
+        }
+      },
+      "13": {
+          "name": "category_weapon_staff_frost",
+          "category": {
+              "0": { "name": "category_weapon_staff_frost" },
+              "1": { "name": "category_weapon_staff_frost_great" },
+              "2": { "name": "category_weapon_staff_frost_glacial" },
+              "3": { "name": "category_weapon_staff_frost_hoarfrost" },
+              "4": { "name": "category_weapon_staff_frost_icicle" },
+              "5": { "name": "category_weapon_staff_frost_permafrost" },
+              "6": { "name": "category_weapon_staff_frost_chillhowl" },
+              "7": { "name": "category_weapon_staff_frost_arctic" }
+          }
+      },
+      "14": {
+          "name": "category_weapon_staff_holy",
+          "category": {
+              "0": { "name": "category_weapon_staff_holy" },
+              "1": { "name": "category_weapon_staff_holy_great" },
+              "2": { "name": "category_weapon_staff_holy_divine" },
+              "3": { "name": "category_weapon_staff_holy_lifetouch" },
+              "4": { "name": "category_weapon_staff_holy_fallen" },
+              "5": { "name": "category_weapon_staff_holy_redemption" },
+              "6": { "name": "category_weapon_staff_holy_hallowfall" },
+              "7": { "name": "category_weapon_staff_holy_exalted" }
+          }
+      },
+      "15": {
+          "name": "category_weapon_staff_nature",
+          "category": {
+              "0": { "name": "category_weapon_staff_nature" },
+              "1": { "name": "category_weapon_staff_nature_great" },
+              "2": { "name": "category_weapon_staff_nature_wild" },
+              "3": { "name": "category_weapon_staff_nature_druid" },
+              "4": { "name": "category_weapon_staff_nature_blight" },
+              "5": { "name": "category_weapon_staff_nature_rampant" },
+              "6": { "name": "category_weapon_staff_nature_ironroot" },
+              "7": { "name": "category_weapon_staff_nature_forgebark" }
+          }
+      },
+      "16": {
+          "name": "category_weapon_staff_shapeshifter",
+          "category": {
+              "0": { "name": "category_weapon_staff_shapeshifter_prowling" },
+              "1": { "name": "category_weapon_staff_shapeshifter_rootbound" },
+              "2": { "name": "category_weapon_staff_shapeshifter_primal" },
+              "3": { "name": "category_weapon_staff_shapeshifter_bloodmoon" },
+              "4": { "name": "category_weapon_staff_shapeshifter_hellspawn" },
+              "5": { "name": "category_weapon_staff_shapeshifter_earthrune" },
+              "6": { "name": "category_weapon_staff_shapeshifter_lightcaller" },
+              "7": { "name": "category_weapon_staff_shapeshifter_steelgaze" }
+          }
+      },
+      "17": {
+          "name": "category_weapon_etc",
+          "category": {}
+      }
+    }
+  },
+  "1": {
+    "name": "category_armor_chest",
+    "category": {
+      "0": {
+        "name": "category_armor_cloth",
+        "category": {}
+      },
+      "1": {
+        "name": "category_armor_leather",
         "category": {}
       }
-    },
-  "1": {
-    "name": "가슴방어구",
-    "category": {
-        "0": {
-            "name": "직물갑옷",
-            "category": {}
-        },
-        "1": {
-            "name": "피혁갑옷",
-            "category": {}
-        }
     }
   },
   "2": {
-    "name": "머리방어구",
+    "name": "category_armor_head",
     "category": {}
   },
   "3": {
-    "name": "발방어구",
+    "name": "category_armor_foot",
     "category": {
       "0": {
-        "name": "직물신발",
+        "name": "category_armor_foot_cloth",
         "category": {
           "0": {
-            "name": "학자샌들"
+            "name": "category_armor_foot_cloth_scholar"
           }
         }
       }
     }
   },
   "4": {
-    "name": "보조",
+    "name": "category_secondhand",
     "category": {}
   },
   "5": {
-    "name": "망토&가방",
+    "name": "category_cloackbag",
     "category": {}
   },
   "6": {
-    "name": "탈것",
+    "name": "category_ride",
     "category": {}
   },
-  "7": {
-    "name": "소비아이템",
-    "category": {}
-  },
+ "7": {
+  "name": "category_consumable",
+  "category": {
+    "0": {
+      "name": "category_consumable_food",
+      "category": {
+        "0": { "name": "category_consumable_food_soup" },
+        "1": { "name": "category_consumable_food_salad" },
+        "2": { "name": "category_consumable_food_pie" },
+        "3": { "name": "category_consumable_food_roast" },
+        "4": { "name": "category_consumable_food_omelette" },
+        "5": { "name": "category_consumable_food_stew" },
+        "6": { "name": "category_consumable_food_sandwich" },
+        "7": { "name": "category_consumable_food_grilledfish" },
+        "8": { "name": "category_consumable_food_event" }
+      }
+    },
+    "1": {
+      "name": "category_consumable_potion",
+      "category": {
+        "0": { "name": "category_consumable_potion_healing" },
+        "1": { "name": "category_consumable_potion_energy" },
+        "2": { "name": "category_consumable_potion_giant" },
+        "3": { "name": "category_consumable_potion_resistance" },
+        "4": { "name": "category_consumable_potion_tracking" },
+        "5": { "name": "category_consumable_potion_poison" },
+        "6": { "name": "category_consumable_potion_invisibility" },
+        "7": { "name": "category_consumable_potion_calmness" },
+        "8": { "name": "category_consumable_potion_purification" },
+        "9": { "name": "category_consumable_potion_acid" },
+        "10": { "name": "category_consumable_potion_rage" },
+        "11": { "name": "category_consumable_potion_hellfire" },
+        "12": { "name": "category_consumable_potion_gathering" },
+        "13": { "name": "category_consumable_potion_tornado" },
+        "14": { "name": "category_consumable_potion_focus" },
+        "15": { "name": "category_consumable_potion_event" },
+        "16": { "name": "category_consumable_potion_misc" }
+      }
+    },
+    "2": {
+      "name": "category_consumable_books",
+      "category": {
+        "0": { "name": "category_consumable_books_wisdom" },
+        "1": { "name": "category_consumable_books_fiber" },
+        "2": { "name": "category_consumable_books_hide" },
+        "3": { "name": "category_consumable_books_learning" },
+        "4": { "name": "category_consumable_books_ore" },
+        "5": { "name": "category_consumable_books_stone" },
+        "6": { "name": "category_consumable_books_wood" }
+      }
+    },
+    "3": {
+      "name": "category_consumable_misc",
+      "category": {
+        "0": { "name": "category_consumable_misc_repair" },
+        "1": { "name": "category_consumable_misc_fireworks" },
+        "2": { "name": "category_consumable_misc_etc" }
+      }
+    },
+    "4": {
+      "name": "category_consumable_silverbag",
+      "category": {}
+    }
+  }
+},
+
   "8": {
-    "name": "채집용장비",
+    "name": "category_gathering",
     "category": {}
   },
   "9": {
-    "name": "제작",
+    "name": "category_craft",
     "category": {
-        "0": {
-            "name": "자원",
-            "category": {}
-        },
-        "1": {
-            "name": "정제된자원",
-            "category": {}
-        },
-        "2": {
-            "name": "토큰",
-            "category": {}
-        },
-        "3": {
-            "name": "도시자원",
-            "category": {}
-        },
-        "4": {
-            "name": "물고기",
-            "category": {
-                "0": { "name": "평범한" },
-                "1": { "name": "희귀한" },
-                "2": { "name": "기타" }
-            }
-        },
-        "5": {
-            "name": "연금술",
-            "category": {}
+      "0": {
+        "name": "category_craft_comodity",
+        "category": {
+          "0": { "name": "category_craft_comodity_fiber" },
+          "1": { "name": "category_craft_comodity_hide" },
+          "2": { "name": "category_craft_comodity_ore" },
+          "3": { "name": "category_craft_comodity_stone" },
+          "4": { "name": "category_craft_comodity_log" }
         }
+      },
+      "1": {
+        "name": "category_craft_refined",
+        "category": {
+          "0": { "name": "category_craft_refined_cloth" },
+          "1": { "name": "category_craft_refined_metal" },
+          "2": { "name": "category_craft_refined_leather" },
+          "3": { "name": "category_craft_refined_block" },
+          "4": { "name": "category_craft_refined_plank" }
+        }
+      },
+      "2": {
+        "name": "category_craft_token",
+        "category": {}
+      },
+      "3": {
+        "name": "category_craft_city",
+        "category": {}
+      },
+      "4": {
+        "name": "category_craft_fish",
+        "category": {
+          "0": { "name": "category_craft_fish_common" },
+          "1": { "name": "category_craft_fish_rare" },
+          "2": { "name": "category_craft_fish_etc" }
+        }
+      },
+      "5": {
+        "name": "category_craft_alchemist",
+        "category": {}
+      }
     }
-  }, 
+  },
   "10": {
-    "name": "아티팩트",
+    "name": "category_artifact",
     "category": {}
   },
   "11": {
-    "name": "농사",
-    "category": {}
+    "name": "category_framing",
+    "category": {
+      "0": {
+        "name": "category_framing_farm",
+        "category": {
+          "0": {
+            "name": ""
+          },
+          "1": {
+            "name": "category_framing_plant",
+            "category": {
+              "0": {
+                "name": "category_framing_plant_carrot"
+              }
+            }
+          }
+        }
+      }
+    }
   },
   "12": {
-    "name": "가구",
+    "name": "category_furniture",
     "category": {}
   },
   "13": {
-    "name": "명품",
+    "name": "category_vanity",
     "category": {}
   },
   "14": {
-    "name": "기타",
+    "name": "category_etc",
     "category": {
+      "0": {
+        "name": ""
+      },
       "1": {
-        "name": "일꾼",
+        "name": "category_etc_worker",
         "category": {
           "0": {
-            "name": "일지",
+            "name": "category_etc_worker_journal",
             "category": {
-              "2": {
-                "name": "섬유"
-              },
-              "4": {
-                "name": "광석"
-              }
+              "0": { "name": "category_etc_worker_journal_general" },
+              "1": { "name": "category_etc_worker_journal_fish" },
+              "2": { "name": "category_etc_worker_journal_fiber" },
+              "3": { "name": "category_etc_worker_journal_hide" },
+              "4": { "name": "category_etc_worker_journal_ore" },
+              "5": { "name": "category_etc_worker_journal_stone" },
+              "6": { "name": "category_etc_worker_journal_log" },
+              "7": { "name": "category_etc_worker_journal_hunter" },
+              "8": { "name": "category_etc_worker_journal_mage" },
+              "9": { "name": "category_etc_worker_journal_warrior" },
+              "10": { "name": "category_etc_worker_journal_craftman" },
+              "11": { "name": "category_etc_worker_journal_mercenary" }
             }
           },
           "1": {
-            "name": "트로피",
+            "name": "category_etc_worker_trophy",
             "category": {
-              "0": {
-                "name": "일반"
-              }
+              "0": { "name": "category_etc_worker_trophy_general" }
             }
           }
         }
