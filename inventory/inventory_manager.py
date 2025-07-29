@@ -157,6 +157,7 @@ class InventoryManager(QWidget):
             box.clear()
             box.addItem("")
             if node and isinstance(node, dict):
+                print("[ category ]")
                 for k in sorted(node.keys(), key=int):
                     print(node[k]["name"])
                     box.addItem(self.util.get_text_from_lang(self.lang, node[k]["name"]), int(k))
@@ -234,7 +235,9 @@ class InventoryManager(QWidget):
         self.material_select.blockSignals(True)
         self.material_select.clear()
         self.material_select.addItem(self.util.get_text_from_lang(self.lang, "combo_new"))
+        print("[ load item ]")
         for name in self.materials:
+            print(name)
             self.material_select.addItem(self.util.get_text_from_lang(self.lang, name))
         self.material_select.blockSignals(False)
         self.update_category_boxes()

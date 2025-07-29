@@ -31,23 +31,6 @@
       2
     ]
   },
-  "item_vegetable_carrot": {
-    "enchant": {
-      "0": {
-        "buy_price": 0,
-        "fee": 0,
-        "count": 0,
-        "market_price": 99,
-        "market_price_time": "2025-07-26 23:38:49"
-      }
-    },
-    "category": [
-      11,
-      0,
-      1,
-      0
-    ]
-  },
   "item_journal_fisherman_journeyman": {
     "enchant": {
       "0": {
@@ -1013,7 +996,7 @@
       }
     }
   },
-  "category_framing_plant_carrot": {
+  "item_farming_carrot": {
     "category": [
       11,
       0,

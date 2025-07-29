@@ -9,11 +9,10 @@
           "1": { "name": "category_weapon_bow_long" },
           "2": { "name": "category_weapon_bow_war" },
           "3": { "name": "category_weapon_bow_warspering" },
-          "4": { "name": "category_weapon_bow_play" },
-          "5": { "name": "category_weapon_bow_whaling" },
-          "6": { "name": "category_weapon_bow_badon" },
-          "7": { "name": "category_weapon_bow_pierc" },
-          "8": { "name": "category_weapon_bow_sky" }
+          "4": { "name": "category_weapon_bow_whaling" },
+          "5": { "name": "category_weapon_bow_badon" },
+          "6": { "name": "category_weapon_bow_pierc" },
+          "7": { "name": "category_weapon_bow_sky" }
         }
       },
       "1": {
@@ -58,7 +57,7 @@
       "4": {
           "name": "category_weapon_hammer",
           "category": {
-            "0": { "name": "category_weapon_hammer" },
+            "0": { "name": "category_weapon_hammer_general" },
             "1": { "name": "category_weapon_hammer_great" },
             "2": { "name": "category_weapon_hammer_pole" },
             "3": { "name": "category_weapon_hammer_tomb" },
@@ -235,44 +234,319 @@
     "name": "category_armor_chest",
     "category": {
       "0": {
-        "name": "category_armor_cloth",
-        "category": {}
+        "name": "category_armor_chest_cloth",
+        "category": {
+          "0": { "name": "category_armor_chest_cloth_scholar" },
+          "1": { "name": "category_armor_chest_cloth_cleric" },
+          "2": { "name": "category_armor_chest_cloth_mage" },
+          "3": { "name": "category_armor_chest_cloth_druid" },
+          "4": { "name": "category_armor_chest_cloth_royal" },
+          "5": { "name": "category_armor_chest_cloth_spectral" },
+          "6": { "name": "category_armor_chest_cloth_cultist" },
+          "7": { "name": "category_armor_chest_cloth_feyscale" },
+          "8": { "name": "category_armor_chest_cloth_purity" }
+        }
       },
       "1": {
-        "name": "category_armor_leather",
-        "category": {}
+        "name": "category_armor_chest_leather",
+        "category": {
+          "0": { "name": "category_armor_chest_leather_mercenary" },
+          "1": { "name": "category_armor_chest_leather_hunter" },
+          "2": { "name": "category_armor_chest_leather_assassin" },
+          "3": { "name": "category_armor_chest_leather_stalker" },
+          "4": { "name": "category_armor_chest_leather_royal" },
+          "5": { "name": "category_armor_chest_leather_rogue" },
+          "6": { "name": "category_armor_chest_leather_specter" },
+          "7": { "name": "category_armor_chest_leather_mistwalker" },
+          "8": { "name": "category_armor_chest_leather_tenacity" }
+        }
+      },
+      "2": {
+        "name": "category_armor_chest_plate",
+        "category": {
+          "0": { "name": "category_armor_chest_plate_soldier" },
+          "1": { "name": "category_armor_chest_plate_knight" },
+          "2": { "name": "category_armor_chest_plate_guardian" },
+          "3": { "name": "category_armor_chest_plate_graveguard" },
+          "4": { "name": "category_armor_chest_plate_royal" },
+          "5": { "name": "category_armor_chest_plate_demon" },
+          "6": { "name": "category_armor_chest_plate_judicator" },
+          "7": { "name": "category_armor_chest_plate_duskweaver" },
+          "8": { "name": "category_armor_chest_plate_valor" }
+        }
       }
     }
   },
   "2": {
     "name": "category_armor_head",
-    "category": {}
-  },
-  "3": {
-    "name": "category_armor_foot",
     "category": {
       "0": {
-        "name": "category_armor_foot_cloth",
+        "name": "category_armor_head_cloth",
         "category": {
-          "0": {
-            "name": "category_armor_foot_cloth_scholar"
-          }
+          "0": { "name": "category_armor_head_cloth_scholar" },
+          "1": { "name": "category_armor_head_cloth_cleric" },
+          "2": { "name": "category_armor_head_cloth_mage" },
+          "3": { "name": "category_armor_head_cloth_druid" },
+          "4": { "name": "category_armor_head_cloth_royal" },
+          "5": { "name": "category_armor_head_cloth_spectral" },
+          "6": { "name": "category_armor_head_cloth_cultist" },
+          "7": { "name": "category_armor_head_cloth_feyscale" },
+          "8": { "name": "category_armor_head_cloth_purity" }
         }
+      },
+      "1": {
+        "name": "category_armor_head_leather",
+        "category": {
+          "0": { "name": "category_armor_head_leather_mercenary" },
+          "1": { "name": "category_armor_head_leather_hunter" },
+          "2": { "name": "category_armor_head_leather_assassin" },
+          "3": { "name": "category_armor_head_leather_stalker" },
+          "4": { "name": "category_armor_head_leather_royal" },
+          "5": { "name": "category_armor_head_leather_rogue" },
+          "6": { "name": "category_armor_head_leather_specter" },
+          "7": { "name": "category_armor_head_leather_mistwalker" },
+          "8": { "name": "category_armor_head_leather_tenacity" }
+        }
+      },
+      "2": {
+        "name": "category_armor_head_plate",
+        "category": {
+          "0": { "name": "category_armor_head_plate_soldier" },
+          "1": { "name": "category_armor_head_plate_knight" },
+          "2": { "name": "category_armor_head_plate_guardian" },
+          "3": { "name": "category_armor_head_plate_graveguard" },
+          "4": { "name": "category_armor_head_plate_royal" },
+          "5": { "name": "category_armor_head_plate_demon" },
+          "6": { "name": "category_armor_head_plate_judicator" },
+          "7": { "name": "category_armor_head_plate_duskweaver" },
+          "8": { "name": "category_armor_head_plate_valor" }
+        }
+      },
+      "3": {
+        "name": "category_armor_head_etc",
+        "category": {}
+      }
+    }
+  },
+  "3": {
+  "name": "category_armor_foot",
+  "category": {
+    "0": {
+      "name": "category_armor_foot_cloth",
+      "category": {
+        "0": { "name": "category_armor_foot_cloth_scholar" },
+        "1": { "name": "category_armor_foot_cloth_cleric" },
+        "2": { "name": "category_armor_foot_cloth_mage" },
+        "3": { "name": "category_armor_foot_cloth_druid" },
+        "4": { "name": "category_armor_foot_cloth_royal" },
+        "5": { "name": "category_armor_foot_cloth_spectral" },
+        "6": { "name": "category_armor_foot_cloth_cultist" },
+        "7": { "name": "category_armor_foot_cloth_feyscale" },
+        "8": { "name": "category_armor_foot_cloth_purity" }
+      }
+    },
+    "1": {
+      "name": "category_armor_foot_leather",
+      "category": {
+        "0": { "name": "category_armor_foot_leather_mercenary" },
+        "1": { "name": "category_armor_foot_leather_hunter" },
+        "2": { "name": "category_armor_foot_leather_assassin" },
+        "3": { "name": "category_armor_foot_leather_stalker" },
+        "4": { "name": "category_armor_foot_leather_royal" },
+        "5": { "name": "category_armor_foot_leather_rogue" },
+        "6": { "name": "category_armor_foot_leather_specter" },
+        "7": { "name": "category_armor_foot_leather_mistwalker" },
+        "8": { "name": "category_armor_foot_leather_tenacity" }
+      }
+    },
+    "2": {
+        "name": "category_armor_foot_plate",
+        "category": {
+          "0": { "name": "category_armor_foot_plate_demon" },
+          "1": { "name": "category_armor_foot_plate_duskweaver" },
+          "2": { "name": "category_armor_foot_plate_graveguard" },
+          "3": { "name": "category_armor_foot_plate_guardian" },
+          "4": { "name": "category_armor_foot_plate_judicator" },
+          "5": { "name": "category_armor_foot_plate_knight" },
+          "6": { "name": "category_armor_foot_plate_royal" },
+          "7": { "name": "category_armor_foot_plate_soldier" },
+          "8": { "name": "category_armor_foot_plate_valor" }
+        }
+      },
+      "3": {
+        "name": "category_armor_foot_etc",
+        "category": {}
       }
     }
   },
   "4": {
     "name": "category_secondhand",
-    "category": {}
+    "category": {
+      "0": {
+        "name": "category_mage",
+        "category": {
+          "0": { "name": "category_secondhand_mage_tome" },
+          "1": { "name": "category_secondhand_mage_eye" },
+          "2": { "name": "category_secondhand_mage_musak" },
+          "3": { "name": "category_secondhand_mage_taproot" },
+          "4": { "name": "category_secondhand_mage_censer" },
+          "5": { "name": "category_secondhand_mage_crystaltome" }
+        }
+      },
+      "1": {
+        "name": "category_hunter",
+        "category": {
+          "0": { "name": "category_secondhand_hunter_torch" },
+          "1": { "name": "category_secondhand_hunter_mistcaller" },
+          "2": { "name": "category_secondhand_hunter_cursedstaff" },
+          "3": { "name": "category_secondhand_hunter_cryptcandle" },
+          "4": { "name": "category_secondhand_hunter_scepter" },
+          "5": { "name": "category_secondhand_hunter_crystaltorch" }
+        }
+      },
+      "2": {
+        "name": "category_warrior",
+        "category": {
+          "0": { "name": "category_secondhand_warrior_basic" },
+          "1": { "name": "category_secondhand_warrior_sarcophagus" },
+          "2": { "name": "category_secondhand_warrior_caitiff" },
+          "3": { "name": "category_secondhand_warrior_facebreaker" },
+          "4": { "name": "category_secondhand_warrior_astralaegis" },
+          "5": { "name": "category_secondhand_warrior_crystal" }
+        }
+      },
+      "3": {
+        "name": "category_etc"
+      }
+    }
   },
   "5": {
     "name": "category_cloackbag",
-    "category": {}
+    "category": {
+      "0": {
+        "name": "category_cloackbag_cloack",
+        "category": {
+          "0" : {
+            "name": "category_cloackbag_cloack"
+          },
+          "1" : {
+            "name": "city_bridgewatch"
+          },
+          "2" : {
+            "name": "city_fortsterling"
+          },
+          "3" : {
+            "name": "city_lymhurst"
+          },
+          "4" : {
+            "name": "city_martlock"
+          },
+          "5" : {
+            "name": "city_thetford"
+          },
+          "6" : {
+            "name": "city_caerleon"
+          },
+          "7" : {
+            "name": "city_brecilien"
+          },
+          "8" : {
+            "name": "category_cloackbag_cloack_heretic"
+          },
+          "9" : {
+            "name": "category_cloackbag_cloack_undead"
+          },
+          "10" : {
+            "name": "category_cloackbag_cloack_keeper"
+          },
+          "11" : {
+            "name": "category_cloackbag_cloack_morgana"
+          },
+          "12" : {
+            "name": "category_cloackbag_cloack_avalonian"
+          },
+          "13" : {
+            "name": "category_cloackbag_cloack_demon"
+          },
+          "14" : {
+            "name": "category_cloackbag_cloack_smuggler"
+          }
+        }
+      },
+      "1": { 
+        "name": "category_cloackbag_bag" 
+      },
+      "2": {
+        "name": "category_cloackbag_bag_insight"
+      },
+      "3": {
+        "name": "category_etc"
+      }
+    }
   },
   "6": {
-    "name": "category_ride",
-    "category": {}
-  },
+  "name": "category_ride",
+  "category": {
+    "0": {
+      "name": "category_ride_basic",
+      "category": {
+        "0": { "name": "category_ride_basic_horse" },
+        "1": { "name": "category_ride_basic_armoredhorse" },
+        "2": { "name": "category_ride_basic_ox" },
+        "3": { "name": "category_ride_basic_sheep" },
+        "4": { "name": "category_ride_basic_direwolf" },
+        "5": { "name": "category_ride_basic_giantstag" },
+        "6": { "name": "category_ride_basic_swiftclaw" },
+        "7": { "name": "category_ride_basic_direboar" },
+        "8": { "name": "category_ride_basic_direbear" },
+        "9": { "name": "category_ride_basic_swampdragon" },
+        "10": { "name": "category_ride_basic_donkey" },
+        "11": { "name": "category_ride_basic_mammoth" },
+        "12": { "name": "category_ride_basic_terrorbird" }
+      }
+    },
+    "1": {
+      "name": "category_ride_rare",
+      "category": {
+        "0": { "name": "category_ride_rare_horse" },
+        "1": { "name": "category_ride_rare_armoredhorse" },
+        "2": { "name": "category_ride_rare_sheep" },
+        "3": { "name": "category_ride_rare_direwolf" },
+        "4": { "name": "category_ride_rare_giantstag" },
+        "5": { "name": "category_ride_rare_swiftclaw" },
+        "6": { "name": "category_ride_rare_direboar" },
+        "7": { "name": "category_ride_rare_direbear" },
+        "8": { "name": "category_ride_rare_swampdragon" },
+        "9": { "name": "category_ride_rare_donkey" },
+        "10": { "name": "category_ride_rare_bat" },
+        "11": { "name": "category_ride_rare_terrorbird" },
+        "12": { "name": "category_ride_rare_owl" },
+        "13": { "name": "category_ride_rare_rabbit" },
+        "14": { "name": "category_ride_rare_raven" },
+        "15": { "name": "category_ride_rare_horseater" },
+        "16": { "name": "category_ride_rare_toad" }
+      }
+    },
+    "3": {
+      "name": "category_ride_battle",
+      "category": {
+        "0": { "name": "category_ride_battle_wanderingfortress" },
+        "1": { "name": "category_ride_battle_beetle" },
+        "2": { "name": "category_ride_battle_behemoth" },
+        "3": { "name": "category_ride_battle_towerchariot" },
+        "4": { "name": "category_ride_battle_battleeagle" },
+        "5": { "name": "category_ride_battle_ancientent" },
+        "6": { "name": "category_ride_battle_juggernaut" },
+        "7": { "name": "category_ride_battle_mammoth" },
+        "8": { "name": "category_ride_battle_rhino" },
+        "9": { "name": "category_ride_battle_siegeballista" },
+        "10": { "name": "category_ride_battle_horseater" },
+        "11": { "name": "category_ride_battle_swampdragon" },
+        "12": { "name": "category_ride_battle_phalanxbeetle" }
+      }
+    }
+  }
+},
  "7": {
   "name": "category_consumable",
   "category": {
@@ -340,9 +614,77 @@
 },
 
   "8": {
-    "name": "category_gathering",
-    "category": {}
-  },
+  "name": "category_gathering",
+  "category": {
+    "0": {
+      "name": "category_fish",
+      "category": {
+        "0": { "name": "category_gathering_fishing_pole" },
+        "1": { "name": "category_armor_chest"},
+        "2": { "name": "category_armor_head"},
+        "3": { "name": "category_shoes"},
+        "4": { "name": "category_cloackbag"},
+        "5": { "name": "category_gathering_fishing_bait" }
+      }
+    },
+    "1": {
+      "name": "category_fiber",
+      "category": {
+        "0": { "name": "category_gathering_cotton_sickle" },
+        "1": { "name": "category_armor_chest"},
+        "2": { "name": "category_armor_head"},
+        "3": { "name": "category_shoes"},
+        "4": { "name": "category_cloackbag"}
+      }
+    },
+    "2": {
+      "name": "category_hide",
+      "category": {
+        "0": { "name": "category_gathering_skinning_knife" },
+        "1": { "name": "category_armor_chest"},
+        "2": { "name": "category_armor_head"},
+        "3": { "name": "category_shoes"},
+        "4": { "name": "category_cloackbag"}
+      }
+    },
+    "3": {
+      "name": "category_ore",
+      "category": {
+        "0": { "name": "category_gathering_ore_pickaxe" },
+        "1": { "name": "category_armor_chest"},
+        "2": { "name": "category_armor_head"},
+        "3": { "name": "category_shoes"},
+        "4": { "name": "category_cloackbag"}
+      }
+    },
+    "4": {
+      "name": "category_stone",
+      "category": {
+        "0": { "name": "category_gathering_stone_hammer" },
+        "1": { "name": "category_armor_chest"},
+        "2": { "name": "category_armor_head"},
+        "3": { "name": "category_shoes"},
+        "4": { "name": "category_cloackbag"}
+      }
+    },
+    "5": {
+      "name": "category_log",
+      "category": {
+        "0": { "name": "category_gathering_wood_axes" },
+        "1": { "name": "category_armor_chest"},
+        "2": { "name": "category_armor_head"},
+        "3": { "name": "category_shoes"},
+        "4": { "name": "category_cloackbag"}
+      }
+    },
+    "6": {
+      "name": "category_tracking",
+      "category": {
+        "0": { "name": "category_gathering_tracking_toolkit" }
+      }
+    }
+  }
+},
   "9": {
     "name": "category_craft",
     "category": {
@@ -368,11 +710,22 @@
       },
       "2": {
         "name": "category_craft_token",
-        "category": {}
+        "category": {
+          "0": { "name": "category_craft_token_rideupgrade" },
+          "1": { "name": "category_craft_token_seal" },
+          "2": { "name": "category_etc" }
+        }
       },
       "3": {
         "name": "category_craft_city",
-        "category": {}
+        "category": {
+          "0": { "name": "category_craft_city_beast" },
+          "1": { "name": "category_craft_city_tree" },
+          "2": { "name": "category_craft_city_mountain" },
+          "3": { "name": "category_craft_city_rock" },
+          "4": { "name": "category_craft_city_vain" },
+          "5": { "name": "category_craft_city_shadow" }
+        }
       },
       "4": {
         "name": "category_craft_fish",
@@ -384,13 +737,506 @@
       },
       "5": {
         "name": "category_craft_alchemist",
-        "category": {}
+        "category": {
+          "0": { "name": "category_craft_alchemist_shadowclaw" },
+          "1": { "name": "category_craft_alchemist_sylvianroot" },
+          "2": { "name": "category_craft_alchemist_elementalpaw" },
+          "3": { "name": "category_craft_alchemist_werewolftooth" },
+          "4": { "name": "category_craft_alchemist_imphorn" },
+          "5": { "name": "category_craft_alchemist_runestontoothed" },
+          "6": { "name": "category_craft_alchemist_dawnbirdfeather" },
+          "7": { "name": "category_craft_alchemist_scrap" },
+          "8": { "name": "category_craft_alchemist_arcaneresidue" },
+          "9": { "name": "category_craft_alchemist_essence" }
+        }
       }
     }
   },
   "10": {
     "name": "category_artifact",
-    "category": {}
+    "category": {
+      "0": {
+        "name": "category_weapon",
+        "category": {
+          "0": {
+            "name": "category_weapon_bow",
+            "category": {
+              "0": { "name": "category_weapon_bow" },
+              "1": { "name": "category_weapon_bow_long" },
+              "2": { "name": "category_weapon_bow_war" },
+              "3": { "name": "category_weapon_bow_warspering" },
+              "4": { "name": "category_weapon_bow_whaling" },
+              "5": { "name": "category_weapon_bow_badon" },
+              "6": { "name": "category_weapon_bow_pierc" },
+              "7": { "name": "category_weapon_bow_sky" }
+            }
+          },
+          "1": {
+            "name": "category_weapon_crossbow",
+            "category": {
+              "0": { "name": "category_weapon_crossbow" },
+              "1": { "name": "category_weapon_crossbow_heavy" },
+              "2": { "name": "category_weapon_crossbow_light" },
+              "3": { "name": "category_weapon_crossbow_weeping" },
+              "4": { "name": "category_weapon_crossbow_boltcasters" },
+              "5": { "name": "category_weapon_crossbow_siege" },
+              "6": { "name": "category_weapon_crossbow_energyshaper" },
+              "7": { "name": "category_weapon_crossbow_arclight" }
+            }
+          },
+          "2": {
+            "name": "category_weapon_axe",
+            "category": {
+              "0": { "name": "category_weapon_battleaxe" },
+              "1": { "name": "category_weapon_axe_great" },
+              "2": { "name": "category_weapon_axe_halberd" },
+              "3": { "name": "category_weapon_axe_carrioncaller" },
+              "4": { "name": "category_weapon_axe_infernal" },
+              "5": { "name": "category_weapon_axe_bearpaws" },
+              "6": { "name": "category_weapon_axe_realm" },
+              "7": { "name": "category_weapon_axe_crystal" }
+            }
+          },
+          "3": {
+            "name": "category_weapon_dagger",
+            "category": {
+              "0": { "name": "category_weapon_dagger" },
+              "1": { "name": "category_weapon_dagger_pair" },
+              "2": { "name": "category_weapon_dagger_claws" },
+              "3": { "name": "category_weapon_dagger_bloodletter" },
+              "4": { "name": "category_weapon_dagger_demonfang" },
+              "5": { "name": "category_weapon_dagger_deathgivers" },
+              "6": { "name": "category_weapon_dagger_bridled" },
+              "7": { "name": "category_weapon_dagger_twinslay" }
+            }
+          },
+          "4": {
+              "name": "category_weapon_hammer",
+              "category": {
+                "0": { "name": "category_weapon_hammer_general" },
+                "1": { "name": "category_weapon_hammer_great" },
+                "2": { "name": "category_weapon_hammer_pole" },
+                "3": { "name": "category_weapon_hammer_tomb" },
+                "4": { "name": "category_weapon_hammer_forge" },
+                "5": { "name": "category_weapon_hammer_grovekeeper" },
+                "6": { "name": "category_weapon_hammer_justice" },
+                "7": { "name": "category_weapon_hammer_truebolt" }
+              }
+          },
+          "5": {
+              "name": "category_weapon_gauntlet",
+              "category": {
+                "0": { "name": "category_weapon_gauntlet_fight" },
+                "1": { "name": "category_weapon_gauntlet_brawler" },
+                "2": { "name": "category_weapon_gauntlet_spiked" },
+                "3": { "name": "category_weapon_gauntlet_bear" },
+                "4": { "name": "category_weapon_gauntlet_hellfire" },
+                "5": { "name": "category_weapon_gauntlet_raven" },
+                "6": { "name": "category_weapon_gauntlet_avalon" },
+                "7": { "name": "category_weapon_gauntlet_pulse" },
+                "8": { "name": "category_weapon_gauntlet_blackhands" }
+              }
+          },
+          "6": {
+              "name": "category_weapon_mace",
+              "category": {
+                "0": { "name": "category_weapon_mace" },
+                "1": { "name": "category_weapon_mace_heavy" },
+                "2": { "name": "category_weapon_mace_morningstar" },
+                "3": { "name": "category_weapon_mace_bedrock" },
+                "4": { "name": "category_weapon_mace_incubus" },
+                "5": { "name": "category_weapon_mace_camlann" },
+                "6": { "name": "category_weapon_mace_oathkeeper" },
+                "7": { "name": "category_weapon_mace_dreadmonarch" }
+              }
+          },
+          "7": {
+              "name": "category_weapon_staff_quarter",
+              "category": {
+                "0": { "name": "category_weapon_staff_quarter" },
+                "1": { "name": "category_weapon_staff_quarter_ironclad" },
+                "2": { "name": "category_weapon_staff_quarter_doubleblade" },
+                "3": { "name": "category_weapon_staff_quarter_blackmonk" },
+                "4": { "name": "category_weapon_staff_quarter_soulside" },
+                "5": { "name": "category_weapon_staff_quarter_balance" },
+                "6": { "name": "category_weapon_staff_quarter_grailseeker" },
+                "7": { "name": "category_weapon_staff_quarter_phantomtwin" }
+              }
+          },
+          "8": {
+              "name": "category_weapon_spear",
+              "category": {
+                "0": { "name": "category_weapon_spear" },
+                "1": { "name": "category_weapon_spear_pike" },
+                "2": { "name": "category_weapon_spear_glaive" },
+                "3": { "name": "category_weapon_spear_heron" },
+                "4": { "name": "category_weapon_spear_spirithunter" },
+                "5": { "name": "category_weapon_spear_trinity" },
+                "6": { "name": "category_weapon_spear_daybreaker" },
+                "7": { "name": "category_weapon_spear_riftglaive" }
+              }
+          },
+          "9": {
+              "name": "category_weapon_sword",
+              "category": {
+                "0": { "name": "category_weapon_sword_broad" },
+                "1": { "name": "category_weapon_sword_claymore" },
+                "2": { "name": "category_weapon_sword_dual" },
+                "3": { "name": "category_weapon_sword_clarent" },
+                "4": { "name": "category_weapon_sword_carving" },
+                "5": { "name": "category_weapon_sword_galatine" },
+                "6": { "name": "category_weapon_sword_kingmaker" },
+                "7": { "name": "category_weapon_sword_infinity" }
+              }
+          },
+          "10": {
+              "name": "category_weapon_staff_arcane",
+              "category": {
+                "0": { "name": "category_weapon_staff_arcane" },
+                "1": { "name": "category_weapon_staff_arcane_great" },
+                "2": { "name": "category_weapon_staff_arcane_enigmatic" },
+                "3": { "name": "category_weapon_staff_arcane_witchwork" },
+                "4": { "name": "category_weapon_staff_arcane_occult" },
+                "5": { "name": "category_weapon_staff_arcane_malevolent" },
+                "6": { "name": "category_weapon_staff_arcane_evensong" },
+                "7": { "name": "category_weapon_staff_arcane_astral" }
+              }
+          },
+          "11": {
+              "name": "category_weapon_staff_cursed",
+              "category": {
+                "0": { "name": "category_weapon_staff_cursed" },
+                "1": { "name": "category_weapon_staff_cursed_great" },
+                "2": { "name": "category_weapon_staff_cursed_demonic" },
+                "3": { "name": "category_weapon_staff_cursed_lifecurse" },
+                "4": { "name": "category_weapon_staff_cursed_skull" },
+                "5": { "name": "category_weapon_staff_cursed_damnation" },
+                "6": { "name": "category_weapon_staff_cursed_shadowcaller" },
+                "7": { "name": "category_weapon_staff_cursed_rottcaller" }
+              }
+          },
+          "12": {
+          "name": "category_weapon_staff_fire",
+          "category": {
+              "0": { "name": "category_weapon_staff_fire" },
+              "1": { "name": "category_weapon_staff_fire_great" },
+              "2": { "name": "category_weapon_staff_fire_infernal" },
+              "3": { "name": "category_weapon_staff_fire_wildfire" },
+              "4": { "name": "category_weapon_staff_fire_brimstone" },
+              "5": { "name": "category_weapon_staff_fire_blazing" },
+              "6": { "name": "category_weapon_staff_fire_dawnsong" },
+              "7": { "name": "category_weapon_staff_fire_flamewalker" }
+            }
+          },
+          "13": {
+              "name": "category_weapon_staff_frost",
+              "category": {
+                  "0": { "name": "category_weapon_staff_frost" },
+                  "1": { "name": "category_weapon_staff_frost_great" },
+                  "2": { "name": "category_weapon_staff_frost_glacial" },
+                  "3": { "name": "category_weapon_staff_frost_hoarfrost" },
+                  "4": { "name": "category_weapon_staff_frost_icicle" },
+                  "5": { "name": "category_weapon_staff_frost_permafrost" },
+                  "6": { "name": "category_weapon_staff_frost_chillhowl" },
+                  "7": { "name": "category_weapon_staff_frost_arctic" }
+              }
+          },
+          "14": {
+              "name": "category_weapon_staff_holy",
+              "category": {
+                  "0": { "name": "category_weapon_staff_holy" },
+                  "1": { "name": "category_weapon_staff_holy_great" },
+                  "2": { "name": "category_weapon_staff_holy_divine" },
+                  "3": { "name": "category_weapon_staff_holy_lifetouch" },
+                  "4": { "name": "category_weapon_staff_holy_fallen" },
+                  "5": { "name": "category_weapon_staff_holy_redemption" },
+                  "6": { "name": "category_weapon_staff_holy_hallowfall" },
+                  "7": { "name": "category_weapon_staff_holy_exalted" }
+              }
+          },
+          "15": {
+              "name": "category_weapon_staff_nature",
+              "category": {
+                  "0": { "name": "category_weapon_staff_nature" },
+                  "1": { "name": "category_weapon_staff_nature_great" },
+                  "2": { "name": "category_weapon_staff_nature_wild" },
+                  "3": { "name": "category_weapon_staff_nature_druid" },
+                  "4": { "name": "category_weapon_staff_nature_blight" },
+                  "5": { "name": "category_weapon_staff_nature_rampant" },
+                  "6": { "name": "category_weapon_staff_nature_ironroot" },
+                  "7": { "name": "category_weapon_staff_nature_forgebark" }
+              }
+          },
+          "16": {
+              "name": "category_weapon_staff_shapeshifter",
+              "category": {
+                  "0": { "name": "category_weapon_staff_shapeshifter_prowling" },
+                  "1": { "name": "category_weapon_staff_shapeshifter_rootbound" },
+                  "2": { "name": "category_weapon_staff_shapeshifter_primal" },
+                  "3": { "name": "category_weapon_staff_shapeshifter_bloodmoon" },
+                  "4": { "name": "category_weapon_staff_shapeshifter_hellspawn" },
+                  "5": { "name": "category_weapon_staff_shapeshifter_earthrune" },
+                  "6": { "name": "category_weapon_staff_shapeshifter_lightcaller" },
+                  "7": { "name": "category_weapon_staff_shapeshifter_steelgaze" }
+              }
+          },
+          "17": {
+              "name": "category_weapon_etc",
+              "category": {}
+          }
+        }
+      },
+      "1": {
+        "name": "category_armor_chest",
+        "category": {
+          "0": {
+            "name": "category_armor_chest_cloth",
+            "category": {
+              "0": { "name": "category_armor_chest_cloth_scholar" },
+              "1": { "name": "category_armor_chest_cloth_cleric" },
+              "2": { "name": "category_armor_chest_cloth_mage" },
+              "3": { "name": "category_armor_chest_cloth_druid" },
+              "4": { "name": "category_armor_chest_cloth_royal" },
+              "5": { "name": "category_armor_chest_cloth_spectral" },
+              "6": { "name": "category_armor_chest_cloth_cultist" },
+              "7": { "name": "category_armor_chest_cloth_feyscale" },
+              "8": { "name": "category_armor_chest_cloth_purity" }
+            }
+          },
+          "1": {
+            "name": "category_armor_chest_leather",
+            "category": {
+              "0": { "name": "category_armor_chest_leather_mercenary" },
+              "1": { "name": "category_armor_chest_leather_hunter" },
+              "2": { "name": "category_armor_chest_leather_assassin" },
+              "3": { "name": "category_armor_chest_leather_stalker" },
+              "4": { "name": "category_armor_chest_leather_royal" },
+              "5": { "name": "category_armor_chest_leather_rogue" },
+              "6": { "name": "category_armor_chest_leather_specter" },
+              "7": { "name": "category_armor_chest_leather_mistwalker" },
+              "8": { "name": "category_armor_chest_leather_tenacity" }
+            }
+          },
+          "2": {
+            "name": "category_armor_chest_plate",
+            "category": {
+              "0": { "name": "category_armor_chest_plate_soldier" },
+              "1": { "name": "category_armor_chest_plate_knight" },
+              "2": { "name": "category_armor_chest_plate_guardian" },
+              "3": { "name": "category_armor_chest_plate_graveguard" },
+              "4": { "name": "category_armor_chest_plate_royal" },
+              "5": { "name": "category_armor_chest_plate_demon" },
+              "6": { "name": "category_armor_chest_plate_judicator" },
+              "7": { "name": "category_armor_chest_plate_duskweaver" },
+              "8": { "name": "category_armor_chest_plate_valor" }
+            }
+          }
+        }
+      },
+      "2": {
+        "name": "category_armor_head",
+        "category": {
+          "0": {
+            "name": "category_armor_head_cloth",
+            "category": {
+              "0": { "name": "category_armor_head_cloth_scholar" },
+              "1": { "name": "category_armor_head_cloth_cleric" },
+              "2": { "name": "category_armor_head_cloth_mage" },
+              "3": { "name": "category_armor_head_cloth_druid" },
+              "4": { "name": "category_armor_head_cloth_royal" },
+              "5": { "name": "category_armor_head_cloth_spectral" },
+              "6": { "name": "category_armor_head_cloth_cultist" },
+              "7": { "name": "category_armor_head_cloth_feyscale" },
+              "8": { "name": "category_armor_head_cloth_purity" }
+            }
+          },
+          "1": {
+            "name": "category_armor_head_leather",
+            "category": {
+              "0": { "name": "category_armor_head_leather_mercenary" },
+              "1": { "name": "category_armor_head_leather_hunter" },
+              "2": { "name": "category_armor_head_leather_assassin" },
+              "3": { "name": "category_armor_head_leather_stalker" },
+              "4": { "name": "category_armor_head_leather_royal" },
+              "5": { "name": "category_armor_head_leather_rogue" },
+              "6": { "name": "category_armor_head_leather_specter" },
+              "7": { "name": "category_armor_head_leather_mistwalker" },
+              "8": { "name": "category_armor_head_leather_tenacity" }
+            }
+          },
+          "2": {
+            "name": "category_armor_head_plate",
+            "category": {
+              "0": { "name": "category_armor_head_plate_soldier" },
+              "1": { "name": "category_armor_head_plate_knight" },
+              "2": { "name": "category_armor_head_plate_guardian" },
+              "3": { "name": "category_armor_head_plate_graveguard" },
+              "4": { "name": "category_armor_head_plate_royal" },
+              "5": { "name": "category_armor_head_plate_demon" },
+              "6": { "name": "category_armor_head_plate_judicator" },
+              "7": { "name": "category_armor_head_plate_duskweaver" },
+              "8": { "name": "category_armor_head_plate_valor" }
+            }
+          },
+          "3": {
+            "name": "category_armor_head_etc",
+            "category": {}
+          }
+        }
+      },
+      "3": {
+      "name": "category_armor_foot",
+      "category": {
+        "0": {
+          "name": "category_armor_foot_cloth",
+          "category": {
+            "0": { "name": "category_armor_foot_cloth_scholar" },
+            "1": { "name": "category_armor_foot_cloth_cleric" },
+            "2": { "name": "category_armor_foot_cloth_mage" },
+            "3": { "name": "category_armor_foot_cloth_druid" },
+            "4": { "name": "category_armor_foot_cloth_royal" },
+            "5": { "name": "category_armor_foot_cloth_spectral" },
+            "6": { "name": "category_armor_foot_cloth_cultist" },
+            "7": { "name": "category_armor_foot_cloth_feyscale" },
+            "8": { "name": "category_armor_foot_cloth_purity" }
+          }
+        },
+        "1": {
+          "name": "category_armor_foot_leather",
+          "category": {
+            "0": { "name": "category_armor_foot_leather_mercenary" },
+            "1": { "name": "category_armor_foot_leather_hunter" },
+            "2": { "name": "category_armor_foot_leather_assassin" },
+            "3": { "name": "category_armor_foot_leather_stalker" },
+            "4": { "name": "category_armor_foot_leather_royal" },
+            "5": { "name": "category_armor_foot_leather_rogue" },
+            "6": { "name": "category_armor_foot_leather_specter" },
+            "7": { "name": "category_armor_foot_leather_mistwalker" },
+            "8": { "name": "category_armor_foot_leather_tenacity" }
+          }
+        },
+        "2": {
+            "name": "category_armor_foot_plate",
+            "category": {
+              "0": { "name": "category_armor_foot_plate_demon" },
+              "1": { "name": "category_armor_foot_plate_duskweaver" },
+              "2": { "name": "category_armor_foot_plate_graveguard" },
+              "3": { "name": "category_armor_foot_plate_guardian" },
+              "4": { "name": "category_armor_foot_plate_judicator" },
+              "5": { "name": "category_armor_foot_plate_knight" },
+              "6": { "name": "category_armor_foot_plate_royal" },
+              "7": { "name": "category_armor_foot_plate_soldier" },
+              "8": { "name": "category_armor_foot_plate_valor" }
+            }
+          },
+          "3": {
+            "name": "category_armor_foot_etc",
+            "category": {}
+          }
+        }
+      },
+      "4": {
+        "name": "category_secondhand",
+        "category": {
+          "0": {
+            "name": "category_mage",
+            "category": {
+              "0": { "name": "category_secondhand_mage_tome" },
+              "1": { "name": "category_secondhand_mage_eye" },
+              "2": { "name": "category_secondhand_mage_musak" },
+              "3": { "name": "category_secondhand_mage_taproot" },
+              "4": { "name": "category_secondhand_mage_censer" },
+              "5": { "name": "category_secondhand_mage_crystaltome" }
+            }
+          },
+          "1": {
+            "name": "category_hunter",
+            "category": {
+              "0": { "name": "category_secondhand_hunter_torch" },
+              "1": { "name": "category_secondhand_hunter_mistcaller" },
+              "2": { "name": "category_secondhand_hunter_cursedstaff" },
+              "3": { "name": "category_secondhand_hunter_cryptcandle" },
+              "4": { "name": "category_secondhand_hunter_scepter" },
+              "5": { "name": "category_secondhand_hunter_crystaltorch" }
+            }
+          },
+          "2": {
+            "name": "category_warrior",
+            "category": {
+              "0": { "name": "category_secondhand_warrior_basic" },
+              "1": { "name": "category_secondhand_warrior_sarcophagus" },
+              "2": { "name": "category_secondhand_warrior_caitiff" },
+              "3": { "name": "category_secondhand_warrior_facebreaker" },
+              "4": { "name": "category_secondhand_warrior_astralaegis" },
+              "5": { "name": "category_secondhand_warrior_crystal" }
+            }
+          },
+          "3": {
+            "name": "category_etc"
+          }
+        }
+      },
+      "5": {
+        "name": "category_artifact_pieces",
+        "category": {
+          "0": { "name": "category_artifact_pieces_rune" },
+          "1": { "name": "category_artifact_pieces_soul" },
+          "2": { "name": "category_artifact_pieces_relic" },
+          "3": { "name": "category_artifact_pieces_avalon" },
+          "4": { "name": "category_artifact_pieces_crystal" }
+        }
+      },
+      "6": {
+        "name": "category_artifact_cloak",
+        "category": {
+          "0" : {
+            "name": "city_bridgewatch"
+          },
+          "1" : {
+            "name": "city_fortsterling"
+          },
+          "2" : {
+            "name": "city_lymhurst"
+          },
+          "3" : {
+            "name": "city_martlock"
+          },
+          "4" : {
+            "name": "city_thetford"
+          },
+          "5" : {
+            "name": "city_caerleon"
+          },
+          "6" : {
+            "name": "city_brecilien"
+          },
+          "7" : {
+            "name": "category_cloackbag_cloack_heretic"
+          },
+          "8" : {
+            "name": "category_cloackbag_cloack_undead"
+          },
+          "9" : {
+            "name": "category_cloackbag_cloack_keeper"
+          },
+          "10" : {
+            "name": "category_cloackbag_cloack_morgana"
+          },
+          "11" : {
+            "name": "category_cloackbag_cloack_demon"
+          },
+          "12" : {
+            "name": "category_cloackbag_cloack_avalonian"
+          },
+          "13" : {
+            "name": "category_cloackbag_cloack_smuggler"
+          }
+        }
+      },
+      "7": {
+        "name": "category_artifact_crystallized"
+      }
+    }
   },
   "11": {
     "name": "category_framing",
@@ -399,35 +1245,224 @@
         "name": "category_framing_farm",
         "category": {
           "0": {
-            "name": ""
+            "name": "category_framing_seed",
+            "category": {
+              "0": { "name": "category_framing_farm_carrot" },
+              "1": { "name": "category_framing_farm_bean" },
+              "2": { "name": "category_framing_farm_wheat" },
+              "3": { "name": "category_framing_farm_turnip" },
+              "4": { "name": "category_framing_farm_cabbage" },
+              "5": { "name": "category_framing_farm_potato" },
+              "6": { "name": "category_framing_farm_corn" },
+              "7": { "name": "category_framing_farm_pumpkin" }
+            }
           },
           "1": {
             "name": "category_framing_plant",
             "category": {
-              "0": {
-                "name": "category_framing_plant_carrot"
-              }
+              "0": { "name": "category_framing_farm_carrot" },
+              "1": { "name": "category_framing_farm_bean" },
+              "2": { "name": "category_framing_farm_wheat" },
+              "3": { "name": "category_framing_farm_turnip" },
+              "4": { "name": "category_framing_farm_cabbage" },
+              "5": { "name": "category_framing_farm_potato" },
+              "6": { "name": "category_framing_farm_corn" },
+              "7": { "name": "category_framing_farm_pumpkin" }
             }
           }
+        }
+      },
+      "1": {
+        "name": "category_framing_herbgarden",
+        "category": {
+          "0": {
+            "name": "category_framing_seed",
+            "category": {
+              "0": { "name": "category_framing_herb_mushroom" },
+              "1": { "name": "category_framing_herb_comfrey" },
+              "2": { "name": "category_framing_herb_burdock" },
+              "3": { "name": "category_framing_herb_rabbitflower" },
+              "4": { "name": "category_framing_herb_foxglove" },
+              "5": { "name": "category_framing_herb_mullein" },
+              "6": { "name": "category_framing_herb_yarrow" }
+            }
+          },
+          "1": {
+            "name": "category_framing_herb",
+            "category": {
+              "0": { "name": "category_framing_herb_mushroom" },
+              "1": { "name": "category_framing_herb_comfrey" },
+              "2": { "name": "category_framing_herb_burdock" },
+              "3": { "name": "category_framing_herb_rabbitflower" },
+              "4": { "name": "category_framing_herb_foxglove" },
+              "5": { "name": "category_framing_herb_mullein" },
+              "6": { "name": "category_framing_herb_yarrow" }
+            }
+          }
+        }
+      },
+      "2": {
+        "name": "category_framing_livestock",
+        "category": {
+          "0": {
+            "name": "category_framing_livestock_younganimal",
+            "category": {
+              "0": { "name": "category_framing_livestock_animal_chicken" },
+              "1": { "name": "category_framing_livestock_animal_goat" },
+              "2": { "name": "category_framing_livestock_animal_goose" },
+              "3": { "name": "category_framing_livestock_animal_sheep" },
+              "4": { "name": "category_framing_livestock_animal_pig" },
+              "5": { "name": "category_framing_livestock_animal_cow" },
+              "6": { "name": "category_framing_livestock_animal_horse" },
+              "7": { "name": "category_framing_livestock_animal_ox" },
+              "8": { "name": "category_framing_livestock_animal_moose" },
+              "9": { "name": "category_framing_livestock_animal_deermoose" }
+            }
+          },
+          "1": {
+            "name": "category_framing_livestock_animal",
+            "category": {
+              "0": { "name": "category_framing_livestock_animal_chicken" },
+              "1": { "name": "category_framing_livestock_animal_goat" },
+              "2": { "name": "category_framing_livestock_animal_goose" },
+              "3": { "name": "category_framing_livestock_animal_sheep" },
+              "4": { "name": "category_framing_livestock_animal_pig" },
+              "5": { "name": "category_framing_livestock_animal_cow" },
+              "6": { "name": "category_framing_livestock_animal_horse" },
+              "7": { "name": "category_framing_livestock_animal_ox" },
+              "8": { "name": "category_framing_livestock_animal_moose" },
+              "9": { "name": "category_framing_livestock_animal_deermoose" }
+            }
+          },
+          "2": { "name": "category_framing_livestock_egg" },
+          "3": { "name": "category_framing_livestock_milk" }
+        }
+      },
+      "3": {
+        "name": "category_framing_kennel",
+        "category": {
+          "0": { "name": "category_framing_livestock_younganimal" },
+          "1": { "name": "category_framing_livestock_animal"}
+        }
+      },
+      "4": {
+        "name": "category_framing_farmingproduct",
+        "category": {
+          "0": { "name": "category_framing_farmingproduct_alcohol" },
+          "1": { "name": "category_framing_farmingproduct_bread" },
+          "2": { "name": "category_framing_farmingproduct_butter" },
+          "3": { "name": "category_framing_farmingproduct_flour" },
+          "4": { "name": "category_framing_farmingproduct_meat" }
         }
       }
     }
   },
   "12": {
     "name": "category_furniture",
-    "category": {}
+    "category": {
+      "0": {
+        "name": "category_furniture_fixing"
+      },
+      "1": {
+        "name": "category_furniture_box",
+        "category": {
+          "0": { "name": "category_furniture_house" },
+          "1": { "name": "category_furniture_world" }
+        }
+      },
+      "2": {
+        "name": "category_furniture_house"
+      },
+      "3": {
+        "name": "category_furniture_island"
+      },
+      "4": {
+        "name": "category_furniture_world",
+        "category": {
+          "0": { "name": "category_furniture_world_flag" },
+          "1": { "name": "category_furniture_world_status" },
+          "2": { "name": "category_etc" }
+        }
+      }
+    }
   },
   "13": {
     "name": "category_vanity",
-    "category": {}
-  },
-  "14": {
-    "name": "category_etc",
     "category": {
       "0": {
-        "name": ""
+        "name": "category_vanity_avatar",
+        "category": {
+          "0": { "name": "category_vanity_avatar_journal" },
+          "1": { "name": "category_vanity_avatar_adventurerchallenge" },
+          "2": { "name": "category_vanity_avatar_conquerorchallenge" },
+          "3": { "name": "category_vanity_avatar_anniversary" },
+          "4": { "name": "category_etc" }
+        }
       },
       "1": {
+        "name": "category_vanity_avatarframe",
+        "category": {
+          "0": { "name": "category_vanity_avatar_journal" },
+          "1": { "name": "category_vanity_avatar_adventurerchallenge" },
+          "2": { "name": "category_vanity_avatar_conquerorchallenge" },
+          "3": { "name": "category_vanity_avatar_anniversary" },
+          "4": { "name": "category_etc" }
+        }
+      },
+      "2": {
+        "name": "category_vanity_mount",
+        "category": {
+          "0": { "name": "category_ride_basic_horse" },
+          "1": { "name": "category_ride_basic_armoredhorse" },
+          "2": { "name": "category_ride_basic_ox" },
+          "4": { "name": "category_ride_basic_direwolf" },
+          "5": { "name": "category_framing_livestock_animal_deermoose" },
+          "6": { "name": "category_ride_basic_swiftclaw" },
+          "7": { "name": "category_ride_basic_direboar" },
+          "8": { "name": "category_ride_basic_direbear" },
+          "9": { "name": "category_ride_basic_swampdragon" },
+          "10": { "name": "category_ride_basic_donkey" },
+          "11": { "name": "category_ride_basic_mammoth" }
+        }
+      },
+      "3": {
+        "name": "category_vanity_weapon"
+      },
+      "4": {
+        "name": "category_vanity_armor"
+      },
+      "5": {
+        "name": "category_vanity_head"
+      },
+      "6": {
+        "name": "category_vanity_shoes"
+      },
+      "7": {
+        "name": "category_vanity_offhand"
+      },
+      "8": {
+        "name": "category_vanity_cape"
+      },
+      "9": {
+        "name": "category_vanity_emote"
+      }
+    }
+  },
+  "14": {
+  "name": "category_etc",
+  "category": {
+      "0": {
+        "name": "category_etc_lootitem"
+      },
+      "1": {
+        "name": "category_etc_guilds",
+        "category": {
+          "0": { "name": "category_etc_guilds_hideout" },
+          "1": { "name": "category_etc_guilds_siegehammer" },
+          "2": { "name": "category_etc_guilds_siegebanner" }
+        }
+      },
+      "2": {
         "name": "category_etc_worker",
         "category": {
           "0": {
@@ -443,17 +1478,362 @@
               "7": { "name": "category_etc_worker_journal_hunter" },
               "8": { "name": "category_etc_worker_journal_mage" },
               "9": { "name": "category_etc_worker_journal_warrior" },
-              "10": { "name": "category_etc_worker_journal_craftman" },
+              "10": { "name": "category_etc_worker_toolcraftman" },
               "11": { "name": "category_etc_worker_journal_mercenary" }
             }
           },
           "1": {
             "name": "category_etc_worker_trophy",
             "category": {
-              "0": { "name": "category_etc_worker_trophy_general" }
+              "0": { "name": "category_etc_worker_trophy_general" },
+              "1": { "name": "category_etc_worker_trophy_fish" },
+              "2": { "name": "category_etc_worker_trophy_fiber" },
+              "3": { "name": "category_etc_worker_trophy_hide" },
+              "4": { "name": "category_etc_worker_trophy_ore" },
+              "5": { "name": "category_etc_worker_trophy_stone" },
+              "6": { "name": "category_etc_worker_trophy_log" },
+              "7": { "name": "category_etc_worker_trophy_mercenary" },
+              "8": { "name": "category_etc_worker_trophy_etc" }
+            }
+          },
+          "2": {
+            "name": "category_etc_worker_contract",
+            "category": {
+              "0": { "name": "category_etc_worker_contract_fish" },
+              "1": { "name": "category_etc_worker_contract_fiber" },
+              "2": { "name": "category_etc_worker_contract_hide" },
+              "3": { "name": "category_etc_worker_contract_ore" },
+              "4": { "name": "category_etc_worker_contract_stone" },
+              "5": { "name": "category_etc_worker_contract_log" },
+              "6": { "name": "category_etc_worker_contract_hunter" },
+              "7": { "name": "category_etc_worker_contract_mage" },
+              "8": { "name": "category_etc_worker_contract_warrior" },
+              "9": { "name": "category_etc_worker_contract_craftman" },
+              "10": { "name": "category_etc_worker_contract_mercenary" }
+            }
+          },
+          "3": { "name": "category_etc_worker_bed" },
+          "4": { "name": "category_etc_worker_table" }
+        }
+      },
+      "3": {
+        "name": "category_etc_tokens",
+        "category": {
+          "0": { "name": "category_etc_tokens_vanity" },
+          "1": { 
+            "name": "category_etc_tokens_crystaltoken",
+            "category": {
+              "0": { "name": "category_etc_tokens_crystaltoken_5v5" },
+              "1": { "name": "category_etc_tokens_crystaltoken_20v20" }
+            }
+           },
+          "2": { "name": "category_etc_tokens_anchor" },
+          "3": { "name": "category_etc_tokens_other" }
+        }
+      },
+      "4": {
+        "name": "category_etc_luxury",
+        "category": {
+          "0": { "name": "city_bridgewatch" },
+          "1": { "name": "city_fortsterling" },
+          "2": { "name": "city_lymhurst" },
+          "3": { "name": "city_martlock" },
+          "4": { "name": "city_thetford" },
+          "5": { "name": "city_caerleon" },
+          "6": { "name": "category_etc_luxury_any" }
+        }
+      },
+      "5": {
+        "name": "category_etc_map",
+        "category": {
+          "0": { 
+            "name": "category_etc_map_random",
+            "category": {
+              "0": { "name": "category_etc_map_random_solo" },
+              "1": { "name": "category_etc_map_random_group" },
+              "2": { "name": "category_etc_map_random_raids" }
+            }
+          },
+          "1": { 
+            "name": "category_etc_map_corrupted",
+            "category": {
+              "0": { "name": "category_etc_map_non" },
+              "1": { "name": "category_etc_map_lethal" }
+            }
+          },
+          "2": { 
+            "name": "category_etc_map_hell",
+            "category": {
+                "0": { "name": "category_etc_map_non" },
+                "1": { "name": "category_etc_map_lethal" }
+              }
+          },
+          "3": { "name": "category_etc_map_etc" }
+        }
+      },
+      "6": {
+        "name": "category_etc_hardcoreexpeditions",
+        "category": {
+          "0": { 
+            "name": "category_etc_hardcoreexpeditions_event",
+            "category": {
+              "0": { "name": "category_etc_hardcoreexpedition_lv1" }
+            }
+           },
+          "1": { 
+            "name": "category_etc_hardcoreexpeditions_suspiciousdeal",
+            "category": {
+              "0": { "name": "category_etc_hardcoreexpedition_lv1" },
+              "1": { "name": "category_etc_hardcoreexpedition_lv2" },
+              "2": { "name": "category_etc_hardcoreexpedition_lv3" },
+              "3": { "name": "category_etc_hardcoreexpedition_lv4" },
+              "4": { "name": "category_etc_hardcoreexpedition_lv5" },
+              "5": { "name": "category_etc_hardcoreexpedition_lv6" },
+              "6": { "name": "category_etc_hardcoreexpedition_lv7" },
+              "7": { "name": "category_etc_hardcoreexpedition_lv8" },
+              "8": { "name": "category_etc_hardcoreexpedition_lv9" },
+              "9": { "name": "category_etc_hardcoreexpedition_lv10" },
+              "10": { "name": "category_etc_hardcoreexpedition_lv11" },
+              "11": { "name": "category_etc_hardcoreexpedition_lv12" },
+              "12": { "name": "category_etc_hardcoreexpedition_lv13" },
+              "13": { "name": "category_etc_hardcoreexpedition_lv14" },
+              "14": { "name": "category_etc_hardcoreexpedition_lv15" },
+              "15": { "name": "category_etc_hardcoreexpedition_lv16" },
+              "16": { "name": "category_etc_hardcoreexpedition_lv17" },
+              "17": { "name": "category_etc_hardcoreexpedition_lv18" }
+            }
+          },
+          "2": { 
+            "name": "category_etc_hardcoreexpeditions_silverscoop",
+            "category": {
+              "0": { "name": "category_etc_hardcoreexpedition_lv1" },
+              "1": { "name": "category_etc_hardcoreexpedition_lv2" },
+              "2": { "name": "category_etc_hardcoreexpedition_lv3" },
+              "3": { "name": "category_etc_hardcoreexpedition_lv4" },
+              "4": { "name": "category_etc_hardcoreexpedition_lv5" },
+              "5": { "name": "category_etc_hardcoreexpedition_lv6" },
+              "6": { "name": "category_etc_hardcoreexpedition_lv7" },
+              "7": { "name": "category_etc_hardcoreexpedition_lv8" },
+              "8": { "name": "category_etc_hardcoreexpedition_lv9" },
+              "9": { "name": "category_etc_hardcoreexpedition_lv10" },
+              "10": { "name": "category_etc_hardcoreexpedition_lv11" },
+              "11": { "name": "category_etc_hardcoreexpedition_lv12" },
+              "12": { "name": "category_etc_hardcoreexpedition_lv13" },
+              "13": { "name": "category_etc_hardcoreexpedition_lv14" },
+              "14": { "name": "category_etc_hardcoreexpedition_lv15" },
+              "15": { "name": "category_etc_hardcoreexpedition_lv16" },
+              "16": { "name": "category_etc_hardcoreexpedition_lv17" },
+              "17": { "name": "category_etc_hardcoreexpedition_lv18" }
+            }
+          },
+          "3": { 
+            "name": "category_etc_hardcoreexpeditions_woodmadness",
+          "category": {
+              "0": { "name": "category_etc_hardcoreexpedition_lv1" },
+              "1": { "name": "category_etc_hardcoreexpedition_lv2" },
+              "2": { "name": "category_etc_hardcoreexpedition_lv3" },
+              "3": { "name": "category_etc_hardcoreexpedition_lv4" },
+              "4": { "name": "category_etc_hardcoreexpedition_lv5" },
+              "5": { "name": "category_etc_hardcoreexpedition_lv6" },
+              "6": { "name": "category_etc_hardcoreexpedition_lv7" },
+              "7": { "name": "category_etc_hardcoreexpedition_lv8" },
+              "8": { "name": "category_etc_hardcoreexpedition_lv9" },
+              "9": { "name": "category_etc_hardcoreexpedition_lv10" },
+              "10": { "name": "category_etc_hardcoreexpedition_lv11" },
+              "11": { "name": "category_etc_hardcoreexpedition_lv12" },
+              "12": { "name": "category_etc_hardcoreexpedition_lv13" },
+              "13": { "name": "category_etc_hardcoreexpedition_lv14" },
+              "14": { "name": "category_etc_hardcoreexpedition_lv15" },
+              "15": { "name": "category_etc_hardcoreexpedition_lv16" },
+              "16": { "name": "category_etc_hardcoreexpedition_lv17" },
+              "17": { "name": "category_etc_hardcoreexpedition_lv18" }
+            }
+          },
+          "4": { 
+            "name": "category_etc_hardcoreexpeditions_moldremoval",
+            "category": {
+              "0": { "name": "category_etc_hardcoreexpedition_lv1" },
+              "1": { "name": "category_etc_hardcoreexpedition_lv2" },
+              "2": { "name": "category_etc_hardcoreexpedition_lv3" },
+              "3": { "name": "category_etc_hardcoreexpedition_lv4" },
+              "4": { "name": "category_etc_hardcoreexpedition_lv5" },
+              "5": { "name": "category_etc_hardcoreexpedition_lv6" },
+              "6": { "name": "category_etc_hardcoreexpedition_lv7" },
+              "7": { "name": "category_etc_hardcoreexpedition_lv8" },
+              "8": { "name": "category_etc_hardcoreexpedition_lv9" },
+              "9": { "name": "category_etc_hardcoreexpedition_lv10" },
+              "10": { "name": "category_etc_hardcoreexpedition_lv11" },
+              "11": { "name": "category_etc_hardcoreexpedition_lv12" },
+              "12": { "name": "category_etc_hardcoreexpedition_lv13" },
+              "13": { "name": "category_etc_hardcoreexpedition_lv14" },
+              "14": { "name": "category_etc_hardcoreexpedition_lv15" },
+              "15": { "name": "category_etc_hardcoreexpedition_lv16" },
+              "16": { "name": "category_etc_hardcoreexpedition_lv17" },
+              "17": { "name": "category_etc_hardcoreexpedition_lv18" }
+            } 
+          },
+          "5": { 
+            "name": "category_etc_hardcoreexpeditions_sermon",
+            "category": {
+              "0": { "name": "category_etc_hardcoreexpedition_lv1" },
+              "1": { "name": "category_etc_hardcoreexpedition_lv2" },
+              "2": { "name": "category_etc_hardcoreexpedition_lv3" },
+              "3": { "name": "category_etc_hardcoreexpedition_lv4" },
+              "4": { "name": "category_etc_hardcoreexpedition_lv5" },
+              "5": { "name": "category_etc_hardcoreexpedition_lv6" },
+              "6": { "name": "category_etc_hardcoreexpedition_lv7" },
+              "7": { "name": "category_etc_hardcoreexpedition_lv8" },
+              "8": { "name": "category_etc_hardcoreexpedition_lv9" },
+              "9": { "name": "category_etc_hardcoreexpedition_lv10" },
+              "10": { "name": "category_etc_hardcoreexpedition_lv11" },
+              "11": { "name": "category_etc_hardcoreexpedition_lv12" },
+              "12": { "name": "category_etc_hardcoreexpedition_lv13" },
+              "13": { "name": "category_etc_hardcoreexpedition_lv14" },
+              "14": { "name": "category_etc_hardcoreexpedition_lv15" },
+              "15": { "name": "category_etc_hardcoreexpedition_lv16" },
+              "16": { "name": "category_etc_hardcoreexpedition_lv17" },
+              "17": { "name": "category_etc_hardcoreexpedition_lv18" }
+            }
+          },
+          "6": { 
+            "name": "category_etc_hardcoreexpeditions_depthlurker",
+            "category": {
+              "0": { "name": "category_etc_hardcoreexpedition_lv1" },
+              "1": { "name": "category_etc_hardcoreexpedition_lv2" },
+              "2": { "name": "category_etc_hardcoreexpedition_lv3" },
+              "3": { "name": "category_etc_hardcoreexpedition_lv4" },
+              "4": { "name": "category_etc_hardcoreexpedition_lv5" },
+              "5": { "name": "category_etc_hardcoreexpedition_lv6" },
+              "6": { "name": "category_etc_hardcoreexpedition_lv7" },
+              "7": { "name": "category_etc_hardcoreexpedition_lv8" },
+              "8": { "name": "category_etc_hardcoreexpedition_lv9" },
+              "9": { "name": "category_etc_hardcoreexpedition_lv10" },
+              "10": { "name": "category_etc_hardcoreexpedition_lv11" },
+              "11": { "name": "category_etc_hardcoreexpedition_lv12" },
+              "12": { "name": "category_etc_hardcoreexpedition_lv13" },
+              "13": { "name": "category_etc_hardcoreexpedition_lv14" },
+              "14": { "name": "category_etc_hardcoreexpedition_lv15" },
+              "15": { "name": "category_etc_hardcoreexpedition_lv16" },
+              "16": { "name": "category_etc_hardcoreexpedition_lv17" },
+              "17": { "name": "category_etc_hardcoreexpedition_lv18" }
+            }
+          },
+          "7": { 
+            "name": "category_etc_hardcoreexpeditions_stonewar",
+            "category": {
+              "0": { "name": "category_etc_hardcoreexpedition_lv1" },
+              "1": { "name": "category_etc_hardcoreexpedition_lv2" },
+              "2": { "name": "category_etc_hardcoreexpedition_lv3" },
+              "3": { "name": "category_etc_hardcoreexpedition_lv4" },
+              "4": { "name": "category_etc_hardcoreexpedition_lv5" },
+              "5": { "name": "category_etc_hardcoreexpedition_lv6" },
+              "6": { "name": "category_etc_hardcoreexpedition_lv7" },
+              "7": { "name": "category_etc_hardcoreexpedition_lv8" },
+              "8": { "name": "category_etc_hardcoreexpedition_lv9" },
+              "9": { "name": "category_etc_hardcoreexpedition_lv10" },
+              "10": { "name": "category_etc_hardcoreexpedition_lv11" },
+              "11": { "name": "category_etc_hardcoreexpedition_lv12" },
+              "12": { "name": "category_etc_hardcoreexpedition_lv13" },
+              "13": { "name": "category_etc_hardcoreexpedition_lv14" },
+              "14": { "name": "category_etc_hardcoreexpedition_lv15" },
+              "15": { "name": "category_etc_hardcoreexpedition_lv16" },
+              "16": { "name": "category_etc_hardcoreexpedition_lv17" },
+              "17": { "name": "category_etc_hardcoreexpedition_lv18" }
+            }
+          },
+          "8": { 
+            "name": "category_etc_hardcoreexpeditions_sisters",
+            "category": {
+              "0": { "name": "category_etc_hardcoreexpedition_lv1" },
+              "1": { "name": "category_etc_hardcoreexpedition_lv2" },
+              "2": { "name": "category_etc_hardcoreexpedition_lv3" },
+              "3": { "name": "category_etc_hardcoreexpedition_lv4" },
+              "4": { "name": "category_etc_hardcoreexpedition_lv5" },
+              "5": { "name": "category_etc_hardcoreexpedition_lv6" },
+              "6": { "name": "category_etc_hardcoreexpedition_lv7" },
+              "7": { "name": "category_etc_hardcoreexpedition_lv8" },
+              "8": { "name": "category_etc_hardcoreexpedition_lv9" },
+              "9": { "name": "category_etc_hardcoreexpedition_lv10" },
+              "10": { "name": "category_etc_hardcoreexpedition_lv11" },
+              "11": { "name": "category_etc_hardcoreexpedition_lv12" },
+              "12": { "name": "category_etc_hardcoreexpedition_lv13" },
+              "13": { "name": "category_etc_hardcoreexpedition_lv14" },
+              "14": { "name": "category_etc_hardcoreexpedition_lv15" },
+              "15": { "name": "category_etc_hardcoreexpedition_lv16" },
+              "16": { "name": "category_etc_hardcoreexpedition_lv17" },
+              "17": { "name": "category_etc_hardcoreexpedition_lv18" }
+            }
+          },
+          "9": { 
+            "name": "category_etc_hardcoreexpeditions_ravenclaws",
+            "category": {
+              "0": { "name": "category_etc_hardcoreexpedition_lv1" },
+              "1": { "name": "category_etc_hardcoreexpedition_lv2" },
+              "2": { "name": "category_etc_hardcoreexpedition_lv3" },
+              "3": { "name": "category_etc_hardcoreexpedition_lv4" },
+              "4": { "name": "category_etc_hardcoreexpedition_lv5" },
+              "5": { "name": "category_etc_hardcoreexpedition_lv6" },
+              "6": { "name": "category_etc_hardcoreexpedition_lv7" },
+              "7": { "name": "category_etc_hardcoreexpedition_lv8" },
+              "8": { "name": "category_etc_hardcoreexpedition_lv9" },
+              "9": { "name": "category_etc_hardcoreexpedition_lv10" },
+              "10": { "name": "category_etc_hardcoreexpedition_lv11" },
+              "11": { "name": "category_etc_hardcoreexpedition_lv12" },
+              "12": { "name": "category_etc_hardcoreexpedition_lv13" },
+              "13": { "name": "category_etc_hardcoreexpedition_lv14" },
+              "14": { "name": "category_etc_hardcoreexpedition_lv15" },
+              "15": { "name": "category_etc_hardcoreexpedition_lv16" },
+              "16": { "name": "category_etc_hardcoreexpedition_lv17" },
+              "17": { "name": "category_etc_hardcoreexpedition_lv18" }
+            }
+          },
+          "10": { 
+            "name": "category_etc_hardcoreexpeditions_eternalwar",
+            "category": {
+              "0": { "name": "category_etc_hardcoreexpedition_lv1" },
+              "1": { "name": "category_etc_hardcoreexpedition_lv2" },
+              "2": { "name": "category_etc_hardcoreexpedition_lv3" },
+              "3": { "name": "category_etc_hardcoreexpedition_lv4" },
+              "4": { "name": "category_etc_hardcoreexpedition_lv5" },
+              "5": { "name": "category_etc_hardcoreexpedition_lv6" },
+              "6": { "name": "category_etc_hardcoreexpedition_lv7" },
+              "7": { "name": "category_etc_hardcoreexpedition_lv8" },
+              "8": { "name": "category_etc_hardcoreexpedition_lv9" },
+              "9": { "name": "category_etc_hardcoreexpedition_lv10" },
+              "10": { "name": "category_etc_hardcoreexpedition_lv11" },
+              "11": { "name": "category_etc_hardcoreexpedition_lv12" },
+              "12": { "name": "category_etc_hardcoreexpedition_lv13" },
+              "13": { "name": "category_etc_hardcoreexpedition_lv14" },
+              "14": { "name": "category_etc_hardcoreexpedition_lv15" },
+              "15": { "name": "category_etc_hardcoreexpedition_lv16" },
+              "16": { "name": "category_etc_hardcoreexpedition_lv17" },
+              "17": { "name": "category_etc_hardcoreexpedition_lv18" }
             }
           }
         }
+      },
+      "7": {
+        "name": "category_etc_quest",
+        "category": {
+          "0": { 
+            "name": "category_etc_quest_city",
+            "category": {
+              "0": { "name": "city_bridgewatch" },
+              "1": { "name": "city_fortsterling" },
+              "2": { "name": "city_lymhurst" },
+              "3": { "name": "city_martlock" },
+              "4": { "name": "city_thetford" },
+              "5": { "name": "city_caerleon" }
+            }
+           },
+          "1": { "name": "category_etc_quest_etc" }
+        }
+      },
+      "8": {
+        "name": "category_etc_killtrophy"
+      },
+      "9": {
+        "name": "category_etc_trash"
       }
     }
   }
